@@ -384,7 +384,3 @@ UserSettings/
 
 # Unity Package Manager folders
 /[Pp]ackages/com.unity.collab-proxy/Logs/
-
-# Ignore user preferences and settings files
-/ProjectSettings/EditorBuildSettings.asset
-/ProjectSettings/ProjectVersion.txt
