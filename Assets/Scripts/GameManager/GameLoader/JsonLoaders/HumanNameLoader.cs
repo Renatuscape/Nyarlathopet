@@ -21,7 +21,7 @@ public class HumanNameLoader : MonoBehaviour
     {
         if (jsonFile == null)
         {
-            Debug.LogError("JSON file is missing or not assigned.");
+            Report.Write(name, "HumanNames.json is missing or not assigned.");
             return;
         }
 
