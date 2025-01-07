@@ -1,11 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SaveDataWrapper
-{
-    public PlayerData playerData;
-}
-
 // Loads the player's save data from JSON
 // Currently there is only one save data file, but more could be added in the wrapper
 public class SaveDataLoader : MonoBehaviour
@@ -20,7 +15,18 @@ public class SaveDataLoader : MonoBehaviour
             yield break;
         }
 
-        SaveDataWrapper saveData = JsonUtility.FromJson<SaveDataWrapper>(saveDataJSON.text);
+        PlayerData saveData = JsonUtility.FromJson<PlayerData>(saveDataJSON.text);
+
+        if (saveData == null)
+        {
+            Report.Write(name, "The loaded data returned null. Creating new.");
+            yield return Player.CreateNewGameDataAsync();
+        }
+        else
+        {
+            Report.Write(name, "Correctly loaded data:\n" + saveData.ToString());
+        }
+
         yield return null;
     }
 }
