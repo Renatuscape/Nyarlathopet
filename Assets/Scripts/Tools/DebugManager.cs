@@ -1,39 +1,37 @@
 ﻿using System;
 using UnityEngine;
 using System.IO;
+using System.Collections.Generic;
 public static class DebugManager
 {
-    // Allows tracking of debug statements and report writing
-    public static string debugReport = "Debug report session " + DateTime.Now;
+    private static readonly List<string> debugLogs = new List<string>();
+    private static readonly string sessionStart = "Debug report session " + DateTime.Now;
+
+    static DebugManager()
+    {
+        debugLogs.Add(sessionStart);
+    }
+
     public static void LogDebugStatement(string name, string report)
     {
-        debugReport += $"\n{DateTime.Now} {name}: {report}";
-        Debug.Log(report);
+        var formattedText = $"\n{DateTime.Now} {name}: {report}";
+        debugLogs.Add(formattedText);
+        Debug.Log(formattedText);
     }
 
     public static void WriteDebugSessionLog(bool overwrite)
     {
         string filePath = Application.streamingAssetsPath + "/DebugSessionLog.txt";
-
-        if (overwrite)
+        try
         {
-            OverwriteFileWithText(filePath, debugReport);
+            if (overwrite)
+                File.WriteAllLines(filePath, debugLogs);
+            else
+                File.AppendAllLines(filePath, debugLogs);
         }
-        else
+        catch (Exception e)
         {
-            AppendTextToFile(filePath, debugReport);
+            Debug.LogError($"Failed to write debug log: {e.Message}");
         }
-    }
-
-    static void OverwriteFileWithText(string filePath, string textToWrite)
-    {
-        // Overwrite the existing file with new text
-        File.WriteAllText(filePath, textToWrite);
-    }
-
-    static void AppendTextToFile(string filePath, string textToAppend)
-    {
-        // Append text to the existing file
-        File.AppendAllText(filePath, textToAppend + "\nDebug report session " + DateTime.Now + "\n");  // Adds a newline after the text
     }
 }
