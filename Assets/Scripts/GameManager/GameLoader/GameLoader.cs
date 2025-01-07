@@ -21,15 +21,12 @@ public class GameLoader : MonoBehaviour
     {
         // Set up loadbar
         loadBar.value = 0;
-        loadBar.maxValue = 3; // Should equal amount of loaders. Find way to automate this
+        loadBar.maxValue = 2; // Should equal amount of loaders. Find way to automate this
 
         // Load components
         loaderDescription.text = "Transcribing human names...";
         yield return StartCoroutine(humanNameLoader.LoadData());
         Report.Write(name, "Loaded human names from JSON.");
-        loadBar.value++;
-
-        yield return new WaitForSeconds(1); // emulate loading. Replace with real loader
         loadBar.value++;
 
         loaderDescription.text = "Fetching cult records...";
@@ -39,10 +36,10 @@ public class GameLoader : MonoBehaviour
 
         yield return new WaitForSeconds(1); // emulate loading. Replace with real loader
         loadBar.value++;
-        DebugManager.WriteDebugSessionLog(true);
 
 
         Report.Write(name, "Completed load routine.");
+        DebugManager.WriteDebugSessionLog(true);
         SceneManager.LoadScene("MainMenu");
     }
 }
