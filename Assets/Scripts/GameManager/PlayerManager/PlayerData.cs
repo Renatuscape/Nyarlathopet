@@ -6,6 +6,7 @@ public class PlayerData
     // Holds data relevant to the player's progress
     public string cultName;
     public int level;
+    public int rounds;
     public int funds; // The cult's pooled funds
     public Human cultLeader; // The current player character
     public List<Human> cultMembers = new();
