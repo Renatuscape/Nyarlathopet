@@ -16,7 +16,14 @@ public static class Player
             inventory = new(),
         };
 
+        Data.cultLeader.sanity += 10;
+
         Report.Write("Player", "Created save data: " + Data.ToString());
         await SaveManager.SaveDataAsync();
+    }
+
+    public static void SetPlayerData(PlayerData data)
+    {
+        Data = data;
     }
 }
