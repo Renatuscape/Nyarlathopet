@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using System.Collections;
 
 public class HumanNamesData
 {
@@ -12,21 +12,16 @@ public class HumanNameLoader : MonoBehaviour
 {
     [SerializeField] private TextAsset HumanNamesJSON;
 
-    void Start()
+    public IEnumerator LoadData()
     {
-        LoadData(HumanNamesJSON);
-    }
-
-    void LoadData(TextAsset jsonFile)
-    {
-        if (jsonFile == null)
+        if (HumanNamesJSON == null)
         {
             Report.Write(name, "HumanNames.json is missing or not assigned.");
-            return;
+            yield break;
         }
 
-        // Parse JSON content into the NamesData object
-        HumanNamesData namesData = JsonUtility.FromJson<HumanNamesData>(jsonFile.text);
+        HumanNamesData namesData = JsonUtility.FromJson<HumanNamesData>(HumanNamesJSON.text);
         HumanNameGenerator.SortNames(namesData);
+        yield return null;
     }
 }
