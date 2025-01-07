@@ -15,6 +15,11 @@ public static class HumanNameGenerator
 
     public static string GetRandomName()
     {
+        if (FirstNames == null || LastNames == null)
+        {
+            return "Inspector Gregson";
+        }
+
         return FirstNames[Random.Range(0, FirstNames.Length)] + " " + LastNames[Random.Range(0, FirstNames.Length)];
     }
 }
