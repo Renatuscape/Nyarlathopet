@@ -24,7 +24,8 @@ public class SaveDataLoader : MonoBehaviour
         }
         else
         {
-            Report.Write(name, "Correctly loaded data:\n" + saveData.ToString());
+            Player.SetPlayerData(saveData);
+            Report.Write(name, "Correctly loaded data: " + saveData.ToString());
         }
 
         yield return null;
