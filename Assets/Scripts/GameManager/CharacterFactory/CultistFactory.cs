@@ -7,7 +7,7 @@ public static class CultistFactory
     {
         Human cultist = new()
         {
-            name = HumanNameGenerator.GetRandomName(),
+            name = RandomNameGenerator.GetRandomHumanName(),
             type = CreatureType.Cultist,
             funds = random.Next(0, (level * 5) + 1),
             sanity = random.Next(5, (level * 10) + 1)

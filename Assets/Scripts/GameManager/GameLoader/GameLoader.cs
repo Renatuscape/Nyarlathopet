@@ -8,12 +8,13 @@ using UnityEngine.UI;
 public class GameLoader : MonoBehaviour
 {
     public Slider loadBar;
-    public HumanNameLoader humanNameLoader;
+    public RandomNameLoader randomNameLoader;
     public SaveDataLoader saveDataLoader;
     public TextMeshProUGUI loaderDescription;
 
     void Start()
     {
+        Report.Write(name, "Starting load routine.");
         StartCoroutine(LoadRoutine());
     }
 
@@ -25,7 +26,7 @@ public class GameLoader : MonoBehaviour
 
         // Load components
         loaderDescription.text = "Transcribing human names...";
-        yield return StartCoroutine(humanNameLoader.LoadData());
+        yield return StartCoroutine(randomNameLoader.LoadData());
         Report.Write(name, "Loaded human names from JSON.");
         loadBar.value++;
 
