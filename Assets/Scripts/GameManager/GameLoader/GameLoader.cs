@@ -38,8 +38,16 @@ public class GameLoader : MonoBehaviour
         loadBar.value++;
 
 
-        Report.Write(name, "Completed load routine.");
+        Report.Write(name, "Completed load routine. Player data " + (Player.Data == null ? "does not exist. Loading NewGame." : "exists. Loading MainMenu."));
         DebugManager.WriteDebugSessionLog(true);
-        SceneManager.LoadScene("MainMenu");
+
+        if (Player.Data != null)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+        else
+        {
+            SceneManager.LoadScene("NewGame");
+        }
     }
 }
