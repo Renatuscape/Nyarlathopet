@@ -20,7 +20,7 @@ public class SaveDataLoader : MonoBehaviour
         if (saveData == null)
         {
             Report.Write(name, "The loaded data returned null. Creating new.");
-            yield return Player.CreateNewGameDataAsync();
+            //yield return Player.CreateNewGameDataAsync(); // Handle data creation in NewGame scene from now on. Allow Data to remain null 
         }
         else
         {
