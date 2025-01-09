@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class BtnQuitApplicaiton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void BtnPromptQuit()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        AlertSystem.Prompt("Quit game?\nProgress is saved at the start of a new month. Any unsaved progress will be lost.",
+            () =>
+            {
+                DebugManager.WriteDebugSessionLog(true);
+                Application.Quit();
+            });
     }
 }
