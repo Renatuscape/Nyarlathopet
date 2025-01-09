@@ -1,5 +1,3 @@
-using System.Threading.Tasks;
-
 public static class Player
 {
     public static PlayerData Data { get; private set; }
