@@ -1,8 +1,6 @@
 [System.Serializable]
-public class Creature
+public class Creature : Entity
 {
-    public string name;
-    public string description;
     public CreatureType type;
 }
 
@@ -12,4 +10,4 @@ public enum CreatureType
     Investigator,
     Pet,
     Nyarlathotep
-}             
+}
