@@ -93,4 +93,11 @@ public static class RandomNameGenerator
             return CultPrefixes[Random.Range(0, CultPrefixes.Length)] + " of " + CultIndefiniteSuffixes[Random.Range(0, CultIndefiniteSuffixes.Length)];
         }
     }
+
+    public static string GetRandomItemName(Item item)
+    {
+        // Pick names depending on stats and strength
+
+        return $"Random Item";
+    }
 }
