@@ -1,0 +1,25 @@
+{
+    "locations":[
+        {
+            "name": "Boston",
+            "level": 1,
+            "x": 0,
+            "y": 0,
+            "hasMagick": true,
+            "hasStrength": true,
+            "hasLore": true,
+            "hasMoney": true
+        },
+        {
+            "name": "Prague",
+            "level": 1,
+            "x": 1,
+            "y": 0,
+            "hasMagick": true,
+            "hasStrength": true,
+            "hasLore": true,
+            "hasMoney": true,
+            "isRisky": true
+        }
+    ]
+}
