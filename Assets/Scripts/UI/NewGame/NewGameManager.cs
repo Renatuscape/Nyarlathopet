@@ -50,8 +50,8 @@ public class NewGameManager : MonoBehaviour
     IEnumerator SaveAndGoToMenu()
     {
         yield return SaveManager.SaveDataAsync();
-        Report.Write(name, "New game created and saved. Moving to next scene.");
-        SceneManager.LoadScene("MainMenu");
+        Report.Write(name, "New game created and saved. Starting game.");
+        SceneManager.LoadScene("Gameplay");
     }
 
     public void BtnFinalise()
