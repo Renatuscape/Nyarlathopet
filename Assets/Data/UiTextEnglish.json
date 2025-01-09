@@ -2,6 +2,7 @@
   "language": "ENG",
   "entries": [
     ["TUT0", "Collect artefacts and summon an aspect of Nyarlathotep!"],
-    ["TUT1", "Each month, you have time for three endeavours. Choose wisely."]
+    ["TUT1", "Each month, you have time for three endeavours. Choose wisely."],
+    ["ALR0", "QUIT GAME?\n\nProgress is saved at the start of a new month. Any unsaved progress will be lost."]
   ]
 }
