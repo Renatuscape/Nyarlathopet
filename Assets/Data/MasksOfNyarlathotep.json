@@ -1,0 +1,28 @@
+{
+  "pets": [
+    {
+      "id": 0,
+      "name": "???",
+      "description": "A shapeless blob of darkness.",
+      "rage": 10,
+      "intrigue": 0,
+      "abstraction": 1,
+      "magick": 0,
+      "strength": 0,
+      "sanityLoss": 1
+    }
+  ],
+  "Nyarlathotep": [
+    {
+      "id": 0,
+      "name": "Masked Phantom",
+      "description": "No more than a sliver of a shade from beyond the veil.",
+      "rage": 10,
+      "intrigue": 1,
+      "abstraction": 10,
+      "magick": 1,
+      "strength": 1,
+      "sanityLoss": 3
+    }
+  ]
+}
