@@ -15,6 +15,7 @@ All interface text and alerts should be stored in JSON
 Load Horror objects
 * Create loader class for Horrors.json
 * Create repository for horrors that can be called to retrieve them by stat or ID
+    * Ensure only copies are handed out from the repository, to prevent edits to base blueprint
 
 Map locations JSON
 * Create .json data
@@ -29,6 +30,15 @@ Sanctuary
 * Implement summoning
 * Implement worship
 * Implement feeding
+
+Sanctuary visuals
+* Add custom graphic for the Book of Masks
+* Add background graphic
+    * Customisable?
+    * Dynamic display of cult wealth and cult members?
+    * Simple, animated nodes
+* Add pet graphic
+    * Pets must have a simple idle animation minimum
 
 Ledger
 * Display leader data
