@@ -50,5 +50,6 @@ public class PlayerData
         level = 1;
         funds = 100;
         cultLeader = CultistFactory.GetCultist(1);
+        cultLeader.origin = "Testlandia";
     }
 }
