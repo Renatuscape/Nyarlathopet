@@ -80,6 +80,11 @@ public static class RandomNameGenerator
     {
         int nameType = Random.Range(0, 3); // 0 = grab a full name, 1 = construct a definite, 2 = construct indefinite
 
+        if (CultNames == null)
+        {
+            return "Troup of the Trial";
+        }
+
         if (nameType == 0)
         {
             return CultNames[Random.Range(0, CultNames.Length)];
