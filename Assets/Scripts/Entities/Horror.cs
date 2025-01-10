@@ -4,7 +4,7 @@
 [System.Serializable]
 public class Horror : Creature
 {
-    public int id;
+    public int id = -1;
     public int rage; // Base for pets, added upon summoning for Nyarlathotep
     public int intrigue;
     public int abstraction;
