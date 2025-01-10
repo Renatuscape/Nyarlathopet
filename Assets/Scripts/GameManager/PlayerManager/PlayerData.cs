@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 [System.Serializable]
 public class PlayerData
@@ -19,5 +20,35 @@ public class PlayerData
     public override string ToString()
     {
         return $"{cultName ?? "Unnamed Cult"} ({level})\nLeader\t\t{cultLeader.name}\nFunds:\t\t{funds}\nMembers:\t{cultMembers.Count}";
+    }
+
+    public PlayerData DeepCopy()
+    {
+        var copy = new PlayerData
+        {
+            cultName = cultName,
+            level = level,
+            rounds = rounds,
+            funds = funds,
+            network = network,
+            notoriety = notoriety,
+            cultLeader = cultLeader,
+            currentPet = currentPet
+        };
+
+        // Simple list copies are sufficient since all contained types are value types or only contain immutable types
+        copy.cultMembers = new List<Human>(cultMembers);
+        copy.inventory = new List<Item>(inventory);
+        copy.discoveredCreatures = new List<int>(discoveredCreatures);
+
+        return copy;
+    }
+
+    public void CreateDummyData()
+    {
+        cultName = "Dummies";
+        level = 1;
+        funds = 100;
+        cultLeader = CultistFactory.GetCultist(1);
     }
 }
