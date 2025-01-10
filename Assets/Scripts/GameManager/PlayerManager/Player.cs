@@ -15,6 +15,7 @@ public static class Player
         };
 
         Data.cultLeader.sanity += 10;
+        Data.cultLeader.origin = "Unknown";
     }
 
     public static void SetPlayerData(PlayerData data)
