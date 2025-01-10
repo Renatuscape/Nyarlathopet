@@ -6,4 +6,5 @@ public class Human : Creature
     public int lore;
     public int sanity;
     public int funds;
+    public string origin;
 }
