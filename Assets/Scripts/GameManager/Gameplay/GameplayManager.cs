@@ -8,7 +8,7 @@ public class GameplayManager : MonoBehaviour
     public static GameplayManager instance;
     public static PlayerData dummyData; // Refer and make changes to this object instead of Player.Data in the gameplay scene
     public PlayerData dummyDisplay;
-    public static int endeavourPoints;
+    public static int EndeavourPoints { get; private set; }
 
     public HotbarController hotbarController;
 
@@ -107,12 +107,28 @@ public class GameplayManager : MonoBehaviour
     IEnumerator StartNewRoundAsync()
     {
         yield return SaveManager.SaveDataAsync();
-        endeavourPoints = 3;
+        EndeavourPoints = 3;
         hotbarController.RefreshForNewRound();
     }
 
-    public static void EndRound()
+    void SubtractEP(int amount)
+    {
+        EndeavourPoints -= amount;
+        hotbarController.RefreshAfterEndeavour();
+
+        if (EndeavourPoints <= 0)
+        {
+            RunEndRoundRoutine();
+        }
+    }
+
+    public static void EndRound() // Are there instances besides EP loss that need to end a round?
     {
         instance.RunEndRoundRoutine();
+    }
+
+    public static void SubtractEndeavourPoints(int amount)
+    {
+        instance.SubtractEP(amount);
     }
 }
