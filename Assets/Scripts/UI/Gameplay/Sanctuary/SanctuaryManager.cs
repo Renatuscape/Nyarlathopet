@@ -16,9 +16,9 @@ public class SanctuaryManager : MonoBehaviour
 
     private void OnEnable()
     {
-        if (Player.Data?.currentPet != null)
+        if (!string.IsNullOrEmpty(GameplayManager.dummyData?.currentPet?.name))
         {
-            SetupWithPet(Player.Data.currentPet);
+            SetupWithPet(GameplayManager.dummyData.currentPet);
         }
         else
         {
@@ -34,7 +34,7 @@ public class SanctuaryManager : MonoBehaviour
         btnBeginRitual.gameObject.SetActive(false);
 
         petName.text = pet.name;
-        petName.text = $"{pet.rage:D2} Rage\n\n\n" +
+        petStats.text = $"{pet.rage:D2} Rage\n\n\n" +
                         $"{pet.intrigue:D2} Intrigue\n\n" +
                         $"{pet.abstraction:D2} Abstraction\n\n" +
                         $"{pet.strength:D2} Strength\n\n" +
