@@ -46,6 +46,11 @@ public class HotbarController : MonoBehaviour
         ToggleView(0);
     }
 
+    public void RefreshAfterEndeavour()
+    {
+        hotbarText.UpdateDisplay();
+    }
+
     void ToggleView(int view)
     {
         canvasSanctuary.gameObject.SetActive(view == 0);
