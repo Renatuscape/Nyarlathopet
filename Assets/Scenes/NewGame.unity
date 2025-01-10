@@ -156,6 +156,8 @@ MonoBehaviour:
     level: 0
     rounds: 0
     funds: 0
+    network: 0
+    notoriety: 0
     cultLeader:
       name: 
       description: 
@@ -165,14 +167,15 @@ MonoBehaviour:
       lore: 0
       sanity: 0
       funds: 0
+      origin: 
     cultMembers: []
     inventory: []
     discoveredCreatures: 
-    currentCreature:
+    currentPet:
       name: 
       description: 
       type: 0
-      id: 0
+      id: -1
       rage: 0
       intrigue: 0
       abstraction: 0
@@ -284,14 +287,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 4
+  m_ContentType: 0
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 1
+  m_KeyboardType: 0
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 4
+  m_CharacterValidation: 0
   m_RegexValue: 
   m_GlobalPointSize: 18
   m_CharacterLimit: 30
@@ -1889,7 +1892,7 @@ GameObject:
   - component: {fileID: 1444309526}
   - component: {fileID: 1444309525}
   m_Layer: 5
-  m_Name: Sanctuary
+  m_Name: Appearance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
