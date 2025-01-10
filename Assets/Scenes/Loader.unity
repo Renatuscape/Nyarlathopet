@@ -476,6 +476,8 @@ GameObject:
   - component: {fileID: 594887374}
   - component: {fileID: 594887375}
   - component: {fileID: 594887376}
+  - component: {fileID: 594887378}
+  - component: {fileID: 594887377}
   m_Layer: 0
   m_Name: Loader
   m_TagString: Untagged
@@ -513,6 +515,8 @@ MonoBehaviour:
   loadBar: {fileID: 87149097}
   randomNameLoader: {fileID: 594887376}
   saveDataLoader: {fileID: 594887375}
+  horrorLoader: {fileID: 594887378}
+  locationLoader: {fileID: 594887377}
   loaderDescription: {fileID: 1601360454}
 --- !u!114 &594887375
 MonoBehaviour:
@@ -540,6 +544,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RandomNamesJSON: {fileID: 4900000, guid: f47948cc462eadd42a35870b27d1060d, type: 3}
+--- !u!114 &594887377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594887371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7035cbf8423428648a3067029061f7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocationsJSON: {fileID: 4900000, guid: dbbc402e57f6c1649b5c05b6d9c23502, type: 3}
+--- !u!114 &594887378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594887371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee9aa1703969ac48ae307520a585373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HorrorsJSON: {fileID: 4900000, guid: 5a806ae4e1b8bf8488ab125c13d8293c, type: 3}
 --- !u!1 &972965592
 GameObject:
   m_ObjectHideFlags: 0

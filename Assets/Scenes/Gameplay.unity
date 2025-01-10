@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 136909278}
   - component: {fileID: 136909277}
   m_Layer: 5
-  m_Name: BtnFeed
+  m_Name: BtnSeek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2407,6 +2407,7 @@ GameObject:
   - component: {fileID: 668107447}
   - component: {fileID: 668107446}
   - component: {fileID: 668107445}
+  - component: {fileID: 668107448}
   m_Layer: 5
   m_Name: MapCanvas
   m_TagString: Untagged
@@ -2497,6 +2498,34 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &668107448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668107443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38760b152e355e4388e74ca682353a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoTitle: {fileID: 1363655802}
+  infoMesh: {fileID: 2119647166}
+  currentLocation:
+    name: Amsterdam
+    description: 
+    level: 0
+    x: 0
+    y: 0
+    hasMagick: 1
+    hasStrength: 0
+    hasLore: 0
+    hasMoney: 0
+    isRisky: 0
+  btnSeek: {fileID: 136909277}
+  btnRecruit: {fileID: 1063974032}
+  btnThwart: {fileID: 923032539}
 --- !u!1 &693376499
 GameObject:
   m_ObjectHideFlags: 0
@@ -3065,7 +3094,7 @@ GameObject:
   - component: {fileID: 923032540}
   - component: {fileID: 923032539}
   m_Layer: 5
-  m_Name: BtnSummon
+  m_Name: BtnThwart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3454,7 +3483,7 @@ GameObject:
   - component: {fileID: 1063974033}
   - component: {fileID: 1063974032}
   m_Layer: 5
-  m_Name: BtnWorship
+  m_Name: BtnRecruit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3626,6 +3655,17 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1087903523 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4256663498875021776, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
+  m_PrefabInstance: {fileID: 1215675756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1133936407
 GameObject:
   m_ObjectHideFlags: 0
@@ -3755,6 +3795,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 120414027}
     m_Modifications:
+    - target: {fileID: 585136789215048137, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
+      propertyPath: m_Name
+      value: Info
+      objectReference: {fileID: 0}
     - target: {fileID: 585136789215048137, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4168,9 +4212,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1317642041}
+  - component: {fileID: 1317642042}
   - component: {fileID: 1317642040}
+  - component: {fileID: 1317642043}
   m_Layer: 0
-  m_Name: GameplayController
+  m_Name: GameplayManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4188,6 +4234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c037dce459336194b9a0ecd80844a2d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hotbarText: {fileID: 1317642043}
   btnSanctuary: {fileID: 1215675760}
   btnLedger: {fileID: 1215675759}
   btnMap: {fileID: 365143673}
@@ -4209,6 +4256,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1317642042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317642039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae8b0e544aa36194fb77a3d58b2b8b03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dummyDisplay:
+    cultName: 
+    level: 0
+    rounds: 0
+    funds: 0
+    network: 0
+    notoriety: 0
+    cultLeader:
+      name: 
+      description: 
+      type: 0
+      magick: 0
+      strength: 0
+      lore: 0
+      sanity: 0
+      funds: 0
+      origin: 
+    cultMembers: []
+    inventory: []
+    discoveredCreatures: 
+    currentPet:
+      name: 
+      description: 
+      type: 0
+      id: -1
+      rage: 0
+      intrigue: 0
+      abstraction: 0
+      magick: 0
+      strength: 0
+      sanityLoss: 0
+  hotbarController: {fileID: 1317642040}
+--- !u!114 &1317642043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317642039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bacff6a4046152548b6c86977be1c36b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: {fileID: 1087903523}
 --- !u!1 &1333775609
 GameObject:
   m_ObjectHideFlags: 0
@@ -4525,7 +4629,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exploration
+  m_text: Endeavour
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b5eb7bdc4fafc5b4892d9dc008e16efe, type: 2}
   m_sharedMaterial: {fileID: 4575195232960861781, guid: b5eb7bdc4fafc5b4892d9dc008e16efe, type: 2}
@@ -6097,7 +6201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Informaiton concerning the selected location, followed by relevant options
+  m_text: Information concerning the selected location, followed by relevant options
     below.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b3388538d3d12f64e99af2bbce46914e, type: 2}
