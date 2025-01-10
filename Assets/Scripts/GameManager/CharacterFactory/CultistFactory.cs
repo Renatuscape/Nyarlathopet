@@ -5,6 +5,13 @@ public static class CultistFactory
     private static readonly Random random = new();
     public static Human GetCultist(int level)
     {
+        if (level <= 0)
+        {
+            level = 1;
+        }
+
+        Report.Write("CultistFactory", $"Attempting to generate a cultist of level {level}.");
+
         Human cultist = new()
         {
             name = RandomNameGenerator.GetRandomHumanName(),
