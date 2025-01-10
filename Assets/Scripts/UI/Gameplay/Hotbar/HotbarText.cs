@@ -14,6 +14,6 @@ public class HotbarText : MonoBehaviour
 
     string GetFormattedString()
     {
-        return "EP:" + GameplayManager.endeavourPoints + " " + DateCalculator.GetGameDate(Player.Data?.rounds ?? 0);
+        return "EP:" + GameplayManager.EndeavourPoints + " " + DateCalculator.GetGameDate(Player.Data?.rounds ?? 0);
     }
 }
