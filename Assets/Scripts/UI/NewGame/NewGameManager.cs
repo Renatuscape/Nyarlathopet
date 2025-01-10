@@ -34,14 +34,14 @@ public class NewGameManager : MonoBehaviour
 
     bool ValidateEntries()
     {
-        if (cultName.text.Length < 2)
+        if (string.IsNullOrEmpty(cultName.text) || cultName.text.Length < 2)
         {
-            Report.Write(name, "Name of cult was too short.");
+            Report.Write(name, "Name of cult was null or too short.");
             return false;
         }
-        else if (leaderName.text.Length < 2)
+        else if (string.IsNullOrEmpty(leaderName.text) || leaderName.text.Length < 2)
         {
-            Report.Write(name, "Name of cult leader was too short.");
+            Report.Write(name, "Name of cult leader was null or too short.");
             return false;
         }
         return true;
@@ -58,10 +58,17 @@ public class NewGameManager : MonoBehaviour
     {
         if (ValidateEntries())
         {
-            Player.Data.cultLeader.name = leaderName.text;
-            Player.Data.cultName = cultName.text;
+            AlertSystem.Prompt("Start a new game and erase old save data?", () =>
+            {
+                Player.Data.cultLeader.name = leaderName.text;
+                Player.Data.cultName = cultName.text;
 
-            StartCoroutine(SaveAndGoToMenu());
+                StartCoroutine(SaveAndGoToMenu());
+            });
+        }
+        else
+        {
+            AlertSystem.Print("The name of your cult and your leader must be at least two characters in length.");
         }
     }
 
