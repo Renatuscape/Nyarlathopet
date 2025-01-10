@@ -12,7 +12,7 @@ public static class ExplorationManager
         Item item = ItemFactory.GenerateItemFromLocation(location);
         GameplayManager.dummyData.inventory.Add(item);
 
-        AlertSystem.Force($"You obtained {item}", () =>
+        AlertSystem.Force($"You obtained {item.name}", () =>
         {
             HandleEndeavourPoints();
         });
@@ -42,11 +42,6 @@ public static class ExplorationManager
     static void HandleEndeavourPoints()
     {
         // In the future, it should be possible to spend multiple endeavour points
-        GameplayManager.endeavourPoints--;
-
-        if (GameplayManager.endeavourPoints <= 0)
-        {
-            GameplayManager.EndRound();
-        }
+        GameplayManager.SubtractEndeavourPoints(1);
     }
 }
