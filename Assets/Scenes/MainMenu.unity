@@ -1002,7 +1002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195654236371383622, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 58.3
+      value: 58.300003
       objectReference: {fileID: 0}
     - target: {fileID: 1195654236371383622, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1972,6 +1972,7 @@ MonoBehaviour:
       lore: 0
       sanity: 0
       funds: 0
+      origin: 
     cultMembers: []
     inventory: []
     discoveredCreatures: 
