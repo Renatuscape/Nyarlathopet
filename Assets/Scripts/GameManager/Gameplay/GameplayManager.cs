@@ -56,16 +56,16 @@ public class GameplayManager : MonoBehaviour
         {
             Report.Write(name, "Executing game over routine.");
 
-            // Destroy player data
-            Player.SetPlayerData(null);
-
             // Load GameOver scene
 
             // Placeholder until GameOver scene is ready
-            AlertSystem.Force("YOU ARE DEAD.", () =>
             {
-                SceneManager.LoadScene("NewGame");
-            });
+                Player.SetPlayerData(null);
+                AlertSystem.Force("YOU ARE DEAD.", () =>
+                {
+                    SceneManager.LoadScene("NewGame");
+                });
+            }
         }
         // Check if a promotion is needed to replace the old leader
         else
@@ -86,21 +86,23 @@ public class GameplayManager : MonoBehaviour
 
     bool CheckIfGameOver()
     {
-        if (CheckIfLeaderSane() && Player.Data.cultMembers.Count < 1)
+        if (!IsLeaderSane() && Player.Data.cultMembers.Count < 1)
         {
+            Report.Write(name, "Cult leader is insane, and there are no cultists left to assume their position.");
             return true;
         }
 
         return false;
     }
 
-    bool CheckIfLeaderSane()
+    bool IsLeaderSane()
     {
         if (Player.Data?.cultLeader?.sanity < 1)
         {
+            Report.Write(name, "Cult leader has gone insane with a sanity of " + Player.Data.cultLeader.sanity);
             return false;
         }
-
+        Report.Write(name, "Cult leader remains sane with a sanity of " + Player.Data.cultLeader.sanity);
         return true;
     }
 
