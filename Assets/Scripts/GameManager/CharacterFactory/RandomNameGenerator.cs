@@ -10,6 +10,13 @@ public static class RandomNameGenerator
     public static string[] CultDefiniteSuffixes { get; private set; }
     public static string[] CultIndefiniteSuffixes { get; private set; }
     public static string[] CultNames { get; private set; }
+    public static string[] ItemPrefixMagick { get; private set; }
+    public static string[] ItemPrefixLore { get; private set; }
+    public static string[] ItemPrefixStrength { get; private set; }
+    public static string[] ItemArtefactTypes { get; private set; }
+    public static string[] ItemSuffixes { get; private set; }
+    public static string[] ItemTomeTypes { get; private set; }
+    public static string[] ItemPrayerTypes { get; private set; }
 
     public static void SortNames(RandomNamesData namesData)
     {
@@ -21,29 +28,45 @@ public static class RandomNameGenerator
         {
             CultPrefixes = namesData.cultPrefixes.Split(", ").ToArray();
         }
-        else
-        {
-            Report.Write("RandomNameGenerator", "Could not load cult prefixes.");
-        }
         if (namesData.cultDefiniteSuffixes != null)
         {
             CultDefiniteSuffixes = namesData.cultDefiniteSuffixes.Split(", ").ToArray();
-        }
-        else
-        {
-            Report.Write("RandomNameGenerator", "Could not load cult definite suffixes.");
         }
         if (namesData.cultIndefiniteSuffixes != null)
         {
             CultIndefiniteSuffixes = namesData.cultIndefiniteSuffixes.Split(", ").ToArray();
         }
-        else
-        {
-            Report.Write("RandomNameGenerator", "Could not load cult indefinite suffixes.");
-        }
         if (namesData.cultNames != null)
         {
             CultNames = namesData.cultNames.Split(", ").ToArray();
+        }
+        if (namesData.itemPrefixMagick != null)
+        {
+            ItemPrefixMagick = namesData.itemPrefixMagick.Split(", ").ToArray();
+        }
+        if (namesData.itemPrefixLore != null)
+        {
+            ItemPrefixLore = namesData.itemPrefixLore.Split(", ").ToArray();
+        }
+        if (namesData.itemPrefixStrength != null)
+        {
+            ItemPrefixStrength = namesData.itemPrefixStrength.Split(", ").ToArray();
+        }
+        if (namesData.itemArtefactTypes != null)
+        {
+            ItemArtefactTypes = namesData.itemArtefactTypes.Split(", ").ToArray();
+        }
+        if (namesData.itemSuffixes != null)
+        {
+            ItemSuffixes = namesData.itemSuffixes.Split(", ").ToArray();
+        }
+        if (namesData.itemTomeTypes != null)
+        {
+            ItemTomeTypes = namesData.itemTomeTypes.Split(", ").ToArray();
+        }
+        if (namesData.itemPrayerTypes != null)
+        {
+            ItemPrayerTypes = namesData.itemPrayerTypes.Split(", ").ToArray();
         }
         else
         {
@@ -101,8 +124,50 @@ public static class RandomNameGenerator
 
     public static string GetRandomItemName(Item item)
     {
-        // Pick names depending on stats and strength
+        if (ItemSuffixes == null)
+        {
+            return $"Random Item of Testing";
+        }
+        // Pick names depending on stats and type
 
-        return $"Random Item";
+        string prefix;
+        string type;
+        string suffix = "";
+
+        // Choose prefix
+        if (item.lore > item.strength && item.lore > item.magick)
+        {
+            prefix = ItemPrefixLore[Random.Range(0, ItemPrefixLore.Length)];
+        }
+        else if (item.strength >= item.magick && item.strength > item.lore)
+        {
+            prefix = ItemPrefixStrength[Random.Range(0, ItemPrefixStrength.Length)];
+        }
+        else
+        {
+            prefix = ItemPrefixMagick[Random.Range(0, ItemPrefixMagick.Length)];
+        }
+
+        // Choose type
+        if (item.type == ItemType.Tome)
+        {
+            type = ItemTomeTypes[Random.Range(0, ItemTomeTypes.Length)];
+        }
+        else if (item.type == ItemType.Prayer)
+        {
+            type = ItemPrayerTypes[Random.Range(0, ItemPrayerTypes.Length)];
+        }
+        else
+        {
+            type = ItemArtefactTypes[Random.Range(0, ItemArtefactTypes.Length)];
+        }
+
+        // Choose suffix, if book strength is high enough
+        if ((item.lore + item.magick + item.strength / 2) >= Player.Data.level)
+        {
+            suffix = " of " + ItemSuffixes[Random.Range(0, ItemSuffixes.Length)];
+        }
+
+        return $"{prefix} {type}{suffix}";
     }
 }
