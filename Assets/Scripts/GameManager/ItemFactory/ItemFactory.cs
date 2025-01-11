@@ -6,8 +6,13 @@ public static class ItemFactory
     {
         Item item = new Item()
         {
-            level = Random.Range(0, location.level + 1)
+            level = Random.Range(Mathf.FloorToInt(location.level * 0.5f), location.level + 1)
         };
+
+        if (item.level <= 0)
+        {
+            item.level = 1;
+        }
 
         int skillPoints = item.level * 2;
 
@@ -37,11 +42,11 @@ public static class ItemFactory
             }
         }
 
-        if (item.lore > item.strength && item.lore >= item.magick)
+        if (item.lore > item.strength && item.lore > item.magick) // Lore must be more than strength and magic
         {
             item.type = ItemType.Tome;
         }
-        else if (item.magick > item.strength && item.magick > item.lore)
+        else if (item.magick > item.strength && item.lore > item.strength) // Magick and lore must be more than strength
         {
             item.type = ItemType.Prayer;
         }
@@ -51,11 +56,6 @@ public static class ItemFactory
         }
 
         item.name = RandomNameGenerator.GetRandomItemName(item);
-
-        if (location.isRisky)
-        {
-            item.name += " +";
-        }
 
         return item;
     }
