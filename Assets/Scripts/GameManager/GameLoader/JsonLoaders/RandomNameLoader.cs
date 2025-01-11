@@ -9,6 +9,13 @@ public class RandomNamesData
     public string cultDefiniteSuffixes;
     public string cultIndefiniteSuffixes;
     public string cultNames;
+    public string itemPrefixMagick;
+    public string itemPrefixLore;
+    public string itemPrefixStrength;
+    public string itemArtefactTypes;
+    public string itemSuffixes;
+    public string itemTomeTypes;
+    public string itemPrayerTypes;
 }
 
 // Loads in first and last names for humans at the start of the game, and holds them for future use
