@@ -10,6 +10,7 @@ public class LedgerVault : MonoBehaviour
     public List<ItemUiPrefab> itemPrefabs;
     public TextMeshProUGUI placeholderText;
     public TextMeshProUGUI pageNumber;
+    public TextMeshProUGUI fundsText;
     public GameObject pageinator;
     public Button btnLeft;
     public Button btnRight;
@@ -34,6 +35,7 @@ public class LedgerVault : MonoBehaviour
     void UpdateDisplay()
     {
         UpdatePageNumber();
+        fundsText.text = GameplayManager.dummyData?.funds.ToString() ?? "00";
 
         if (items.Count == 0)
         {
