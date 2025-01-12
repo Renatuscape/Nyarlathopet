@@ -3558,6 +3558,7 @@ MonoBehaviour:
   - {fileID: 253700089}
   placeholderText: {fileID: 1217569322}
   pageNumber: {fileID: 1667494984}
+  fundsText: {fileID: 104700061}
   pageinator: {fileID: 1667494982}
   btnLeft: {fileID: 800406686}
   btnRight: {fileID: 349406084}
