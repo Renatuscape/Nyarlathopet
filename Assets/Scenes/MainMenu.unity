@@ -868,8 +868,8 @@ MonoBehaviour:
   m_AssetsPPU: 32
   m_RefResolutionX: 640
   m_RefResolutionY: 480
-  m_CropFrame: 2
-  m_GridSnapping: 2
+  m_CropFrame: 0
+  m_GridSnapping: 1
   m_FilterMode: 0
   m_UpscaleRT: 0
   m_PixelSnapping: 0
@@ -1002,7 +1002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195654236371383622, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 58.300003
+      value: 58.299988
       objectReference: {fileID: 0}
     - target: {fileID: 1195654236371383622, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1130,7 +1130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3023041928583726098, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 189.90001
+      value: 189.90002
       objectReference: {fileID: 0}
     - target: {fileID: 3023041928583726098, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
       propertyPath: m_AnchoredPosition.y
