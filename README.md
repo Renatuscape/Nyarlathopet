@@ -45,15 +45,18 @@ All assets included in this repository are either 100% free/open source or made 
 
 **Ledger**
 * Display leader data
-* Display cultist data
+* ✅ Display cultist data
 * Display funds and inventory items
+* Allow powering up cult members with items
 
 **Map**
-* Plan visual layout
-* 🔄 Create exploration controller
-    * Seek Artefacts
-    * Recruit Members
-    * Thwart Enemies
+* Display locations
+    * Make nodes selectable
+    * Display location availability and risk-factor
+* Create exploration controller
+    * ↪️ Seek Artefacts
+    * ↪️ Recruit Members
+    * ↪️ Thwart Enemies
 
 ### Loader Scene
 **Visual updates**
