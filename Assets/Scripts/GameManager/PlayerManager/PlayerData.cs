@@ -49,7 +49,17 @@ public class PlayerData
         cultName = "Dummies";
         level = 1;
         funds = 100;
-        cultLeader = CultistFactory.GetCultist(1);
+        cultLeader = CultistFactory.GetCultist(3);
         cultLeader.origin = "Testlandia";
+        cultMembers = new()
+        {
+            CultistFactory.GetCultist(1),
+            CultistFactory.GetCultist(2),
+            CultistFactory.GetCultist(3)
+        };
+
+        cultMembers[0].origin = "Testlandia";
+        cultMembers[1].origin = "Constantinope";
+        cultMembers[2].origin = "Nootlevania";
     }
 }
