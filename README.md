@@ -1,4 +1,6 @@
 # Nyarlathopet
+*Nyar-la-tho-pet*
+
 A tamagotchi-inspired game about summoning eldritch horrors, built in Unity and C# with additional data stored in JSON format.
 
 ## Disclaimer
@@ -44,10 +46,11 @@ All assets included in this repository are either 100% free/open source or made 
     * Pets must have a simple idle animation minimum
 
 **Ledger**
-* Display leader data
+* ✅ Display leader data
 * ✅ Display cultist data
-* Display funds and inventory items
-* Allow powering up cult members with items
+* ✅ Display funds and inventory items
+* Display item icons to indicate their type
+* Allow powering up cult members with tomes
 
 **Map**
 * Display locations
@@ -57,6 +60,9 @@ All assets included in this repository are either 100% free/open source or made 
     * ↪️ Seek Artefacts
     * ↪️ Recruit Members
     * ↪️ Thwart Enemies
+* Fix bugs
+    * Notoriety should not drop below 1
+    * Network must be reduced by at least 1
 
 ### Loader Scene
 **Visual updates**
@@ -68,6 +74,10 @@ All assets included in this repository are either 100% free/open source or made 
 * Adjust layout to look more like a main menu (reduce displayed info?)
 
 ### Misc
+**Magick and Occultism**
+* Rename human stat magick to occultism in code and displays
+* Horrors should use magick stat, humans should use occultism
+
 **Application Quit prompt** (Ensure proper quitting, which will save the session debug log)
 * Either hide player 'X' button or display quit prompt when player 'X' button is clicked
 
