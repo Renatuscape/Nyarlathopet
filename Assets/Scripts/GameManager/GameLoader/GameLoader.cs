@@ -52,7 +52,6 @@ public class GameLoader : MonoBehaviour
 
 
         Report.Write(name, "Completed load routine. Player data " + (Player.Data == null ? "does not exist. Loading NewGame." : "exists. Loading MainMenu."));
-        DebugManager.WriteDebugSessionLog(true);
 
         if (Player.Data != null)
         {
