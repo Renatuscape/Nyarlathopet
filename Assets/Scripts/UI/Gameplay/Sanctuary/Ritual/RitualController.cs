@@ -6,7 +6,7 @@ public static class RitualController
 
     public static void EnableRitualMenu()
     {
-        manager.ritualCanvas.gameObject.SetActive(true);
+        manager.EnableRitualMenu();
     }
 
     public static void AbortRitual()
