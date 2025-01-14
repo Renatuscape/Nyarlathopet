@@ -10,6 +10,8 @@ public class RitualManager : MonoBehaviour
 
     public List<HumanUiPrefab> cultistSlots;
     public List<ItemUiPrefab> itemSlots;
+    public PageinationPrefab cultistPageination;
+    public PageinationPrefab itemPageination;
 
     public TextMeshProUGUI ritualValues;
     [SerializeField]
@@ -40,7 +42,21 @@ public class RitualManager : MonoBehaviour
         activeItem = null;
     }
 
-    internal void SacrificeCultist()
+    public void SacrificeItem()
+    {
+        if (activeItem == null) { return; }
+
+        RitualSacrificeHelper.SacrificeItem(ritualState, activeItem.item, out var report);
+
+        AlertSystem.Force(report, () =>
+        {
+            UpdateItems();
+        });
+
+        UpdateDisplayedRitualValues();
+    }
+
+    public void SacrificeCultist()
     {
         if (activeCultist == null) { return; }
 
