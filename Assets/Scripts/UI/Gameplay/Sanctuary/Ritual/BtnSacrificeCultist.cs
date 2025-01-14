@@ -11,9 +11,13 @@ public class BtnSacrificeCultist : MonoBehaviour
                 RitualController.SacrificeCultist();
             });
         }
-        else
+        else if (GameplayManager.dummyData.cultMembers.Count > 0)
         {
             AlertSystem.Print("Choose whom you wish to sacrifice first.");
+        }
+        else
+        {
+            AlertSystem.Print("You have no cultists to sacrifice.");
         }
     }
 }
