@@ -163,7 +163,7 @@ public static class RandomNameGenerator
         }
 
         // Choose suffix, if book strength is high enough
-        if ((item.lore + item.magick + item.strength / 2) >= Player.Data.level)
+        if ((item.lore + item.magick + item.strength / 2) > Player.Data.level)
         {
             suffix = " of " + ItemSuffixes[Random.Range(0, ItemSuffixes.Length)];
         }
