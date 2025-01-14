@@ -1,7 +1,87 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 public static class RitualSacrificeHelper
 {
+    public static void SacrificeItem(Horror horrorState, Item item, out string report)
+    {
+        report = "Sacrificed " + item.name + ".\n";
+        int magickIncrease = 0;
+        int abstractionIncrease = 0;
+        int strengthIncrease = 0;
+        int intrigueIncrease = 0;
+        int rageIncrease = 0; 
+
+        int itemLevel = Math.Max(1, Mathf.FloorToInt((item.lore + item.strength + item.magick) * 0.5f));
+
+        // Find the highest stat value
+        int maxStat = Math.Max(item.lore, Math.Max(item.strength, item.magick));
+
+        // Helper method to count how many stats equal the max
+        int CountMaxStats() => (item.lore == maxStat ? 1 : 0)
+                            + (item.strength == maxStat ? 1 : 0)
+                            + (item.magick == maxStat ? 1 : 0);
+
+        for (int i = 0; i < itemLevel; i++)
+        {
+            int maxStatCount = CountMaxStats();
+
+            if (maxStatCount == 3) // All stats are equal
+            {
+                intrigueIncrease++;
+                strengthIncrease++;
+                magickIncrease++;
+                continue;
+            }
+
+            if (maxStatCount == 2) // Two highest stats are equal
+            {
+                if (item.lore == item.strength && maxStat == item.lore)
+                {
+                    intrigueIncrease++;
+                    strengthIncrease++;
+                }
+                else if (item.lore == item.magick && maxStat == item.lore)
+                {
+                    intrigueIncrease++;
+                    magickIncrease++;
+                }
+                else if (item.magick == item.strength && maxStat == item.magick)
+                {
+                    magickIncrease++;
+                    strengthIncrease++;
+                }
+                continue;
+            }
+
+            // Single highest stat
+            if (item.lore == maxStat)
+            {
+                intrigueIncrease++;
+                rageIncrease--;
+            }
+            else if (item.magick == maxStat)
+            {
+                magickIncrease++;
+                abstractionIncrease++;
+            }
+            else if (item.strength == maxStat)
+            {
+                strengthIncrease++;
+                rageIncrease++;
+            }
+        }
+
+        horrorState.magick += magickIncrease;
+        horrorState.strength += strengthIncrease;
+        horrorState.rage += rageIncrease;
+        horrorState.intrigue += intrigueIncrease;
+        horrorState.abstraction += abstractionIncrease;
+
+        report += $"MGC+{magickIncrease} ABS+{abstractionIncrease} ITR+{intrigueIncrease} STR+{strengthIncrease} RGE{(rageIncrease >= 0 ? "+" : "-")}{rageIncrease}";
+    }
+
     public static void SacrificeCultist(Horror ritualState, Human cultist, out string report)
     {
 
