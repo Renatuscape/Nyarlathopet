@@ -16,20 +16,20 @@ All assets included in this repository are either 100% free/open source or made 
 
 **Load Horror objects**
 * ✅ Create loader class for Horrors.json
-* Create repository for horrors that can be called to retrieve them by stat or ID
+* ✅ Create repository for horrors
     * Ensure only copies are handed out from the repository, to prevent edits to base blueprint
 
 **Map locations JSON**
 * ✅ Create .json data
 * ✅ Create loader
-* Create repository
+* ✅ Create repository
 
 ### Gameplay Scene 👈
 **Sanctuary**
 * ✅ Toggle info and buttons on/off according to whether a pet exists
 * ✅ Display pet stats if one exists
 * Implement Book of Masks
-* Implement summoning
+* 🔄 Implement summoning
     * "Begin Ritual" button should start a summoning sequence that consumes items/cultists/own stats and some sanity
     * Will require separate menu, or even separate scene?
 * Implement worship
@@ -39,16 +39,22 @@ All assets included in this repository are either 100% free/open source or made 
 **Sanctuary visuals**
 * Add custom graphic for the Book of Masks
 * Add background graphic
-    * Customisable?
-    * Dynamic display of cult wealth and cult members?
-    * Simple, animated nodes
+    * 🔒 Customisable?
+    * 🔒 Dynamic display of cult wealth and cult members?
+    * 🔒 Simple, animated nodes
 * Add pet graphic
     * Pets must have a simple idle animation minimum
+
+**Ritual**
+* 🪲 Fix bugs
+    * Ritual stats must not drop below 0
+    * Player should lose minimum 1 sanity when sacrificing cultists
 
 **Ledger**
 * ✅ Display leader data
 * ✅ Display cultist data
-* ✅ Display funds and inventory items
+* 📌 Display funds and inventory items
+    * Items should be sorted by type
 * Display item icons to indicate their type
 * Allow powering up cult members with tomes
 
@@ -57,10 +63,10 @@ All assets included in this repository are either 100% free/open source or made 
     * Make nodes selectable
     * Display location availability and risk-factor
 * Create exploration controller
-    * ↪️ Seek Artefacts
-    * ↪️ Recruit Members
-    * ↪️ Thwart Enemies
-* Fix bugs
+    * 📌 Seek Artefacts
+    * 📌 Recruit Members
+    * 📌 Thwart Enemies
+* 🪲 Fix bugs
     * Notoriety should not drop below 1
     * Network must be reduced by at least 1
 
@@ -88,6 +94,14 @@ All assets included in this repository are either 100% free/open source or made 
 
 🔄 Task in progress
 
-↪️ Return to task
+↪️ Unfinished. Return later
+
+🪲 Bug entry
+
+📌 Works well enough, but should be improved later
+
+❓ Consider whether feature should be included
+
+🔒 Stretch goal
 
 ✅ Task complete
