@@ -109,12 +109,12 @@ public class RitualManager : MonoBehaviour
         sacrificesMade = 0;
     }
 
-    public void SacrificeItem()
+    public void OfferArtefact()
     {
         if (activeItem == null) { return; }
         sacrificesMade++;
 
-        RitualSacrificeHelper.SacrificeItem(ritualState, activeItem.item, out var report);
+        RitualSacrificeHelper.OfferArtefact(ritualState, activeItem.item, out var report);
 
         AlertSystem.Force(report, () =>
         {
