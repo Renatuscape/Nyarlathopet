@@ -12,7 +12,7 @@ All assets included in this repository are either 100% free/open source or made 
 ↪️ All interface text and alerts should be stored in JSON
 * Create loader class for UiText[Language].json
 * Create repository for text snippets and their ID
-* Implement use of the text repository across all classes that display test
+* Implement use of the text repository across all classes that display text
 
 **Load Horror objects**
 * ✅ Create loader class for Horrors.json
@@ -46,6 +46,10 @@ All assets included in this repository are either 100% free/open source or made 
     * Pets must have a simple idle animation minimum
 
 **Ritual**
+* ✅ Implement cultist sacrifice
+* Implement cultist selection
+* Implement item selection
+* Implement item sacrifice
 * 🪲 Fix bugs
     * Ritual stats must not drop below 0
     * Player should lose minimum 1 sanity when sacrificing cultists

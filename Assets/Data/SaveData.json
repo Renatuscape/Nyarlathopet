@@ -1,0 +1,214 @@
+{
+    "cultName": "Dummies",
+    "level": 1,
+    "rounds": 0,
+    "funds": 100,
+    "network": 0,
+    "notoriety": 0,
+    "cultLeader": {
+        "name": "Inspector Gregson",
+        "description": "",
+        "type": 0,
+        "magick": 2,
+        "strength": 2,
+        "lore": 2,
+        "sanity": 7,
+        "funds": 12,
+        "origin": "Testlandia"
+    },
+    "cultMembers": [
+        {
+            "name": "Inspector Gregson",
+            "description": "",
+            "type": 0,
+            "magick": 2,
+            "strength": 0,
+            "lore": 0,
+            "sanity": 9,
+            "funds": 3,
+            "origin": "???"
+        },
+        {
+            "name": "Inspector Gregson",
+            "description": "",
+            "type": 0,
+            "magick": 2,
+            "strength": 1,
+            "lore": 1,
+            "sanity": 11,
+            "funds": 3,
+            "origin": "???"
+        },
+        {
+            "name": "Inspector Gregson",
+            "description": "",
+            "type": 0,
+            "magick": 3,
+            "strength": 2,
+            "lore": 1,
+            "sanity": 17,
+            "funds": 10,
+            "origin": "???"
+        },
+        {
+            "name": "Inspector Gregson",
+            "description": "",
+            "type": 0,
+            "magick": 1,
+            "strength": 0,
+            "lore": 1,
+            "sanity": 7,
+            "funds": 4,
+            "origin": "???"
+        },
+        {
+            "name": "Inspector Gregson",
+            "description": "",
+            "type": 0,
+            "magick": 2,
+            "strength": 0,
+            "lore": 2,
+            "sanity": 7,
+            "funds": 5,
+            "origin": "???"
+        },
+        {
+            "name": "Inspector Gregson",
+            "description": "",
+            "type": 0,
+            "magick": 2,
+            "strength": 3,
+            "lore": 1,
+            "sanity": 9,
+            "funds": 12,
+            "origin": "???"
+        }
+    ],
+    "inventory": [
+        {
+            "level": 0,
+            "name": "Random Item of Testing",
+            "type": 0,
+            "magick": 2,
+            "strength": 0,
+            "lore": 0
+        },
+        {
+            "level": 0,
+            "name": "Random Item of Testing",
+            "type": 0,
+            "magick": 0,
+            "strength": 2,
+            "lore": 0
+        },
+        {
+            "level": 0,
+            "name": "Random Item of Testing",
+            "type": 0,
+            "magick": 1,
+            "strength": 1,
+            "lore": 0
+        },
+        {
+            "level": 0,
+            "name": "Random Item of Testing",
+            "type": 0,
+            "magick": 0,
+            "strength": 2,
+            "lore": 0
+        },
+        {
+            "level": 0,
+            "name": "Random Item of Testing",
+            "type": 0,
+            "magick": 1,
+            "strength": 1,
+            "lore": 0
+        },
+        {
+            "level": 0,
+            "name": "Random Item of Testing",
+            "type": 0,
+            "magick": 2,
+            "strength": 0,
+            "lore": 0
+        },
+        {
+            "level": 0,
+            "name": "Random Item of Testing",
+            "type": 0,
+            "magick": 0,
+            "strength": 2,
+            "lore": 0
+        },
+        {
+            "level": 0,
+            "name": "Random Item of Testing",
+            "type": 0,
+            "magick": 1,
+            "strength": 1,
+            "lore": 0
+        },
+        {
+            "level": 0,
+            "name": "Random Item of Testing",
+            "type": 0,
+            "magick": 0,
+            "strength": 2,
+            "lore": 0
+        },
+        {
+            "level": 0,
+            "name": "Random Item of Testing",
+            "type": 0,
+            "magick": 1,
+            "strength": 1,
+            "lore": 0
+        },
+        {
+            "level": 0,
+            "name": "Random Item of Testing",
+            "type": 0,
+            "magick": 0,
+            "strength": 2,
+            "lore": 0
+        },
+        {
+            "level": 0,
+            "name": "Random Item of Testing",
+            "type": 0,
+            "magick": 1,
+            "strength": 1,
+            "lore": 0
+        },
+        {
+            "level": 0,
+            "name": "Random Item of Testing",
+            "type": 0,
+            "magick": 0,
+            "strength": 2,
+            "lore": 0
+        },
+        {
+            "level": 0,
+            "name": "Random Item of Testing",
+            "type": 0,
+            "magick": 1,
+            "strength": 1,
+            "lore": 0
+        }
+    ],
+    "discoveredCreatures": [],
+    "currentPet": {
+        "name": "",
+        "description": "",
+        "type": 0,
+        "id": -1,
+        "rage": 0,
+        "intrigue": 0,
+        "abstraction": 0,
+        "magick": 0,
+        "strength": 0,
+        "sanityLoss": 0
+    }
+}
