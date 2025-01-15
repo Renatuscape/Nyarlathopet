@@ -8,6 +8,7 @@ public class GameplayManager : MonoBehaviour
     public static GameplayManager instance;
     public static PlayerData dummyData; // Refer and make changes to this object instead of Player.Data in the gameplay scene
     public PlayerData dummyDisplay;
+    public RitualManager ritualManager;
     public static int EndeavourPoints { get; private set; }
 
     public HotbarController hotbarController;
@@ -15,6 +16,7 @@ public class GameplayManager : MonoBehaviour
     private void Start()
     {
         Initialise();
+        ritualManager.Initialise();
     }
 
     void Initialise()
@@ -28,13 +30,16 @@ public class GameplayManager : MonoBehaviour
     {
         if (Player.Data != null)
         {
+            Report.Write(name, "Player data was successfully found. Copying to dummy data.");
             dummyData = Player.Data.DeepCopy();
             dummyDisplay = dummyData;
         }
         else // Game is in test mode. Create test data
         {
-            dummyData = new();
-            dummyData.CreateDummyData();
+            Report.Write(name, "Player data was null. Creating dummy data for test mode.");
+            Player.CreateDummyData();
+            dummyData = Player.Data.DeepCopy();
+            dummyDisplay = dummyData;
         }
     }
 
