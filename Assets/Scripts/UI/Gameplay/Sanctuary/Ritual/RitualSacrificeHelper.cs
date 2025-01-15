@@ -4,9 +4,10 @@ using Random = UnityEngine.Random;
 
 public static class RitualSacrificeHelper
 {
-    public static void SacrificeItem(Horror horrorState, Item item, out string report)
+    public static void OfferArtefact(Horror horrorState, Item item, out string report)
     {
         report = "Sacrificed " + item.name + ".\n";
+        GameplayManager.dummyData.inventory.Remove(item);
         int magickIncrease = 0;
         int abstractionIncrease = 0;
         int strengthIncrease = 0;
