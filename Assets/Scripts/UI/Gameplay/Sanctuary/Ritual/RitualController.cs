@@ -28,9 +28,9 @@ public static class RitualController
         }
     }
 
-    public static void SacrificeArtefact(Item item)
+    public static void OfferArtefact()
     {
-        GameplayManager.dummyData.inventory.Remove(item);
+        manager.OfferArtefact();
     }
 
     public static void SacrificeCultist()
@@ -43,5 +43,12 @@ public static class RitualController
         selectedCultist = manager.activeCultist?.human;
 
         return manager.activeCultist != null;
+    }
+
+    internal static bool CheckIfItemSelected(out Item selectedArtefact)
+    {
+        selectedArtefact = manager.activeItem?.item;
+
+        return manager.activeItem != null;
     }
 }
