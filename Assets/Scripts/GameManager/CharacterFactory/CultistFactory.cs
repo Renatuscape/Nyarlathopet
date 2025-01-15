@@ -17,7 +17,8 @@ public static class CultistFactory
             name = RandomNameGenerator.GetRandomHumanName(),
             type = CreatureType.Cultist,
             funds = random.Next(0, (level * 5) + 1),
-            sanity = random.Next(5, (level * 10) + 1)
+            sanity = random.Next(5, (level * 10) + 1),
+            origin = "???"
         };
 
         int skillPoints = level * 2;
