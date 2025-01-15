@@ -22,4 +22,10 @@ public static class Player
     {
         Data = data;
     }
+
+    public static void CreateDummyData()
+    {
+        Data = new();
+        Data.CreateDummyData();
+    }
 }
