@@ -53,6 +53,7 @@ All assets included in this repository are either 100% free/open source or made 
 * 🪲 Fix bugs
     * Ritual stats must not drop below 0
     * Player should lose minimum 1 sanity when sacrificing cultists
+    * !! Fix issue where active cultist/artefact are not nulled out when a sacrifice is completed
 
 **Ledger**
 * ✅ Display leader data
