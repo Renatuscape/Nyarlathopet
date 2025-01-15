@@ -84,7 +84,7 @@ public static class RitualSacrificeHelper
 
     public static void SacrificeCultist(Horror ritualState, Human cultist, out string report)
     {
-
+        int reductionChance = 25;
         GameplayManager.dummyData.cultMembers.Remove(cultist);
         GameplayManager.dummyData.funds += cultist.funds;
 
@@ -109,7 +109,7 @@ public static class RitualSacrificeHelper
 
         if (ritualState.strength < cultist.magick || cultist.magick > 0)
         {
-            if (Random.Range(0, 99) > 49)
+            if (Random.Range(0, 99) > reductionChance)
             {
                 ritualState.magick += cultist.magick;
                 statReport += "MGC+" + cultist.magick + " ";
@@ -123,7 +123,7 @@ public static class RitualSacrificeHelper
 
         if (ritualState.intrigue < cultist.strength || cultist.strength > 0)
         {
-            if (Random.Range(0, 99) > 49)
+            if (Random.Range(0, 99) > reductionChance)
             {
                 ritualState.strength += cultist.strength;
                 statReport += "STR+" + cultist.strength + " ";
@@ -137,7 +137,7 @@ public static class RitualSacrificeHelper
 
         if (cultist.lore > 0)
         {
-            if (ritualState.abstraction < cultist.lore || Random.Range(0, 99) > 49)
+            if (ritualState.abstraction < cultist.lore || Random.Range(0, 99) > reductionChance)
             {
                 ritualState.intrigue += cultist.lore;
                 statReport += "ITR+" + cultist.lore;
