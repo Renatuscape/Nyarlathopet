@@ -3191,6 +3191,7 @@ GameObject:
   - component: {fileID: 423021491}
   - component: {fileID: 423021490}
   - component: {fileID: 423021489}
+  - component: {fileID: 423021492}
   m_Layer: 5
   m_Name: BtnOffer Artefact
   m_TagString: Untagged
@@ -3261,7 +3262,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 423021490}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 423021492}
+        m_TargetAssemblyTypeName: BtnOfferArtefact, Assembly-CSharp
+        m_MethodName: BtnOffer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &423021490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3300,6 +3313,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423021487}
   m_CullTransparentMesh: 1
+--- !u!114 &423021492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423021487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add9c1c6f137b4341b89b3481b175d2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &424371476
 PrefabInstance:
   m_ObjectHideFlags: 0
