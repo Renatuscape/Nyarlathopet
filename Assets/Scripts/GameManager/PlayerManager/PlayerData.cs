@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using static UnityEditor.Progress;
 
 [System.Serializable]
 public class PlayerData
@@ -55,11 +56,27 @@ public class PlayerData
         {
             CultistFactory.GetCultist(1),
             CultistFactory.GetCultist(2),
+            CultistFactory.GetCultist(3),
+            CultistFactory.GetCultist(1),
+            CultistFactory.GetCultist(2),
             CultistFactory.GetCultist(3)
         };
-
-        cultMembers[0].origin = "Testlandia";
-        cultMembers[1].origin = "Constantinope";
-        cultMembers[2].origin = "Nootlevania";
+        inventory = new()
+        {
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 2, strength = 0, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 0, strength = 2, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 1, strength = 1, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 0, strength = 2, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 1, strength = 1, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 2, strength = 0, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 0, strength = 2, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 1, strength = 1, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 0, strength = 2, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 1, strength = 1, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 0, strength = 2, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 1, strength = 1, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 0, strength = 2, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 1, strength = 1, lore = 0 },
+        };
     }
 }
