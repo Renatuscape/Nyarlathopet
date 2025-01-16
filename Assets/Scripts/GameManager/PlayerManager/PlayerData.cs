@@ -13,7 +13,7 @@ public class PlayerData
     public Human cultLeader;    // The current player character
     public List<Human> cultMembers = new();
     public List<Item> inventory = new(); // Holds inventory items, which are randomly generated
-    public List<int> discoveredCreatures = new(); // Holds ID of discovered creatures
+    public List<string> bookOfMasks = new(); // Holds ID of discovered creatures
     public Horror currentPet;
 
     public override string ToString()
@@ -38,7 +38,7 @@ public class PlayerData
         // Simple list copies are sufficient since all contained types are value types or only contain immutable types
         copy.cultMembers = new List<Human>(cultMembers);
         copy.inventory = new List<Item>(inventory);
-        copy.discoveredCreatures = new List<int>(discoveredCreatures);
+        copy.bookOfMasks = new List<string>(bookOfMasks);
 
         return copy;
     }
