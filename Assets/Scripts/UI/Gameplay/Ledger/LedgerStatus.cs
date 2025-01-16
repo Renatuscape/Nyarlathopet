@@ -20,7 +20,7 @@ public class LedgerStatus : MonoBehaviour
         PlayerData d = GameplayManager.dummyData ?? new();
 
         cultStats.text = $"{d.level:D2}\n" +
-            $"{d.discoveredCreatures.Count:D2}\n" +
+            $"{d.bookOfMasks.Count:D2}\n" +
             $"{d.cultMembers.Count:D2}\n" +
             $"{d.network:D2}\n" +
             $"{d.notoriety:D2}\n" +
