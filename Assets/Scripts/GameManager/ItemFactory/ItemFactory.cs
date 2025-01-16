@@ -37,7 +37,7 @@ public static class ItemFactory
             }
             else if (type == 2 && location.hasLore)
             {
-                item.strength++;
+                item.lore++;
                 skillPoints--;
             }
         }
