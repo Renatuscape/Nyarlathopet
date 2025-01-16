@@ -34,7 +34,9 @@ All assets included in this repository are either 100% free/open source or made 
     * Will require separate menu, or even separate scene?
 * Implement worship
 * Implement feeding
+    * Track whether pet was fed this round, and increase rage if it was not. Clearly alert the player
 * Implement communing
+* Decide whether pet activities should consume EP, and consider whether more than 3 EP per round is necessary
 
 **Sanctuary visuals**
 * Add custom graphic for the Book of Masks
@@ -83,6 +85,20 @@ All assets included in this repository are either 100% free/open source or made 
 **Visual updates**
 * Splash screen or animated background
 * Adjust layout to look more like a main menu (reduce displayed info?)
+
+### Game Over Scene
+* Add this to the game
+* Should display some statistics and graphic
+* Handle old data erasure and store some history about the failed cult for a hall of fame
+    * ❓ Scores and scoreboard?
+
+### Event Scene
+For events which occur between rounds, or forced early under certain conditions
+* Promotion of a new leader (leader is insane or otherwise dead/missing)
+    * This condition should force the event scene regardless of remaining EP
+    * ❓ Feature to depose the leader, with better benefits than letting the leader go insane?
+* Attacks by police or investigators (high notoriety)
+* Pet tantrums (high rage)
 
 ### Misc
 **Magick and Occultism**
