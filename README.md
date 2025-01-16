@@ -25,17 +25,23 @@ All assets included in this repository are either 100% free/open source or made 
 * ✅ Create repository
 
 ### Gameplay Scene 👈
+**Round Mechanics**
+* The pet must be fed every round, or rage will increase. Add some incentive as to why the ritual should be commenced as soon as possible
+    * Chance of gaining bonuses during events when a pet is active
+    * Chance of losing cultists, network, or other detrimental effects without a pet
+* Summoning costs max EP and can only be done at the beginning of the round
+
 **Sanctuary**
 * ✅ Toggle info and buttons on/off according to whether a pet exists
 * ✅ Display pet stats if one exists
 * Implement Book of Masks
 * 🔄 Implement summoning
-    * "Begin Ritual" button should start a summoning sequence that consumes items/cultists/own stats and some sanity
-    * Will require separate menu, or even separate scene?
+    * ✅ I"Begin Ritual" button should start a summoning sequence that consumes items/cultists/own stats and some sanity
 * Implement worship
 * Implement feeding
     * Track whether pet was fed this round, and increase rage if it was not. Clearly alert the player
 * Implement communing
+    * Chance of leveling up when stats are high enough and enough masks have been found
 * Decide whether pet activities should consume EP, and consider whether more than 3 EP per round is necessary
 
 **Sanctuary visuals**
@@ -49,13 +55,16 @@ All assets included in this repository are either 100% free/open source or made 
 
 **Ritual**
 * ✅ Implement cultist sacrifice
-* Implement cultist selection
-* Implement item selection
-* Implement item sacrifice
+* ✅ Implement cultist selection
+* ✅ Implement item selection
+* ✅ Implement item sacrifice
 * 🪲 Fix bugs
     * Ritual stats must not drop below 0
     * Player should lose minimum 1 sanity when sacrificing cultists
     * !! Fix issue where active cultist/artefact are not nulled out when a sacrifice is completed
+    * !! Using up all artefacts on page 2 will erroneously show an empty inventory
+    * !! Using up all cultists on page 2 will erroneously show an empty inventory
+    * Sacrificing a cultist will sometimes show the same skill increase twice. Compound values into one
 
 **Ledger**
 * ✅ Display leader data
