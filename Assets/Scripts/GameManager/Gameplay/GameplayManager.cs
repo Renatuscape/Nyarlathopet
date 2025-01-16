@@ -10,6 +10,7 @@ public class GameplayManager : MonoBehaviour
     public PlayerData dummyDisplay;
     public RitualManager ritualManager;
     public static int EndeavourPoints { get; private set; }
+    public const int MaxEndeavourPoints = 3;
 
     public HotbarController hotbarController;
 
@@ -114,7 +115,7 @@ public class GameplayManager : MonoBehaviour
     IEnumerator StartNewRoundAsync()
     {
         yield return SaveManager.SaveDataAsync();
-        EndeavourPoints = 3;
+        EndeavourPoints = MaxEndeavourPoints;
         hotbarController.RefreshForNewRound();
     }
 
