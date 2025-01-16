@@ -2,6 +2,7 @@
 using TMPro;
 using UnityEngine;
 
+// Main functionality of the ritual menu, holds references in the hierarchy and initialises the other components in the scene
 public class RitualManager : MonoBehaviour
 {
     public Canvas ritualCanvas;
@@ -63,6 +64,52 @@ public class RitualManager : MonoBehaviour
         });
 
         // Set up highlight functions
+        cultistSlots.ForEach(slot => slot.button.onClick.AddListener(() => SelectCultist(slot)));
+        itemSlots.ForEach(slot => slot.button.onClick.AddListener(() => SelectItem(slot)));
+    }
+
+    void SelectCultist(HumanUiPrefab selectedPrefab)
+    {
+        if (selectedPrefab == activeCultist)
+        {
+            selectedPrefab.Highlight(false);
+            activeCultist = null;
+        }
+        else
+        {
+            selectedPrefab.Highlight(true);
+            activeCultist = selectedPrefab;
+        }
+
+        cultistSlots.ForEach(slot =>
+        {
+            if (slot != selectedPrefab)
+            {
+                slot.Highlight(false);
+            }
+        });
+    }
+
+    void SelectItem(ItemUiPrefab selectedPrefab)
+    {
+        if (selectedPrefab == activeItem)
+        {
+            selectedPrefab.Highlight(false);
+            activeItem = null;
+        }
+        else
+        {
+            selectedPrefab.Highlight(true);
+            activeItem = selectedPrefab;
+        }
+
+        itemSlots.ForEach(slot =>
+        {
+            if (slot != selectedPrefab)
+            {
+                slot.Highlight(false);
+            }
+        });
     }
 
     void BtnRight(ref int index, int maxIndex, int increment)
@@ -142,27 +189,12 @@ public class RitualManager : MonoBehaviour
 
     void CheckForInsaneCultists()
     {
-        List<Human> insaneCultists = new();
-        GameplayManager.dummyData.cultMembers.ForEach(c =>
-        {
-            if (c.sanity <= 0) { insaneCultists.Add(c); }
-        });
+        RitualController.RemoveInstaneCultists(out var report);
 
-        if (insaneCultists.Count == 1)
+        if (!string.IsNullOrEmpty(report))
         {
-            AlertSystem.Print(insaneCultists[0] + " has gone insane.");
+            AlertSystem.Print(report);
         }
-        else if (insaneCultists.Count > 1)
-        {
-            string alert = "Several cultists have gone insane. You lost ";
-            insaneCultists.ForEach(m => alert += m.name + ", ");
-
-            alert = alert.Trim(' ').Trim(',');
-
-            AlertSystem.Print(alert);
-        }
-
-        insaneCultists.ForEach(c => GameplayManager.dummyData.cultMembers.Remove(c));
     }
 
     void UpdateDisplayedRitualValues()
@@ -178,6 +210,8 @@ public class RitualManager : MonoBehaviour
     {
         Report.Write(name, "Updating displayed cultists.");
         ListHelper.DisplayHumansFromIndex(cultistIndex, GameplayManager.dummyData.cultMembers, cultistSlots, out var isListEmpty);
+        activeCultist = null;
+        cultistSlots.ForEach(slot => slot.Highlight(false));
 
         if (isListEmpty)
         {
@@ -199,6 +233,8 @@ public class RitualManager : MonoBehaviour
     void UpdateItems()
     {
         ListHelper.DisplayItemsFromIndex(itemIndex, GameplayManager.dummyData.inventory, itemSlots, out var isListEmpty);
+        activeItem = null;
+        itemSlots.ForEach(slot => slot.Highlight(false));
 
         if (isListEmpty)
         {
@@ -215,5 +251,12 @@ public class RitualManager : MonoBehaviour
             itemPageination.gameObject.SetActive(true);
             itemPlaceholderText.gameObject.SetActive(false);
         }
+    }
+
+    public void CommenceRitual()
+    {
+        RitualSummonHelper.CommenceRitual(ritualState);
+        ritualCanvas.gameObject.SetActive(false);
+        ResetRitual();
     }
 }
