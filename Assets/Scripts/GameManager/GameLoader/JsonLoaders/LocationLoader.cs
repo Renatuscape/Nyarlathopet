@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class LocationData
+{
+    public Location[] locations;
+}
+
 public class LocationLoader : MonoBehaviour
 {
     [SerializeField] private TextAsset LocationsJSON;
@@ -16,8 +21,9 @@ public class LocationLoader : MonoBehaviour
             yield break;
         }
 
-        HorrorData data = JsonUtility.FromJson<HorrorData>(LocationsJSON.text);
-        // RandomNameGenerator.SortNames(namesData);
+        LocationData data = JsonUtility.FromJson<LocationData>(LocationsJSON.text);
+        Repository.locations = data.locations;
+        Report.Write(name, $"Found {Repository.locations.Length} locations.");
         yield return null;
     }
 }
