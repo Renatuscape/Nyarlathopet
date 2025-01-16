@@ -4,7 +4,7 @@ using UnityEngine;
 public class HorrorData
 {
     public Horror[] pets;
-    public Horror[] nyarlathotep;
+    public Horror[] masks;
 }
 
 public class HorrorLoader : MonoBehaviour
@@ -22,7 +22,11 @@ public class HorrorLoader : MonoBehaviour
         }
 
         HorrorData data = JsonUtility.FromJson<HorrorData>(HorrorsJSON.text);
-        // RandomNameGenerator.SortNames(namesData);
+        Repository.pets = data.pets;
+        Repository.masks = data.masks;
+
+        Report.Write(name, $"Found {Repository.pets.Length} pets.");
+        Report.Write(name, $"Found {Repository.masks.Length} masks.");
         yield return null;
     }
 }
