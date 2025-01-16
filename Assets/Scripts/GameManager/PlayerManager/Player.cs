@@ -27,5 +27,9 @@ public static class Player
     {
         Data = new();
         Data.CreateDummyData();
+
+        if (Repository.pets == null) {
+            Repository.CreateDummyData();
+        }
     }
 }
