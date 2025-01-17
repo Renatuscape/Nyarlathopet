@@ -55,11 +55,22 @@ public static class RitualSummonHelper
             book.Add(pet.id);
             sanLoss = Mathf.CeilToInt(Random.Range(pet.sanityLoss * 0.5f, pet.sanityLoss));
             report += "Upon witnessing an unfamiliar fragment of Nyarlathotep, you are forever altered.";
+
+            if (sanLoss < 1)
+            {
+                sanLoss = 1;
+            }
         }
 
         report += "\nThe ritual empowers you.\n";
 
         int skillPoints = Mathf.CeilToInt(sanLoss * 0.5f);
+
+        if (skillPoints < 1)
+        {
+            skillPoints = 1;
+        }
+
         int magick = 0;
         int strength = 0;
         int lore = 0;
@@ -104,7 +115,8 @@ public static class RitualSummonHelper
         }
 
         RitualController.RemoveInstaneCultists(out report);
-        if (string.IsNullOrEmpty(report))
+
+        if (GameplayManager.dummyData.cultMembers.Count > 0 && string.IsNullOrEmpty(report))
         {
             report = "Your cult members withstand the mental anguish and fall to their knees in frantic worship.";
         }
@@ -120,12 +132,19 @@ public static class RitualSummonHelper
 
             AlertSystem.Force(report, () =>
             {
-                ExecuteCultMemberConsequences(out var memberReport);
+                if (GameplayManager.dummyData.cultMembers.Count > 0)
+                {
+                    ExecuteCultMemberConsequences(out var memberReport);
 
-                AlertSystem.Force(memberReport, () =>
+                    AlertSystem.Force(memberReport, () =>
+                    {
+                        endRound.Invoke();
+                    });
+                }
+                else
                 {
                     endRound.Invoke();
-                });
+                }
             });
         }
         else
