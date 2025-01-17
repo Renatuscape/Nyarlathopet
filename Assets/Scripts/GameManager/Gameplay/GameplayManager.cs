@@ -11,6 +11,7 @@ public class GameplayManager : MonoBehaviour
     public RitualManager ritualManager;
     public static int EndeavourPoints { get; private set; }
     public const int MaxEndeavourPoints = 3;
+    public static bool isPetFed;
 
     public HotbarController hotbarController;
 
@@ -116,6 +117,7 @@ public class GameplayManager : MonoBehaviour
     {
         yield return SaveManager.SaveDataAsync();
         EndeavourPoints = MaxEndeavourPoints;
+        isPetFed = false;
         hotbarController.RefreshForNewRound();
     }
 
