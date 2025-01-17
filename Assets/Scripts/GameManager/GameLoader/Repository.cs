@@ -12,6 +12,16 @@ public static class Repository
         return locations[id];
     }
 
+    public static Location GetLocationByCoordinates((int x, int y) coords)
+    {
+        if (locations == null)
+        {
+            CreateDummyData();
+        }
+
+        return locations.FirstOrDefault(l => l.x == coords.x && l.y == coords.y);
+    }
+
     public static Horror GetHorrorByID(int id)
     {
         var horrors = masks.Concat(pets).ToArray();
