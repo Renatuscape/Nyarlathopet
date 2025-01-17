@@ -1,25 +1,277 @@
 {
-    "locations":[
-        {
-            "name": "Boston",
-            "level": 1,
-            "x": 0,
-            "y": 0,
-            "hasMagick": true,
-            "hasStrength": true,
-            "hasLore": true,
-            "hasMoney": true
-        },
-        {
-            "name": "Prague",
-            "level": 1,
-            "x": 1,
-            "y": 0,
-            "hasMagick": true,
-            "hasStrength": true,
-            "hasLore": true,
-            "hasMoney": true,
-            "isRisky": true
-        }
-    ]
+  "locations": [
+    {
+      "name": "New York",
+      "description": "America's largest city, bustling with jazz and immigrants",
+      "x": 15,
+      "y": 8
+    },
+    {
+      "name": "Boston",
+      "description": "Major port city with occult connections",
+      "x": 16,
+      "y": 7
+    },
+    {
+      "name": "New Orleans",
+      "description": "Port city known for voodoo and jazz",
+      "x": 12,
+      "y": 11
+    },
+    {
+      "name": "San Francisco",
+      "description": "Gateway to the Pacific, Chinatown mysteries",
+      "x": 5,
+      "y": 9
+    },
+    {
+      "name": "Mexico City",
+      "description": "Ancient Aztec capital, revolutionary upheaval",
+      "x": 10,
+      "y": 13
+    },
+    {
+      "name": "Rio de Janeiro",
+      "description": "Brazilian capital, rapidly modernizing",
+      "x": 19,
+      "y": 20
+    },
+    {
+      "name": "Buenos Aires",
+      "description": "Argentina's cosmopolitan capital",
+      "x": 17,
+      "y": 24
+    },
+    {
+      "name": "London",
+      "description": "Heart of the British Empire, occult societies",
+      "x": 25,
+      "y": 6
+    },
+    {
+      "name": "Paris",
+      "description": "French capital, still recovering from the Great War",
+      "x": 26,
+      "y": 7
+    },
+    {
+      "name": "Berlin",
+      "description": "Weimar Republic's capital, expressionist art",
+      "x": 28,
+      "y": 6
+    },
+    {
+      "name": "Vienna",
+      "description": "Former imperial capital, psychological research",
+      "x": 29,
+      "y": 7
+    },
+    {
+      "name": "Prague",
+      "description": "Ancient Bohemian capital, filled with esoteric lore",
+      "x": 28,
+      "y": 7
+    },
+    {
+      "name": "Budapest",
+      "description": "Former co-capital of Austria-Hungary on the Danube",
+      "x": 30,
+      "y": 8
+    },
+    {
+      "name": "Milan",
+      "description": "Industrial heart of northern Italy, Gothic cathedral",
+      "x": 27,
+      "y": 8
+    },
+    {
+      "name": "Rome",
+      "description": "Italian capital, ancient catacombs",
+      "x": 28,
+      "y": 9
+    },
+    {
+      "name": "Constantinople",
+      "description": "Ancient city straddling East and West",
+      "x": 32,
+      "y": 9
+    },
+    {
+      "name": "Cairo",
+      "description": "Egyptian capital, ancient mysteries",
+      "x": 31,
+      "y": 12
+    },
+    {
+      "name": "Mombasa",
+      "description": "East African port city",
+      "x": 33,
+      "y": 17
+    },
+    {
+      "name": "Cape Town",
+      "description": "Southern African colonial port",
+      "x": 29,
+      "y": 24
+    },
+    {
+      "name": "Moscow",
+      "description": "Soviet capital, revolution aftermath",
+      "x": 35,
+      "y": 5
+    },
+    {
+      "name": "Bombay",
+      "description": "British India's major port",
+      "x": 38,
+      "y": 13
+    },
+    {
+      "name": "Calcutta",
+      "description": "Capital of British India",
+      "x": 41,
+      "y": 12
+    },
+    {
+      "name": "Shanghai",
+      "description": "Chinese trading port, international settlement",
+      "x": 45,
+      "y": 11
+    },
+    {
+      "name": "Hong Kong",
+      "description": "British crown colony, trading port",
+      "x": 44,
+      "y": 13
+    },
+    {
+      "name": "Tokyo",
+      "description": "Japanese imperial capital",
+      "x": 48,
+      "y": 10
+    },
+    {
+      "name": "Singapore",
+      "description": "British Straits Settlement trading hub",
+      "x": 42,
+      "y": 17
+    },
+    {
+      "name": "Sydney",
+      "description": "Australian port city",
+      "x": 46,
+      "y": 24
+    },
+    {
+      "name": "Manila",
+      "description": "American colonial capital in the Philippines",
+      "x": 45,
+      "y": 15
+    },
+    {
+        "name": "The Alps",
+        "description": "Ancient mountain range harboring forgotten valleys and isolated villages",
+        "x": 27,
+        "y": 8,
+        "type": "mountain_range"
+      },
+      {
+        "name": "Postojna Cave System",
+        "description": "Vast Slovenian limestone caves with prehistoric human remains",
+        "x": 29,
+        "y": 8,
+        "type": "cave"
+      },
+      {
+        "name": "Black Forest",
+        "description": "Dense German woodland steeped in dark folklore",
+        "x": 27,
+        "y": 7,
+        "type": "forest"
+      },
+      {
+        "name": "Valley of the Kings",
+        "description": "Ancient Egyptian burial grounds with sealed tombs",
+        "x": 31,
+        "y": 13,
+        "type": "archaeological"
+      },
+      {
+        "name": "Mount Athos",
+        "description": "Sacred Greek peninsula with medieval monasteries and forbidden libraries",
+        "x": 31,
+        "y": 10,
+        "type": "religious"
+      },
+      {
+        "name": "Carpathian Mountains",
+        "description": "Mountain range home to ancient folklore and isolated monasteries",
+        "x": 31,
+        "y": 7,
+        "type": "mountain_range"
+      },
+      {
+        "name": "Fingal's Cave",
+        "description": "Sea cave in Scotland formed of hexagonal basalt columns",
+        "x": 24,
+        "y": 5,
+        "type": "cave"
+      },
+      {
+        "name": "Tunguska Impact Site",
+        "description": "Location of the mysterious 1908 explosion in Siberia",
+        "x": 42,
+        "y": 4,
+        "type": "anomaly"
+      },
+      {
+        "name": "Taklamakan Desert",
+        "description": "Treacherous desert with buried ruins of ancient cities",
+        "x": 41,
+        "y": 10,
+        "type": "desert"
+      },
+      {
+        "name": "Aokigahara Forest",
+        "description": "Dense forest at the base of Mount Fuji with magnetic anomalies",
+        "x": 48,
+        "y": 11,
+        "type": "forest"
+      },
+      {
+        "name": "Easter Island",
+        "description": "Remote Pacific island with mysterious stone heads",
+        "x": 8,
+        "y": 22,
+        "type": "archaeological"
+      },
+      {
+        "name": "Nan Madol",
+        "description": "Ancient city built on artificial islands in Micronesia",
+        "x": 47,
+        "y": 16,
+        "type": "ruins"
+      },
+      {
+        "name": "Delphi",
+        "description": "Ancient Greek oracle site with prophetic vapors",
+        "x": 30,
+        "y": 10,
+        "type": "religious"
+      },
+      {
+        "name": "Externsteine",
+        "description": "Mysterious German rock formation with pagan history",
+        "x": 27,
+        "y": 6,
+        "type": "megalith"
+      },
+      {
+        "name": "Newgrange",
+        "description": "Ancient Irish passage tomb older than the pyramids",
+        "x": 23,
+        "y": 6,
+        "type": "megalith"
+      }
+  ]
 }
