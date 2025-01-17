@@ -61,10 +61,13 @@ All assets included in this repository are either 100% free/open source or made 
 * 🪲 Fix bugs
     * Ritual stats must not drop below 0
     * Player should lose minimum 1 sanity when sacrificing cultists
-    * !! Fix issue where active cultist/artefact are not nulled out when a sacrifice is completed
+    * ✅ !! Fix issue where active cultist/artefact are not nulled out when a sacrifice is completed
     * !! Using up all artefacts on page 2 will erroneously show an empty inventory
     * !! Using up all cultists on page 2 will erroneously show an empty inventory
     * Sacrificing a cultist will sometimes show the same skill increase twice. Compound values into one
+    * Do not display cultist reactions when there are no cult members
+    * Ensure that a summoning gives at least one skill point and at least one sanity loss
+    * Summoned pet had 0 rage
 
 **Ledger**
 * ✅ Display leader data
@@ -75,8 +78,8 @@ All assets included in this repository are either 100% free/open source or made 
 * Allow powering up cult members with tomes
 
 **Map**
-* Display locations
-    * Make nodes selectable
+* ✅ Display locations
+    * ✅  Make nodes selectable
     * Display location availability and risk-factor
 * Create exploration controller
     * 📌 Seek Artefacts
