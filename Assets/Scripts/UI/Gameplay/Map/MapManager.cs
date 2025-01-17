@@ -21,13 +21,8 @@ public class MapManager : MonoBehaviour
         btnSeek.onClick.AddListener(() => BtnSeek());
         btnThwart.onClick.AddListener(() => BtnThwart());
         btnRecruit.onClick.AddListener(() => BtnRecruit());
-
-        if (Repository.locations == null)
-        {
-            currentLocation = new() { name = "Amsterdam", hasMagick = true, hasLore = true, hasStrength = true, level = 1 };
-        }
+        currentLocation = null;
     }
-
 
     private void OnEnable()
     {
