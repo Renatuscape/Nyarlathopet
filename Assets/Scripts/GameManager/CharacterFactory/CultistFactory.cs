@@ -28,7 +28,7 @@ public static class CultistFactory
             int randomStat = random.Next(0, 3);
             if (randomStat == 0)
             {
-                cultist.magick++;
+                cultist.occultism++;
             }
             else if (randomStat == 1)
             {
