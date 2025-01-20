@@ -2,7 +2,7 @@
 [System.Serializable]
 public class Location: Entity
 {
-    public int level;           // Player level must be at least this high
+    public int level = 1;           // Player level must be at least this high
 
     public int x;
     public int y;
