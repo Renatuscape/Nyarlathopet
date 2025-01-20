@@ -221,7 +221,7 @@
     {
       "name": "Bombay",
       "description": "British India's major port",
-      "level": 3,
+      "level": 5,
       "isRisky": false,
       "hasMagick": true,
       "hasLore": true,
@@ -232,7 +232,7 @@
     {
       "name": "Calcutta",
       "description": "Capital of British India",
-      "level": 3,
+      "level": 5,
       "isRisky": false,
       "hasMagick": true,
       "hasLore": true,
@@ -243,7 +243,7 @@
     {
       "name": "Shanghai",
       "description": "Chinese trading port, international settlement",
-      "level": 3,
+      "level": 5,
       "isRisky": false,
       "hasMagick": true,
       "hasLore": true,
@@ -254,7 +254,7 @@
     {
       "name": "Hong Kong",
       "description": "British crown colony, trading port",
-      "level": 3,
+      "level": 5,
       "isRisky": false,
       "hasMagick": true,
       "hasLore": true,
@@ -265,7 +265,7 @@
     {
       "name": "Tokyo",
       "description": "Japanese imperial capital",
-      "level": 3,
+      "level": 5,
       "isRisky": false,
       "hasMagick": true,
       "hasLore": true,
@@ -276,7 +276,7 @@
     {
       "name": "Singapore",
       "description": "British Straits Settlement trading hub",
-      "level": 3,
+      "level": 5,
       "isRisky": false,
       "hasMagick": true,
       "hasLore": true,
@@ -316,7 +316,7 @@
         "hasStrength": true,
         "x": 27,
         "y": 8,
-        "type": "mountain_range"
+        "type": "Natural"
       },
       {
         "name": "Postojna Cave System",
@@ -328,7 +328,7 @@
         "hasStrength": true,
         "x": 29,
         "y": 8,
-        "type": "cave"
+        "type": "Archaeology"
       },
       {
         "name": "Black Forest",
@@ -340,7 +340,7 @@
         "hasStrength": true,
         "x": 27,
         "y": 7,
-        "type": "forest"
+        "type": "Natural"
       },
       {
         "name": "Valley of the Kings",
@@ -352,7 +352,7 @@
         "hasStrength": true,
         "x": 31,
         "y": 13,
-        "type": "archaeological"
+        "type": "Archaeology"
       },
       {
         "name": "Mount Athos",
@@ -364,7 +364,7 @@
         "hasStrength": true,
         "x": 31,
         "y": 10,
-        "type": "religious"
+        "type": "Religion"
       },
       {
         "name": "Carpathian Mountains",
@@ -376,7 +376,7 @@
         "hasStrength": true,
         "x": 31,
         "y": 7,
-        "type": "mountain_range"
+        "type": "Natural"
       },
       {
         "name": "Fingal's Cave",
@@ -388,7 +388,7 @@
         "hasStrength": true,
         "x": 24,
         "y": 5,
-        "type": "cave"
+        "type": "Natural"
       },
       {
         "name": "Tunguska Impact Site",
@@ -400,7 +400,7 @@
         "hasStrength": true,
         "x": 42,
         "y": 4,
-        "type": "anomaly"
+        "type": "Landmark"
       },
       {
         "name": "Taklamakan Desert",
@@ -412,7 +412,7 @@
         "hasStrength": true,
         "x": 41,
         "y": 10,
-        "type": "desert"
+        "type": "Archaeology"
       },
       {
         "name": "Aokigahara Forest",
@@ -424,7 +424,7 @@
         "hasStrength": true,
         "x": 48,
         "y": 11,
-        "type": "forest"
+        "type": "Natural"
       },
       {
         "name": "Easter Island",
@@ -436,7 +436,7 @@
         "hasStrength": true,
         "x": 8,
         "y": 22,
-        "type": "archaeological"
+        "type": "Archaeology"
       },
       {
         "name": "Nan Madol",
@@ -448,7 +448,7 @@
         "hasStrength": true,
         "x": 47,
         "y": 16,
-        "type": "ruins"
+        "type": "Archaeology"
       },
       {
         "name": "Delphi",
@@ -460,7 +460,7 @@
         "hasStrength": true,
         "x": 30,
         "y": 10,
-        "type": "religious"
+        "type": "Religion"
       },
       {
         "name": "Externsteine",
@@ -472,7 +472,7 @@
         "hasStrength": true,
         "x": 27,
         "y": 6,
-        "type": "megalith"
+        "type": "Religion"
       },
       {
         "name": "Newgrange",
@@ -484,7 +484,7 @@
         "hasStrength": true,
         "x": 23,
         "y": 6,
-        "type": "megalith"
+        "type": "Archaeology"
       }
   ]
 }
