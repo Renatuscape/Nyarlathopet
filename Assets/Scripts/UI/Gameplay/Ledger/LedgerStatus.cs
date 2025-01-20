@@ -31,7 +31,7 @@ public class LedgerStatus : MonoBehaviour
 
         leaderStats.text = d.cultLeader != null ? $"{d.cultLeader.sanity:D2}\n" +
             $"{d.cultLeader.lore:D2}\n" +
-            $"{d.cultLeader.magick:D2}\n" +
+            $"{d.cultLeader.occultism:D2}\n" +
             $"{d.cultLeader.strength:D2}\n"
             : "00\n00\n00\n00";
     }
