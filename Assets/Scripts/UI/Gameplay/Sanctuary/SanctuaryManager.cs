@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class SanctuaryManager : MonoBehaviour
 {
+    public static SanctuaryManager instance;
     public TextMeshProUGUI petName;
     public TextMeshProUGUI petStats;
 
@@ -14,7 +15,17 @@ public class SanctuaryManager : MonoBehaviour
     public Button btnCommune;
     public Button btnBeginRitual;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void OnEnable()
+    {
+        UpdateDisplay();
+    }
+
+    public void UpdateDisplay()
     {
         if (!string.IsNullOrEmpty(GameplayManager.dummyData?.currentPet?.name))
         {
@@ -34,11 +45,7 @@ public class SanctuaryManager : MonoBehaviour
         btnBeginRitual.gameObject.SetActive(false);
 
         petName.text = pet.name;
-        petStats.text = $"{pet.rage:D2} Rage\n\n\n" +
-                        $"{pet.intrigue:D2} Intrigue\n\n" +
-                        $"{pet.abstraction:D2} Abstraction\n\n" +
-                        $"{pet.strength:D2} Strength\n\n" +
-                        $"{pet.magick:D2} Magick\n\n";
+        petStats.text = pet.GetStatPrintOut(false, true);
         petName.gameObject.SetActive(true);
     }
 
