@@ -33,8 +33,8 @@ public class MapManager : MonoBehaviour
     {
         if (currentLocation != null && !string.IsNullOrEmpty(currentLocation.name))
         {
-            infoTitle.text = (currentLocation.isRisky ? "!" : "") + currentLocation.name + (currentLocation.isRisky ? "!" : "");
-            infoMesh.text = currentLocation.description;
+            infoTitle.text = currentLocation.name;
+            infoMesh.text =  currentLocation.description + $"\n\n{(currentLocation.hasLore ? "LOR+ " : "")}{(currentLocation.hasMagick ? "MGC+ " : "")}{(currentLocation.hasStrength ? "STR+ " : "")}{(currentLocation.isRisky ? "\n\nRisky endeavour!" : "")}";
 
             btnSeek.gameObject.SetActive(true);
             btnRecruit.gameObject.SetActive(true);
