@@ -35,8 +35,11 @@ All assets included in this repository are either 100% free/open source or made 
 * ✅ Toggle info and buttons on/off according to whether a pet exists
 * ✅ Display pet stats if one exists
 * Implement Book of Masks
-* 🔄 Implement summoning
-    * ✅ I"Begin Ritual" button should start a summoning sequence that consumes items/cultists/own stats and some sanity
+* ↪️ Implement summoning
+    * ✅ "Begin Ritual" button should start a summoning sequence that consumes items/cultists/own stats and some sanity
+    * Implement final summoning of the mask
+        * Where should this button go?
+        * When should it become available?
 * Implement worship
 * Implement feeding
     * Track whether pet was fed this round, and increase rage if it was not. Clearly alert the player
@@ -77,17 +80,20 @@ All assets included in this repository are either 100% free/open source or made 
 * Display item icons to indicate their type
 * Allow powering up cult members with tomes
 
-**Map**
+**Map** 🔄 
 * ✅ Display locations
     * ✅  Make nodes selectable
     * Display location availability and risk-factor
 * Create exploration controller
     * 📌 Seek Artefacts
+        * Give options for spending members, network, or funds
     * 📌 Recruit Members
+        * Implement cost
     * 📌 Thwart Enemies
+        * Give options for spending members, network, or funds
 * 🪲 Fix bugs
-    * Notoriety should not drop below 1
-    * Network must be reduced by at least 1
+    * Notoriety should not drop below 1 when thwarting
+    * Network must be reduced by at least 1 when thwarting
 
 ### Loader Scene
 **Visual updates**
