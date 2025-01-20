@@ -26,39 +26,33 @@ public class MapController : MonoBehaviour
         {
             for (int y = 0; y < 45; y++)
             {
-                GameObject cell = Instantiate(cellPrefab, worldMap.transform);
-                RectTransform rectTransform = cell.GetComponent<RectTransform>();
+                var location = Repository.GetLocationByCoordinates((x, y));
 
-                // Position relative to top-left corner
-                rectTransform.anchoredPosition = new Vector2((x * cellSize) + (int)topLeft.x, (-y * cellSize) + (int)topLeft.y);
+                if (location != null)
+                {
+                    GameObject cell = Instantiate(cellPrefab, worldMap.transform);
+                    RectTransform rectTransform = cell.GetComponent<RectTransform>();
 
-                // Set size
-                rectTransform.sizeDelta = new Vector2(cellSize, cellSize);
+                    // Position relative to top-left corner
+                    rectTransform.anchoredPosition = new Vector2((x * cellSize) + (int)topLeft.x, (-y * cellSize) + (int)topLeft.y);
 
-                // Optional: name the cell for debugging
-                cell.name = $"Cell_{x}_{y}";
+                    // Set size
+                    rectTransform.sizeDelta = new Vector2(cellSize, cellSize);
 
-                cells[x, y] = cell;
+                    // Optional: name the cell for debugging
+                    cell.name = $"Cell_{x}_{y}";
 
-                SetUpCell(cell, x, y);
+                    cells[x, y] = cell;
+
+                    SetUpCell(cell, x, y, location);
+                }
             }
         }
     }
 
-    public void SetUpCell(GameObject cell, int x, int y)
+    public void SetUpCell(GameObject cell, int x, int y, Location location)
     {
         var script = cell.GetComponent<MapCellPrefab>();
-
-        var location = Repository.GetLocationByCoordinates((x, y));
-
         script.Initialise(location, (x, y));
-    }
-
-    // Helper method to get cell at specific coordinates
-    public GameObject GetCell(int x, int y)
-    {
-        if (x >= 0 && x < 60 && y >= 0 && y < 45)
-            return cells[x, y];
-        return null;
     }
 }
