@@ -3,174 +3,317 @@
     {
       "name": "New York",
       "description": "America's largest city, bustling with jazz and immigrants",
+      "level": 2,
+      "isRisky": false,
+      "hasMagick": false,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 15,
       "y": 8
     },
     {
       "name": "Boston",
       "description": "Major port city with occult connections",
+      "isRisky": false,
+      "hasMagick": false,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 16,
       "y": 7
     },
     {
       "name": "New Orleans",
       "description": "Port city known for voodoo and jazz",
+      "isRisky": true,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": false,
       "x": 12,
       "y": 11
     },
     {
       "name": "San Francisco",
       "description": "Gateway to the Pacific, Chinatown mysteries",
+      "level": 2,
+      "isRisky": false,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": false,
       "x": 5,
       "y": 9
     },
     {
       "name": "Mexico City",
       "description": "Ancient Aztec capital, revolutionary upheaval",
+      "level": 2,
+      "isRisky": true,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 10,
       "y": 13
     },
     {
       "name": "Rio de Janeiro",
       "description": "Brazilian capital, rapidly modernizing",
+      "level": 3,
+      "isRisky": true,
+      "hasMagick": true,
+      "hasLore": false,
+      "hasStrength": true,
       "x": 19,
       "y": 20
     },
     {
       "name": "Buenos Aires",
       "description": "Argentina's cosmopolitan capital",
+      "level": 3,
+      "isRisky": false,
+      "hasMagick": false,
+      "hasLore": false,
+      "hasStrength": true,
       "x": 17,
       "y": 24
     },
     {
       "name": "London",
       "description": "Heart of the British Empire, occult societies",
+      "level": 2,
+      "isRisky": false,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 25,
       "y": 6
     },
     {
       "name": "Paris",
       "description": "French capital, still recovering from the Great War",
+      "level": 2,
+      "isRisky": false,
+      "hasMagick": true,
+      "hasLore": false,
+      "hasStrength": false,
       "x": 26,
       "y": 7
     },
     {
       "name": "Berlin",
       "description": "Weimar Republic's capital, expressionist art",
+      "level": 2,
+      "isRisky": false,
+      "hasMagick": false,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 28,
       "y": 6
     },
     {
       "name": "Vienna",
       "description": "Former imperial capital, psychological research",
+      "level": 2,
+      "isRisky": true,
+      "hasMagick": false,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 29,
       "y": 7
     },
     {
       "name": "Prague",
       "description": "Ancient Bohemian capital, filled with esoteric lore",
+      "level": 2,
+      "isRisky": true,
+      "hasMagick": false,
+      "hasLore": true,
+      "hasStrength": false,
       "x": 28,
       "y": 7
     },
     {
       "name": "Budapest",
       "description": "Former co-capital of Austria-Hungary on the Danube",
+      "level": 2,
+      "isRisky": true,
+      "hasMagick": false,
+      "hasLore": true,
+      "hasStrength": false,
       "x": 30,
       "y": 8
     },
     {
       "name": "Milan",
       "description": "Industrial heart of northern Italy, Gothic cathedral",
+      "level": 2,
+      "isRisky": false,
+      "hasMagick": false,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 27,
       "y": 8
     },
     {
       "name": "Rome",
       "description": "Italian capital, ancient catacombs",
+      "level": 2,
+      "isRisky": true,
+      "hasMagick": false,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 28,
       "y": 9
     },
     {
       "name": "Constantinople",
       "description": "Ancient city straddling East and West",
+      "level": 2,
+      "isRisky": true,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": false,
       "x": 32,
       "y": 9
     },
     {
       "name": "Cairo",
       "description": "Egyptian capital, ancient mysteries",
+      "level": 3,
+      "isRisky": false,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 31,
       "y": 12
     },
     {
       "name": "Mombasa",
       "description": "East African port city",
+      "level": 4,
+      "isRisky": false,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 33,
       "y": 17
     },
     {
       "name": "Cape Town",
       "description": "Southern African colonial port",
+      "level": 4,
+      "isRisky": true,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 29,
       "y": 24
     },
     {
       "name": "Moscow",
       "description": "Soviet capital, revolution aftermath",
+      "level": 3,
+      "isRisky": false,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 35,
       "y": 5
     },
     {
       "name": "Bombay",
       "description": "British India's major port",
+      "level": 3,
+      "isRisky": false,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 38,
       "y": 13
     },
     {
       "name": "Calcutta",
       "description": "Capital of British India",
+      "level": 3,
+      "isRisky": false,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 41,
       "y": 12
     },
     {
       "name": "Shanghai",
       "description": "Chinese trading port, international settlement",
+      "level": 3,
+      "isRisky": false,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 45,
       "y": 11
     },
     {
       "name": "Hong Kong",
       "description": "British crown colony, trading port",
+      "level": 3,
+      "isRisky": false,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 44,
       "y": 13
     },
     {
       "name": "Tokyo",
       "description": "Japanese imperial capital",
+      "level": 3,
+      "isRisky": false,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 48,
       "y": 10
     },
     {
       "name": "Singapore",
       "description": "British Straits Settlement trading hub",
+      "level": 3,
+      "isRisky": false,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 42,
       "y": 17
     },
     {
       "name": "Sydney",
       "description": "Australian port city",
+      "level": 3,
+      "isRisky": false,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 46,
       "y": 24
     },
     {
       "name": "Manila",
       "description": "American colonial capital in the Philippines",
+      "level": 3,
+      "isRisky": false,
+      "hasMagick": true,
+      "hasLore": true,
+      "hasStrength": true,
       "x": 45,
       "y": 15
     },
     {
         "name": "The Alps",
         "description": "Ancient mountain range harboring forgotten valleys and isolated villages",
+        "level": 3,
+        "isRisky": false,
+        "hasMagick": true,
+        "hasLore": true,
+        "hasStrength": true,
         "x": 27,
         "y": 8,
         "type": "mountain_range"
@@ -178,6 +321,11 @@
       {
         "name": "Postojna Cave System",
         "description": "Vast Slovenian limestone caves with prehistoric human remains",
+        "level": 3,
+        "isRisky": false,
+        "hasMagick": true,
+        "hasLore": true,
+        "hasStrength": true,
         "x": 29,
         "y": 8,
         "type": "cave"
@@ -185,6 +333,11 @@
       {
         "name": "Black Forest",
         "description": "Dense German woodland steeped in dark folklore",
+        "level": 3,
+        "isRisky": false,
+        "hasMagick": true,
+        "hasLore": true,
+        "hasStrength": true,
         "x": 27,
         "y": 7,
         "type": "forest"
@@ -192,6 +345,11 @@
       {
         "name": "Valley of the Kings",
         "description": "Ancient Egyptian burial grounds with sealed tombs",
+        "level": 3,
+        "isRisky": false,
+        "hasMagick": true,
+        "hasLore": true,
+        "hasStrength": true,
         "x": 31,
         "y": 13,
         "type": "archaeological"
@@ -199,6 +357,11 @@
       {
         "name": "Mount Athos",
         "description": "Sacred Greek peninsula with medieval monasteries and forbidden libraries",
+        "level": 3,
+        "isRisky": false,
+        "hasMagick": true,
+        "hasLore": true,
+        "hasStrength": true,
         "x": 31,
         "y": 10,
         "type": "religious"
@@ -206,6 +369,11 @@
       {
         "name": "Carpathian Mountains",
         "description": "Mountain range home to ancient folklore and isolated monasteries",
+        "level": 3,
+        "isRisky": false,
+        "hasMagick": true,
+        "hasLore": true,
+        "hasStrength": true,
         "x": 31,
         "y": 7,
         "type": "mountain_range"
@@ -213,6 +381,11 @@
       {
         "name": "Fingal's Cave",
         "description": "Sea cave in Scotland formed of hexagonal basalt columns",
+        "level": 3,
+        "isRisky": false,
+        "hasMagick": true,
+        "hasLore": true,
+        "hasStrength": true,
         "x": 24,
         "y": 5,
         "type": "cave"
@@ -220,6 +393,11 @@
       {
         "name": "Tunguska Impact Site",
         "description": "Location of the mysterious 1908 explosion in Siberia",
+        "level": 3,
+        "isRisky": false,
+        "hasMagick": true,
+        "hasLore": true,
+        "hasStrength": true,
         "x": 42,
         "y": 4,
         "type": "anomaly"
@@ -227,6 +405,11 @@
       {
         "name": "Taklamakan Desert",
         "description": "Treacherous desert with buried ruins of ancient cities",
+        "level": 3,
+        "isRisky": false,
+        "hasMagick": true,
+        "hasLore": true,
+        "hasStrength": true,
         "x": 41,
         "y": 10,
         "type": "desert"
@@ -234,6 +417,11 @@
       {
         "name": "Aokigahara Forest",
         "description": "Dense forest at the base of Mount Fuji with magnetic anomalies",
+        "level": 3,
+        "isRisky": false,
+        "hasMagick": true,
+        "hasLore": true,
+        "hasStrength": true,
         "x": 48,
         "y": 11,
         "type": "forest"
@@ -241,6 +429,11 @@
       {
         "name": "Easter Island",
         "description": "Remote Pacific island with mysterious stone heads",
+        "level": 3,
+        "isRisky": false,
+        "hasMagick": true,
+        "hasLore": true,
+        "hasStrength": true,
         "x": 8,
         "y": 22,
         "type": "archaeological"
@@ -248,6 +441,11 @@
       {
         "name": "Nan Madol",
         "description": "Ancient city built on artificial islands in Micronesia",
+        "level": 3,
+        "isRisky": false,
+        "hasMagick": true,
+        "hasLore": true,
+        "hasStrength": true,
         "x": 47,
         "y": 16,
         "type": "ruins"
@@ -255,6 +453,11 @@
       {
         "name": "Delphi",
         "description": "Ancient Greek oracle site with prophetic vapors",
+        "level": 3,
+        "isRisky": false,
+        "hasMagick": true,
+        "hasLore": true,
+        "hasStrength": true,
         "x": 30,
         "y": 10,
         "type": "religious"
@@ -262,6 +465,11 @@
       {
         "name": "Externsteine",
         "description": "Mysterious German rock formation with pagan history",
+        "level": 3,
+        "isRisky": false,
+        "hasMagick": true,
+        "hasLore": true,
+        "hasStrength": true,
         "x": 27,
         "y": 6,
         "type": "megalith"
@@ -269,6 +477,11 @@
       {
         "name": "Newgrange",
         "description": "Ancient Irish passage tomb older than the pyramids",
+        "level": 3,
+        "isRisky": false,
+        "hasMagick": true,
+        "hasLore": true,
+        "hasStrength": true,
         "x": 23,
         "y": 6,
         "type": "megalith"
