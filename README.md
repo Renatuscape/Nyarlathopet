@@ -31,7 +31,7 @@ All assets included in this repository are either 100% free/open source or made 
     * Chance of losing cultists, network, or other detrimental effects without a pet
 * Summoning costs max EP and can only be done at the beginning of the round
 
-**Sanctuary**
+**Sanctuary** 🔄 
 * ✅ Toggle info and buttons on/off according to whether a pet exists
 * ✅ Display pet stats if one exists
 * Implement Book of Masks
@@ -41,7 +41,7 @@ All assets included in this repository are either 100% free/open source or made 
         * Where should this button go?
         * When should it become available?
 * Implement worship
-* Implement feeding
+* ✅ Implement feeding
     * Track whether pet was fed this round, and increase rage if it was not. Clearly alert the player
 * Implement communing
     * Chance of leveling up when stats are high enough and enough masks have been found
@@ -80,10 +80,10 @@ All assets included in this repository are either 100% free/open source or made 
 * Display item icons to indicate their type
 * Allow powering up cult members with tomes
 
-**Map** 🔄 
+**Map**
 * ✅ Display locations
     * ✅  Make nodes selectable
-    * Display location availability and risk-factor
+    * ✅  Display location availability and risk-factor
 * Create exploration controller
     * 📌 Seek Artefacts
         * Give options for spending members, network, or funds
