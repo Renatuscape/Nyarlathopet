@@ -27,7 +27,7 @@ public class NewGameManager : MonoBehaviour
     { 
         cultName.text = Player.Data.cultName;
         leaderName.text = Player.Data.cultLeader?.name ?? "";
-        tagStats.text = $"{Player.Data.cultLeader?.magick ?? 0:D2} magick power\r\n\r\n" +
+        tagStats.text = $"{Player.Data.cultLeader?.occultism ?? 0:D2} magick power\r\n\r\n" +
                         $"{Player.Data.cultLeader?.strength ?? 0:D2} physical strength\r\n\r\n" +
                         $"{Player.Data.cultLeader?.lore ?? 0:D2} knowledge of arcane lore";
     }

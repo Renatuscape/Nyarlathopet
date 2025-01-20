@@ -89,7 +89,7 @@ public static class RitualSacrificeHelper
         GameplayManager.dummyData.cultMembers.Remove(cultist);
         GameplayManager.dummyData.funds += cultist.funds;
 
-        int skillPoints = cultist.magick + cultist.strength + cultist.lore;
+        int skillPoints = cultist.occultism + cultist.strength + cultist.lore;
         int cultistLevel = Mathf.FloorToInt(skillPoints * 0.5f);
 
         // STAT INCREASES
@@ -108,17 +108,17 @@ public static class RitualSacrificeHelper
             statReport += "RGE+" + value + " ";
         }
 
-        if (ritualState.strength < cultist.magick || cultist.magick > 0)
+        if (ritualState.strength < cultist.occultism || cultist.occultism > 0)
         {
             if (Random.Range(0, 99) > reductionChance)
             {
-                ritualState.magick += cultist.magick;
-                statReport += "MGC+" + cultist.magick + " ";
+                ritualState.magick += cultist.occultism;
+                statReport += "MGC+" + cultist.occultism + " ";
             }
             else
             {
-                ritualState.strength -= cultist.magick;
-                statReport += "STR-" + cultist.magick + " ";
+                ritualState.strength -= cultist.occultism;
+                statReport += "STR-" + cultist.occultism + " ";
             }
         }
 

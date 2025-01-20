@@ -99,7 +99,7 @@ public static class RitualSummonHelper
         report += $"SAN-{sanLoss} MGC+{magick} STR+{strength} LOR+{lore}";
 
         GameplayManager.dummyData.cultLeader.sanity -= sanLoss;
-        GameplayManager.dummyData.cultLeader.magick += magick;
+        GameplayManager.dummyData.cultLeader.occultism += magick;
         GameplayManager.dummyData.cultLeader.strength += strength;
         GameplayManager.dummyData.cultLeader.lore += lore;
     }

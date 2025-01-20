@@ -30,6 +30,6 @@ public class HumanUiPrefab : MonoBehaviour
         originText.text = human.origin;
         fundsText.text = $"Funds:{human.funds:D2}";
         statText.text = $"SAN:{human.sanity:D2} LOR:{human.lore:D2}\n" +
-                        $"STR:{human.strength:D2} MGC:{human.magick:D2}";
+                        $"STR:{human.strength:D2} MGC:{human.occultism:D2}";
     }
 }
