@@ -86,6 +86,12 @@ public static class ExplorationManager
 
         Human cultist = CultistFactory.GetCultist(currentLocation.level);
         cultist.origin = currentLocation.name;
+
+        if (currentLocation.hasMoney)
+        {
+            cultist.funds = cultist.funds * 3;
+        }
+
         GameplayManager.dummyData.cultMembers.Add(cultist);
 
         AlertSystem.Force($"{cultist.name} joined your cult.", () =>
