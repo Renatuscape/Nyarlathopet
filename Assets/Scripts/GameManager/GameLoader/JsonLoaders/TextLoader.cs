@@ -32,8 +32,8 @@ public class TextLoader : MonoBehaviour
 
         // Use JsonConvert instead of JsonUtility to ensure enums are correctly loaded
         TextData data = JsonConvert.DeserializeObject<TextData>(textFile.text);
-        Repository.text = data;
-        Report.Write(name, $"Found {Repository.text.entries.Count} text entries in {Repository.text.language}.");
+        Repository.displayText = data;
+        Report.Write(name, $"Found {Repository.displayText.entries.Count} text entries in {Repository.displayText.language}.");
         yield return null;
     }
 }
