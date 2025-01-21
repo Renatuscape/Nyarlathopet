@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class GameLoader : MonoBehaviour
     public SaveDataLoader saveDataLoader;
     public HorrorLoader horrorLoader;
     public LocationLoader locationLoader;
+    public TextLoader textLoader;
     public TextMeshProUGUI loaderDescription;
 
     void Start()
@@ -24,27 +26,42 @@ public class GameLoader : MonoBehaviour
     {
         // Set up loadbar
         loadBar.value = 0;
-        loadBar.maxValue = 4; // Should equal amount of loaders. Find way to automate this
+        loadBar.maxValue = 6; // Should equal amount of loaders. Find way to automate this
 
         // Load components
-        loaderDescription.text = "Finding locations ...";
+        yield return StartCoroutine(saveDataLoader.LoadData());
+        Report.Write(name, "Loaded save data from JSON.");
+        loadBar.value++;
+
+        // Set language from save file
+        if (Enum.TryParse(Player.Data.language, out Language languageSetting))
+        {
+            GlobalSettings.language = languageSetting;
+        }
+        else
+        {
+            Report.Write(name, "Unable to parse language setting from file. Defaulting to English.");
+            GlobalSettings.language = Language.English;
+        }
+
+        yield return StartCoroutine(textLoader.LoadData());
+        Report.Write(name, "Loaded text from JSON in " + GlobalSettings.language);
+        loadBar.value++;
+
+        loaderDescription.text = Repository.GetText("LOAD0");
+        //loaderDescription.text = "Finding locations ...";
         yield return StartCoroutine(locationLoader.LoadData());
         Report.Write(name, "Loaded locations from JSON.");
         loadBar.value++;
 
-        loaderDescription.text = "Perceiving horrors ...";
-        yield return StartCoroutine(horrorLoader.LoadData());
-        Report.Write(name, "Loaded horrors from JSON.");
-        loadBar.value++;
-
-        loaderDescription.text = "Transcribing human names ...";
+        //loaderDescription.text = "Transcribing human names ...";
         yield return StartCoroutine(randomNameLoader.LoadData());
         Report.Write(name, "Loaded human names from JSON.");
         loadBar.value++;
 
-        loaderDescription.text = "Fetching cult records ...";
-        yield return StartCoroutine(saveDataLoader.LoadData());
-        Report.Write(name, "Loaded save data from JSON.");
+        //loaderDescription.text = "Perceiving horrors ...";
+        yield return StartCoroutine(horrorLoader.LoadData());
+        Report.Write(name, "Loaded horrors from JSON.");
         loadBar.value++;
 
         yield return new WaitForSeconds(1); // emulate loading. Replace with real loader
