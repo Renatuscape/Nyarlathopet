@@ -9,19 +9,19 @@ public static class ExplorationManager
         Item item = ItemFactory.GenerateItemFromLocation(location);
         GameplayManager.dummyData.inventory.Add(item);
 
-        string alertMessage = $"You obtained {item.name}.";
+        string alertMessage = $"{Repository.GetText("EXP-A0")} {item.name}.";
         int networkGain = Random.Range(0, item.level + 1);
         int notorietyGain = Random.Range(0, item.level + 1);
 
         if (networkGain > 0)
         {
-            alertMessage += $"\nYour endeavours improved your network by " + networkGain;
+            alertMessage += $"\n{Repository.GetText("EXP-A1")} " + networkGain;
             GameplayManager.dummyData.network += networkGain;
         }
 
         if (notorietyGain > 0)
         {
-            alertMessage += $"\nThose who would seek to stop you have taken notice. Notoriety increased by " + notorietyGain;
+            alertMessage += $"\n{Repository.GetText("EXP-A2")} " + notorietyGain;
             GameplayManager.dummyData.notoriety += notorietyGain;
         }
 
@@ -37,13 +37,13 @@ public static class ExplorationManager
 
         if (GameplayManager.dummyData.notoriety < 1)
         {
-            AlertSystem.Print("You do not yet have any notoriety, and therefore no enemies.");
+            AlertSystem.Print(Repository.GetText("EXP-T0"));
         }
         else
         {
             int maxReduction = Mathf.FloorToInt(GameplayManager.dummyData.notoriety * 0.75f);
             int reduction = Random.Range(1, maxReduction) + GameplayManager.dummyData.level;
-            string alertMessage = $"You reduced your notoriety by {reduction}.";
+            string alertMessage = $"{Repository.GetText("EXP-T1")} {reduction}.";
 
             GameplayManager.dummyData.notoriety -= reduction;
             int startingNetwork = GameplayManager.dummyData.network;
@@ -56,7 +56,7 @@ public static class ExplorationManager
                 if (GameplayManager.dummyData.cultMembers.Count > 1)
                 {
                     Human cultist = GameplayManager.dummyData.cultMembers[Random.Range(0, GameplayManager.dummyData.cultMembers.Count)];
-                    alertMessage += $"\n{cultist.name} was lost to the enemy.";
+                    alertMessage += $"\n{cultist.name} {Repository.GetText("EXP-T2")}";
                     GameplayManager.dummyData.cultMembers.Remove(cultist);
                 }
                 else
@@ -70,7 +70,7 @@ public static class ExplorationManager
                 currentNetwork = startingNetwork - 1;
             }
 
-            alertMessage += $"\nYour network decreased by " + (startingNetwork - currentNetwork);
+            alertMessage += $"\n{Repository.GetText("EXP-T3")} {startingNetwork - currentNetwork}";
 
             AlertSystem.Force(alertMessage, () =>
             {
@@ -94,7 +94,7 @@ public static class ExplorationManager
 
         GameplayManager.dummyData.cultMembers.Add(cultist);
 
-        AlertSystem.Force($"{cultist.name} joined your cult.", () =>
+        AlertSystem.Force($"{cultist.name} {Repository.GetText("EXP-R0")}", () =>
         {
             HandleEndeavourPoints();
         });
