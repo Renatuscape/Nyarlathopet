@@ -4,7 +4,7 @@ public class BtnCommenceRitual : MonoBehaviour
 {
     public void BtnCommence()
     {
-        AlertSystem.Prompt("Commence the summoning with these offerings and sacrifices?", () =>
+        AlertSystem.Prompt(Repository.GetText("RIT-COMM"), () =>
         {
             RitualController.CommenceRitual();
         });
