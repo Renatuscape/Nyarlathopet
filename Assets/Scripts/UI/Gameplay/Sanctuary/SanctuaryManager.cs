@@ -53,7 +53,7 @@ public class SanctuaryManager : MonoBehaviour
     {
         petName.gameObject.SetActive(false);
         
-        petStats.text = "The sanctuary is ready for a summoning.";
+        petStats.text = Repository.GetText("SAN-READY");
 
         btnFeed.gameObject.SetActive(false);
         btnWorship.gameObject.SetActive(false);
