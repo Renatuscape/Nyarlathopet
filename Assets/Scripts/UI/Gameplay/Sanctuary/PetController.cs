@@ -7,11 +7,11 @@ public static class PetController
     {
         if (GameplayManager.dummyData.cultMembers.Count < 1)
         {
-            AlertSystem.Print("You have no cult members to sacrifice.");
+            AlertSystem.Print(Repository.GetText("PET-F0"));
         }
         if (GameplayManager.isPetFed)
         {
-            AlertSystem.Prompt($"You already fed your {GameplayManager.dummyData.currentPet.name} this month. Feed again?", () =>
+            AlertSystem.Prompt($"{Repository.GetText("PET-F1A")} {GameplayManager.dummyData.currentPet.name} {Repository.GetText("PET-F1B")}", () =>
             {
                 ConfirmVolunteer();
             });
@@ -26,7 +26,7 @@ public static class PetController
     {
         var volunteer = FindSacrifice();
 
-        AlertSystem.Prompt($"{volunteer.name} has volunteered.\n{volunteer.GetStatPrintOut(true, false)}\n\nProceed?", () =>
+        AlertSystem.Prompt($"{volunteer.name} {Repository.GetText("PET-F2A")}\n{volunteer.GetStatPrintOut(true, false)}\n\n{Repository.GetText("PET-F2B")}", () =>
         {
             ExecuteFeeding(volunteer);
         });
@@ -41,7 +41,7 @@ public static class PetController
         var changes = StatConverter.ConvertHumanToCreatureStats(volunteer, 0);
         var report = StatConverter.CreateCreatureStatChangeReport(changes, true);
 
-        AlertSystem.Print($"{GameplayManager.dummyData.currentPet.name} consumed {volunteer.name}.\n" + report);
+        AlertSystem.Print($"{GameplayManager.dummyData.currentPet.name} {Repository.GetText("PET-F3")} {volunteer.name}.\n" + report);
 
         GameplayManager.dummyData.currentPet.ApplyStatChanges(changes);
         SanctuaryManager.instance.UpdateDisplay();
