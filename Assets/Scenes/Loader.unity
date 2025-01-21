@@ -478,6 +478,7 @@ GameObject:
   - component: {fileID: 594887376}
   - component: {fileID: 594887378}
   - component: {fileID: 594887377}
+  - component: {fileID: 594887379}
   m_Layer: 0
   m_Name: Loader
   m_TagString: Untagged
@@ -517,6 +518,7 @@ MonoBehaviour:
   saveDataLoader: {fileID: 594887375}
   horrorLoader: {fileID: 594887378}
   locationLoader: {fileID: 594887377}
+  textLoader: {fileID: 594887379}
   loaderDescription: {fileID: 1601360454}
 --- !u!114 &594887375
 MonoBehaviour:
@@ -570,6 +572,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HorrorsJSON: {fileID: 4900000, guid: 5a806ae4e1b8bf8488ab125c13d8293c, type: 3}
+--- !u!114 &594887379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594887371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d9b147ac9e12bc4bafc5968aa57f8dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textJsonList:
+  - {fileID: 4900000, guid: 01d77f119cd2c1b449905c8b6eafb561, type: 3}
+  - {fileID: 4900000, guid: a659858744e474a48bf4594e811edb39, type: 3}
 --- !u!1 &972965592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,7 +1202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Loading...
+  m_text: "\u2591\u2342\u27C5\u27C6\u2254\u0489\u0487\u2A02\u2593\u046A\u20AA\u2021\u2588\xA4\u2588\u2592\xA5\u2020\u2021\xB6\xA7\xB5\xF7\xA3\xA2\xA4\u20AA"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b3388538d3d12f64e99af2bbce46914e, type: 2}
   m_sharedMaterial: {fileID: -6512651846369728620, guid: b3388538d3d12f64e99af2bbce46914e, type: 2}
