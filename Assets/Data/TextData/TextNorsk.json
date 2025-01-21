@@ -1,0 +1,33 @@
+{
+  "language": "Norsk",
+  "entries": [
+    ["LOAD0", "Oversetter de antikke tekster ..."],
+    ["ALERT-QUIT", "AVSLUTT SPILL?\nSpillet blir lagret på starten av en ny måned. Alt som ikke er lagret vil gå tapt."],
+    
+    ["RIT-ERR", "Påkallingen kan bare igangsettes på starten av en ny måned, når himmellegmene er i riktig stilling.\nPrøv igjen når du har"],
+    ["RIT-ABORT", "FORKAST ALL FREMGANG OG AVBRYT RITUALET?\nAlle ansamlede krefter vil gå tapt. Dine ofre vil være bortkastet."],
+    ["RIT-COMM", "Begynn påkallingen med disse offergavene?"],
+
+    ["SAN-READY", "Kapellet er klart for en ny påkallelse."],
+    
+    ["SACR0", "Ofret"],
+    ["SACR1", "er ofret. Din fornuft reduseres med"],
+    ["SACR2", "Dine kultmedlemer lider også."],
+    
+    ["PET-F0", "Du har ingen kultmedlemer å ofre."],
+    ["PET-F1A", "Du har allerede fôret din"],
+    ["PET-F1B", "denne måneden. Fôr igjen?"],
+    ["PET-F2A", "har meldt seg frivillig."],
+    ["PET-F2B", "Fortsett?"],
+    ["PET-F3", "konsumerte"],
+
+    ["EXP-A0", "Du fant"],
+    ["EXP-A1", "Dine beskjeftigelser forbedret ditt nettverk med"],
+    ["EXP-A2", "De som ønsker å stoppe deg har merket dine aktiviteter. Berømmelse økte med"],
+    ["EXP-T0", "Du har ikke nevneverdig berømmelse. Du har ingen fiender å motarbeide."],
+    ["EXP-T1", "Din berømmelse reduseres med"],
+    ["EXP-T2", "taptes til fienden."],
+    ["EXP-T3", "Ditt nettverk økte med"],
+    ["EXP-R0", "sluttet seg til din kult."]
+  ]
+}
