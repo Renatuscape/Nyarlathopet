@@ -11,7 +11,7 @@ public class BtnEnableRitualMenu : MonoBehaviour
         }
         else
         {
-            AlertSystem.Print($"The summoning ritual must commence at the beginning of a new month, when the moon and stars are correct.\nReturn when you have {GameplayManager.MaxEndeavourPoints} EP.");
+            AlertSystem.Print($"{Repository.GetText("RIT-ERR")} {GameplayManager.MaxEndeavourPoints} EP.");
         }
     }
 }
