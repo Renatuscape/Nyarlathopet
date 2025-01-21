@@ -3,9 +3,22 @@ using System.Linq;
 
 public static class Repository
 {
+    public static TextData displayText;
     public static Location[] locations;
     public static Horror[] masks;
     public static Horror[] pets;
+
+    public static string GetText(string tag)
+    {
+        var entry = displayText.entries.FirstOrDefault(e => e[0] == tag);
+
+        if (entry == null)
+        {
+            Report.Write("Repository", tag + " returned null from " + displayText.language);
+        }
+
+        return entry != null ? entry[1] : "▓║▓┤▓░▓";
+    }
 
     public static Location GetLocationByID(int id)
     {
