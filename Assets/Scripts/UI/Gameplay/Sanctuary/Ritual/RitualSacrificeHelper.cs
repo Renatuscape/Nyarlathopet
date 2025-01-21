@@ -6,7 +6,7 @@ public static class RitualSacrificeHelper
 {
     public static void OfferArtefact(Horror horrorState, Item item, out string report)
     {
-        report = "Sacrificed " + item.name + ".\n";
+        report = $"{Repository.GetText("SACR0")} " + item.name + ".\n";
         GameplayManager.dummyData.inventory.Remove(item);
         int magickIncrease = 0;
         int abstractionIncrease = 0;
@@ -166,6 +166,6 @@ public static class RitualSacrificeHelper
         }
 
         // Display results
-        report = $"The sacrifice of {cultist.name} reduces your sanity by {sanityLossLeader}.{(totalMemberSanityLoss > 0 ? "\nYour cultists have also suffered." : "")}\n{statReport}";
+        report = $"{cultist.name} {Repository.GetText("SACR1")} {sanityLossLeader}.{(totalMemberSanityLoss > 0 ? $"\n{Repository.GetText("SACR2")}" : "")}\n{statReport}";
     }
 }
