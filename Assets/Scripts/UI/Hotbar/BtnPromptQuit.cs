@@ -6,7 +6,7 @@ public class BtnQuitApplicaiton : MonoBehaviour
 {
     public void BtnPromptQuit()
     {
-        AlertSystem.Prompt("Quit game?\nProgress is saved at the start of a new month. Any unsaved progress will be lost.",
+        AlertSystem.Prompt(Repository.GetText("ALERT-QUIT"),
             () =>
             {
                 DebugManager.WriteDebugSessionLog(true);
