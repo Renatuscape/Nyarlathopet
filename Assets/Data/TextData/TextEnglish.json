@@ -1,0 +1,33 @@
+{
+  "language": "English",
+  "entries": [
+    ["LOAD0", "Transcribing the ancient texts ..."],
+    ["ALERT-QUIT", "QUIT GAME?\nProgress is saved at the start of a new month. Any unsaved progress will be lost."],
+    
+    ["RIT-ERR", "The summoning ritual must commence at the beginning of a new month, when the moon and stars are correct.\nReturn when you have"],
+    ["RIT-ABORT", "ABANDON PROGRESS AND ABORT RITUAL?\nAll amassed power will be lost. Any sacrifices made will be for naught."],
+    ["RIT-COMM", "Commence the summoning with these sacrificial offerings?"],
+
+    ["SAN-READY", "The sanctuary is ready for a summoning."],
+    
+    ["SACR0", "Sacrificed"],
+    ["SACR1", "is sacrificed. Your sanity is reduced by"],
+    ["SACR2", "Your cultists have also suffered."],
+    
+    ["PET-F0", "You have no cult members to sacrifice."],
+    ["PET-F1A", "You already fed your"],
+    ["PET-F1B", "this month. Feed again?"],
+    ["PET-F2A", "has volunteered."],
+    ["PET-F2B", "Proceed?"],
+    ["PET-F3", "consumed"],
+
+    ["EXP-A0", "You obtained"],
+    ["EXP-A1", "Your endeavours improved your network by"],
+    ["EXP-A2", "Those who would seek to stop you have taken notice. Notoriety increased by"],
+    ["EXP-T0", "You do not yet have any notoriety, and therefore no enemies."],
+    ["EXP-T1", "You reduced your notoriety by"],
+    ["EXP-T2", "was lost to the enemy."],
+    ["EXP-T3", "Your network decreased by"],
+    ["EXP-R0", "joined your cult."]
+  ]
+}
