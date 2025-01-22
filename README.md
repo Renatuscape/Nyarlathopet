@@ -10,9 +10,9 @@ All assets included in this repository are either 100% free/open source or made 
 ## To Do
 ### Data from JSON
 ↪️ All interface text and alerts should be stored in JSON
-* Create loader class for UiText[Language].json
-* Create repository for text snippets and their ID
-* Implement use of the text repository across all classes that display text
+* ✅ Create loader class for Text[Language].json
+* ✅ Create repository for text snippets and their ID
+* 🔄 Implement use of the text repository across all classes that display text
 
 **Load Horror objects**
 * ✅ Create loader class for Horrors.json
@@ -112,11 +112,16 @@ All assets included in this repository are either 100% free/open source or made 
 
 ### Event Scene
 For events which occur between rounds, or forced early under certain conditions
-* Promotion of a new leader (leader is insane or otherwise dead/missing)
-    * This condition should force the event scene regardless of remaining EP
+* Create framework for handling events
+    * Method for building event queue
+    * ✅ Library for holding event data
+    * ✅ Methods for managing event queue
+* Event methods
+    * Promotion of a new leader (leader is insane or otherwise dead/missing)
+        * This condition should force the event scene regardless of remaining EP
     * ❓ Feature to depose the leader, with better benefits than letting the leader go insane?
-* Attacks by police or investigators (high notoriety)
-* Pet tantrums (high rage)
+    * Attacks by police or investigators (high notoriety)
+    * Pet tantrums (high rage)
 
 ### Misc
 **Magick and Occultism**
