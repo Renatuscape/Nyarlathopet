@@ -1202,7 +1202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u2591\u2342\u27C5\u27C6\u2254\u0489\u0487\u2A02\u2593\u046A\u20AA\u2021\u2588\xA4\u2588\u2592\xA5\u2020\u2021\xB6\xA7\xB5\xF7\xA3\xA2\xA4\u20AA"
+  m_text: "\u2591\u2593\u2591\u0489\u0487\u2591\u046A\u20AA\u2021\u2588\xA4\u2588\u2592\xA5\u2020\u2021\xB6\xA7\xB5\xF7\xA3\xA2\xA4\u20AA"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b3388538d3d12f64e99af2bbce46914e, type: 2}
   m_sharedMaterial: {fileID: -6512651846369728620, guid: b3388538d3d12f64e99af2bbce46914e, type: 2}
