@@ -7,7 +7,6 @@ public class GameplayManager : MonoBehaviour
 {
     public static GameplayManager instance;
     public static PlayerData dummyData; // Refer and make changes to this object instead of Player.Data in the gameplay scene
-    public PlayerData dummyDisplay;
     public RitualManager ritualManager;
     public static int EndeavourPoints { get; private set; }
     public const int MaxEndeavourPoints = 3;
@@ -34,14 +33,12 @@ public class GameplayManager : MonoBehaviour
         {
             Report.Write(name, "Player data was successfully found. Copying to dummy data.");
             dummyData = Player.Data.DeepCopy();
-            dummyDisplay = dummyData;
         }
         else // Game is in test mode. Create test data
         {
             Report.Write(name, "Player data was null. Creating dummy data for test mode.");
             Player.CreateDummyData();
             dummyData = Player.Data.DeepCopy();
-            dummyDisplay = dummyData;
         }
     }
 
@@ -61,29 +58,50 @@ public class GameplayManager : MonoBehaviour
 
         if (CheckIfGameOver())
         {
-            Report.Write(name, "Executing game over routine.");
+            RunGameOverRoutine();
+        }
+        else
+        {
+            EventController.InitiateNormalSequence();
+        }
+    }
 
-            // Load GameOver scene
+    void RunGameOverRoutine()
+    {
+        Report.Write(name, "Executing game over routine.");
 
-            // Placeholder until GameOver scene is ready
+        // Load GameOver scene
+
+        // Placeholder until GameOver scene is ready
+        {
+            Player.SetPlayerData(null);
+            AlertSystem.Force(Repository.GetText("END-DEAD"), () =>
             {
-                Player.SetPlayerData(null);
-                AlertSystem.Force("YOU ARE DEAD.", () =>
-                {
-                    SceneManager.LoadScene("NewGame");
-                });
-            }
+                SceneManager.LoadScene("NewGame");
+            });
+        }
+    }
+    void CheckNewRoundConditions()
+    {
+        Report.Write(name, "Checking if game is over.");
+
+        if (CheckIfGameOver())
+        {
+            RunGameOverRoutine();
         }
         // Check if a promotion is needed to replace the old leader
         else
         {
             // Exchange for an event scene once round logic has been properly implemented
-            AlertSystem.Force($"YOU SURVIVED THE MONTH.\n{DateCalculator.GetGameDate(dummyData.rounds)}", () =>
+            string roundReport = (dummyData.currentPet == null || isPetFed) ? Repository.GetText("ROUND-CLEAR0") : $"{Repository.GetText("ROUND-CLEAR1A")} {dummyData.currentPet.name}{Repository.GetText("ROUND-CLEAR1B")}";
+
+            AlertSystem.Force($"{roundReport}\n{DateCalculator.GetGameDate(dummyData.rounds)}", () =>
             {
                 StartNewRound();
             });
         }
     }
+
 
     void StartNewRound()
     {
@@ -135,6 +153,11 @@ public class GameplayManager : MonoBehaviour
     public static void EndRound() // Are there instances besides EP loss that need to end a round?
     {
         instance.RunEndRoundRoutine();
+    }
+
+    public static void AttemptNewRound()
+    {
+        instance.CheckNewRoundConditions();
     }
 
     public static void SubtractEndeavourPoints(int amount)
