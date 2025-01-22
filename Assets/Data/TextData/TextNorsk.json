@@ -4,6 +4,13 @@
     ["LOAD0", "Oversetter de antikke tekster ..."],
     ["ALERT-QUIT", "AVSLUTT SPILL?\nSpillet blir lagret på starten av en ny måned. Alt som ikke er lagret vil gå tapt."],
     
+    ["ROUND-CLEAR0", "DU OVERLEVDE MÅNEDEN."],
+    ["ROUND-CLEAR1A", "DU OVERLEVDE MÅNEDEN.\nMen du fôret ikke din"],
+    ["ROUND-CLEAR1B", ". Dens vrede vokser."],
+
+    ["END-DEAD", "DU ER DØD."],
+    ["END-INSANE", "DU ER PERMANENT SINSSYK."],
+
     ["RIT-ERR", "Påkallingen kan bare igangsettes på starten av en ny måned, når himmellegmene er i riktig stilling.\nPrøv igjen når du har"],
     ["RIT-ABORT", "FORKAST ALL FREMGANG OG AVBRYT RITUALET?\nAlle ansamlede krefter vil gå tapt. Dine ofre vil være bortkastet."],
     ["RIT-COMM", "Begynn påkallingen med disse offergavene?"],

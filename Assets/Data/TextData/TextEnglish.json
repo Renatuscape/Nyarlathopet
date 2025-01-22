@@ -4,6 +4,13 @@
     ["LOAD0", "Transcribing the ancient texts ..."],
     ["ALERT-QUIT", "QUIT GAME?\nProgress is saved at the start of a new month. Any unsaved progress will be lost."],
     
+    ["ROUND-CLEAR0", "YOU SURVIVED THE MONTH."],
+    ["ROUND-CLEAR1A", "YOU SURVIVED THE MONTH.\nBut you have neglected to feed your"],
+    ["ROUND-CLEAR1B", ". Its rage grows."],
+
+    ["END-DEAD", "YOU ARE DEAD."],
+    ["END-INSANE", "YOU ARE PERMANENTLY INSANE."],
+
     ["RIT-ERR", "The summoning ritual must commence at the beginning of a new month, when the moon and stars are correct.\nReturn when you have"],
     ["RIT-ABORT", "ABANDON PROGRESS AND ABORT RITUAL?\nAll amassed power will be lost. Any sacrifices made will be for naught."],
     ["RIT-COMM", "Commence the summoning with these sacrificial offerings?"],
