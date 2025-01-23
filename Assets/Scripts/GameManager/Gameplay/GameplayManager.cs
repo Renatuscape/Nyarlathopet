@@ -74,29 +74,22 @@ public class GameplayManager : MonoBehaviour
     }
     void CheckNewRoundConditions()
     {
-        Report.Write(name, "Checking if game is over.");
+        Report.Write("GameplayManager", "Checking if game is over.");
 
         if (CheckIfGameOver())
         {
             RunGameOverRoutine();
         }
-        // Check if a promotion is needed to replace the old leader
         else
         {
-            // Exchange for an event scene once round logic has been properly implemented
-            string roundReport = (dummyData.currentPet == null || isPetFed) ? Repository.GetText("ROUND-CLEAR0") : $"{Repository.GetText("ROUND-CLEAR1A")} {dummyData.currentPet.name}{Repository.GetText("ROUND-CLEAR1B")}";
-
-            AlertSystem.Force($"{roundReport}\n{DateCalculator.GetGameDate(dummyData.rounds)}", () =>
-            {
-                StartNewRound();
-            });
+            StartNewRound();
         }
     }
 
 
     void StartNewRound()
     {
-        Report.Write(name, "Starting new round.");
+        Report.Write("GameplayManager", "Starting new round.");
         StartCoroutine(StartNewRoundAsync());
     }
 
@@ -104,7 +97,7 @@ public class GameplayManager : MonoBehaviour
     {
         if (!IsLeaderSane() && Player.Data.cultMembers.Count < 1)
         {
-            Report.Write(name, "Cult leader is insane, and there are no cultists left to assume their position.");
+            Report.Write("GameplayManager", "Cult leader is insane, and there are no cultists left to assume their position.");
             return true;
         }
 
@@ -115,10 +108,10 @@ public class GameplayManager : MonoBehaviour
     {
         if (Player.Data?.cultLeader?.sanity < 1)
         {
-            Report.Write(name, "Cult leader has gone insane with a sanity of " + Player.Data.cultLeader.sanity);
+            Report.Write("GameplayManager", "Cult leader has gone insane with a sanity of " + Player.Data.cultLeader.sanity);
             return false;
         }
-        Report.Write(name, "Cult leader remains sane with a sanity of " + Player.Data.cultLeader.sanity);
+        Report.Write("GameplayManager", "Cult leader remains sane with a sanity of " + Player.Data.cultLeader.sanity);
         return true;
     }
 
