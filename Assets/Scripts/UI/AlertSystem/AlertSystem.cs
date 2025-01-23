@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,15 +14,34 @@ public class AlertSystem : MonoBehaviour
     public Button btnConfirmAction;
     public Button btnCloseAlert;
 
-    private void Start()
+    public GameObject alertContainer;
+    public GameObject choiceContainer;
+    public List<ChoiceButton> choiceButtons;
+    public TextMeshProUGUI choiceMesh;
+    public Button btnCloseChoice;
+
+    private void Awake()
     {
         alertCanvas.gameObject.SetActive(false);
         instance = this;
-        btnCloseAlert.onClick.AddListener(CloseAlert);
+        btnCloseAlert.onClick.AddListener(CloseDisplay);
+        btnCloseChoice.onClick.AddListener(CloseDisplay);
+    }
+
+    void SwitchWindow(bool isChoice = false)
+    {
+        choiceContainer.SetActive(isChoice);
+        alertContainer.SetActive(!isChoice);
+    }
+
+    void CloseDisplay()
+    {
+        alertCanvas.gameObject.SetActive(false);
     }
 
     void PrintAlert(string alertText)
     {
+        SwitchWindow();
         btnCloseAlert.gameObject.SetActive(true);
         btnConfirmAction.gameObject.SetActive(false);
 
@@ -29,8 +49,9 @@ public class AlertSystem : MonoBehaviour
         alertCanvas.gameObject.SetActive(true);
     }
 
-    void PrintActionPrompt(string alertText, Action action)
+    void PrintAlertWithPromptedAction(string alertText, Action action)
     {
+        SwitchWindow();
         btnCloseAlert.gameObject.SetActive(true);
         btnConfirmAction.gameObject.SetActive(true);
 
@@ -41,13 +62,14 @@ public class AlertSystem : MonoBehaviour
         btnConfirmAction.onClick.AddListener(() =>
         {
             Report.Write(name, "Attempting to invoke action assigned to Confirm button: " + action.Method?.Name ?? "unnamed");
-            CloseAlert();
+            CloseDisplay();
             action.Invoke();
         });
     }
 
-    void PrintForceAction(string alertText, Action action)
+    void PrintAlertWithForcedAction(string alertText, Action action)
     {
+        SwitchWindow();
         btnCloseAlert.gameObject.SetActive(false);
         btnConfirmAction.gameObject.SetActive(true);
 
@@ -58,43 +80,86 @@ public class AlertSystem : MonoBehaviour
         btnConfirmAction.onClick.AddListener(() =>
         {
             Report.Write(name, "Attempting to invoke action assigned to Confirm button: " + action.Method?.Name ?? "unnamed");
-            CloseAlert();
+            CloseDisplay();
             action.Invoke();
         });
     }
-
-    void CloseAlert()
+    void PrintChoiceWithCustomOptions(string alertText, List<(string text, Action action)> choices, bool isForced = true)
     {
-        alertCanvas.gameObject.SetActive(false);
+        if (choices.Count > 5 || (!isForced && choices.Count > 4))
+        {
+            Report.Write(name, "Custom choices had too many options to print: " + alertText);
+        }
+
+        SwitchWindow(true);
+        choiceMesh.text = alertText;
+        btnCloseChoice.gameObject.SetActive(!isForced);
+
+        for (int i = 0; i < choiceButtons.Count; i++)
+        {
+            if (choices.Count < i)
+            {
+                choiceButtons[i].tmp.text = choices[i].text;
+                choiceButtons[i].button.onClick.RemoveAllListeners();
+                choiceButtons[i].button.onClick.AddListener(() => choices[i].action.Invoke());
+                choiceButtons[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                choiceButtons[i].gameObject.SetActive(false);
+            }
+        }
     }
 
-    public static void Print(string alertText)
+    void PrintChoiceYesNo(string alertText, Action actionYes, Action actionNo)
+    {
+        SwitchWindow(true);
+        PrintChoiceWithCustomOptions(alertText, new()
+        {
+            (Repository.GetText("OPTION-YES"), actionYes),
+            (Repository.GetText("OPTION-NO"), actionNo)
+        });
+    }
+
+    #region STATIC METHODS
+    static bool CheckIfInstanceIsNull()
     {
         if (instance == null)
         {
             Report.Write("AlertSystem static", "Attempted to call AlertSystem while instance was null.");
-            return;
+            return true;
         }
+        return false;
+    }
+
+    public static void Print(string alertText)
+    {
+        if (CheckIfInstanceIsNull()) { return; }
         instance.PrintAlert(alertText);
     }
 
     public static void Prompt(string alertText, Action action)
     {
-        if (instance == null)
-        {
-            Report.Write("AlertSystem static", "Attempted to call AlertSystem while instance was null.");
-            return;
-        }
-        instance.PrintActionPrompt(alertText, action);
+        if (CheckIfInstanceIsNull()) { return; }
+        instance.PrintAlertWithPromptedAction(alertText, action);
     }
 
     public static void Force(string alertText, Action action)
     {
-        if (instance == null)
-        {
-            Report.Write("AlertSystem static", "Attempted to call AlertSystem while instance was null.");
-            return;
-        }
-        instance.PrintForceAction(alertText, action);
+        if (CheckIfInstanceIsNull()) { return; }
+        instance.PrintAlertWithForcedAction(alertText, action);
     }
+
+    public static void Choice(string alertText, List<(string, Action)> choices, bool isForced = true)
+    {
+        if (CheckIfInstanceIsNull()) { return; }
+        instance.PrintChoiceWithCustomOptions(alertText, choices, isForced);
+    }
+
+    public static void YesNo(string alertText, Action actionYes, Action actionNo)
+    {
+        if (CheckIfInstanceIsNull()) { return; }
+        instance.PrintChoiceYesNo(alertText, actionYes, actionNo);
+    }
+    #endregion
 }
