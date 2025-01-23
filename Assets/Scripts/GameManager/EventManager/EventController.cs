@@ -24,8 +24,8 @@ public static class EventController
 
     public static void InitiateNormalSequence()
     {
-        // Build events from current dummyData in GameplayManager
-
+        eventQueue = EventLibrary.GetEventQueue(GameplayManager.dummyData);
+        eventQueue.ForEach(e => { Report.Write("EventQueue", "Queued event: " + e.type.ToString()); });
 
         LoadEventSceneAndExecute(() => ExecuteNextInQueue());
     }
@@ -41,7 +41,7 @@ public static class EventController
 
         EventData eventData = EventPicker();
 
-        Report.Write("EventManager", "Executing next in queue: " + eventData.name);
+        Report.Write("EventManager", "Executing next in queue: " + eventData.type);
         eventData.Execute();
     }
 
