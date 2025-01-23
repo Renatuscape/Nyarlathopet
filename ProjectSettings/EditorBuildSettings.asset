@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NewGame.unity
     guid: 391efd2f5fe300b48a8cf402b0de259c
+  - enabled: 1
+    path: Assets/Scenes/EventScene.unity
+    guid: 6df08b9a46c4b0346842e020faa4009d
   m_configObjects: {}
