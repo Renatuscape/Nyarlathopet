@@ -15,7 +15,7 @@ public class GameplayManager : MonoBehaviour
 
     public HotbarController hotbarController;
 
-    private void Start()
+    private void Awake()
     {
         Initialise();
         ritualManager.Initialise();
