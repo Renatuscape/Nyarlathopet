@@ -155,4 +155,13 @@ public class GameplayManager : MonoBehaviour
     {
         instance.SubtractEP(amount);
     }
+
+    public static bool CheckActivePet()
+    {
+        if (instance == null || dummyData.currentPet == null || dummyData.currentPet.id == "-1")
+        {
+            return false;
+        }
+        return true;
+    }
 }
