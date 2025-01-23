@@ -11,6 +11,7 @@ public class GameplayManager : MonoBehaviour
     public static int EndeavourPoints { get; private set; }
     public const int MaxEndeavourPoints = 3;
     public static bool isPetFed;
+    public static Human mutineer;
 
     public HotbarController hotbarController;
 
