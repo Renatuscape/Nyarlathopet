@@ -70,17 +70,7 @@ public class GameplayManager : MonoBehaviour
     void RunGameOverRoutine()
     {
         Report.Write(name, "Executing game over routine.");
-
-        // Load GameOver scene
-
-        // Placeholder until GameOver scene is ready
-        {
-            Player.SetPlayerData(null);
-            AlertSystem.Force(Repository.GetText("END-DEAD"), () =>
-            {
-                SceneManager.LoadScene("NewGame");
-            });
-        }
+        SceneLoader.LoadSceneAndExecute("EventScene", () => EventController.InitiateNormalSequence());
     }
     void CheckNewRoundConditions()
     {
