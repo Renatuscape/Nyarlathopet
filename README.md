@@ -31,7 +31,7 @@ All assets included in this repository are either 100% free/open source or made 
     * Chance of losing cultists, network, or other detrimental effects without a pet
 * Summoning costs max EP and can only be done at the beginning of the round
 
-**Sanctuary** 🔄 
+**Sanctuary** 
 * ✅ Toggle info and buttons on/off according to whether a pet exists
 * ✅ Display pet stats if one exists
 * Implement Book of Masks
@@ -85,7 +85,7 @@ All assets included in this repository are either 100% free/open source or made 
     * ✅  Make nodes selectable
     * ✅  Display location availability and risk-factor
 * Create exploration controller
-    * 📌 Seek Artefacts
+    * 🔄 Seek Artefacts
         * Give options for spending members, network, or funds
     * 📌 Recruit Members
         * Implement cost
@@ -94,6 +94,9 @@ All assets included in this repository are either 100% free/open source or made 
 * 🪲 Fix bugs
     * Notoriety should not drop below 1 when thwarting
     * Network must be reduced by at least 1 when thwarting
+
+**Misc**
+* ✅ Add pop-out panel to view a compressed version of stats anywhere
 
 ### Loader Scene
 **Visual updates**
