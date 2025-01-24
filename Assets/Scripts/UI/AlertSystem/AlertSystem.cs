@@ -28,10 +28,11 @@ public class AlertSystem : MonoBehaviour
         btnCloseChoice.onClick.AddListener(CloseDisplay);
     }
 
-    void SwitchWindow(bool isChoice = false)
+    void SetWindow(bool isChoice = false)
     {
         choiceContainer.SetActive(isChoice);
         alertContainer.SetActive(!isChoice);
+        alertCanvas.gameObject.SetActive(true);
     }
 
     void CloseDisplay()
@@ -41,17 +42,15 @@ public class AlertSystem : MonoBehaviour
 
     void PrintAlert(string alertText)
     {
-        SwitchWindow();
         btnCloseAlert.gameObject.SetActive(true);
         btnConfirmAction.gameObject.SetActive(false);
 
         alertMesh.text = alertText;
-        alertCanvas.gameObject.SetActive(true);
+        SetWindow();
     }
 
     void PrintAlertWithPromptedAction(string alertText, Action action)
     {
-        SwitchWindow();
         btnCloseAlert.gameObject.SetActive(true);
         btnConfirmAction.gameObject.SetActive(true);
 
@@ -65,11 +64,11 @@ public class AlertSystem : MonoBehaviour
             CloseDisplay();
             action.Invoke();
         });
+        SetWindow();
     }
 
     void PrintAlertWithForcedAction(string alertText, Action action)
     {
-        SwitchWindow();
         btnCloseAlert.gameObject.SetActive(false);
         btnConfirmAction.gameObject.SetActive(true);
 
@@ -83,6 +82,7 @@ public class AlertSystem : MonoBehaviour
             CloseDisplay();
             action.Invoke();
         });
+        SetWindow();
     }
     void PrintChoiceWithCustomOptions(string alertText, List<(string text, Action action)> choices, bool isForced = true)
     {
@@ -91,29 +91,27 @@ public class AlertSystem : MonoBehaviour
             Report.Write(name, "Custom choices had too many options to print: " + alertText);
         }
 
-        SwitchWindow(true);
+        SetWindow(true);
         choiceMesh.text = alertText;
         btnCloseChoice.gameObject.SetActive(!isForced);
 
         for (int i = 0; i < choiceButtons.Count; i++)
         {
-            if (choices.Count < i)
+            var button = choiceButtons[i];
+            button.gameObject.SetActive(i < choices.Count);
+
+            if (i < choices.Count)
             {
-                choiceButtons[i].tmp.text = choices[i].text;
-                choiceButtons[i].button.onClick.RemoveAllListeners();
-                choiceButtons[i].button.onClick.AddListener(() => choices[i].action.Invoke());
-                choiceButtons[i].gameObject.SetActive(true);
-            }
-            else
-            {
-                choiceButtons[i].gameObject.SetActive(false);
+                button.tmp.text = choices[i].text;
+                button.button.onClick.RemoveAllListeners();
+                button.button.onClick.AddListener(choices[i].action.Invoke);
             }
         }
+        SetWindow(true);
     }
 
     void PrintChoiceYesNo(string alertText, Action actionYes, Action actionNo)
     {
-        SwitchWindow(true);
         PrintChoiceWithCustomOptions(alertText, new()
         {
             (Repository.GetText("OPTION-YES"), actionYes),
