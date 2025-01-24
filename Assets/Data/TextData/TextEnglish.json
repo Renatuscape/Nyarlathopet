@@ -33,9 +33,23 @@
     ["PET-F2B", "Proceed?"],
     ["PET-F3", "consumed"],
 
+    ["EXP-A", "How will you search for artefacts?"],
     ["EXP-A0", "You obtained"],
-    ["EXP-A1", "Your endeavours improved your network by"],
-    ["EXP-A2", "Those who would seek to stop you have taken notice. Notoriety increased by"],
+    ["EXP-A1", "Network +"],
+    ["EXP-A2", "Those who would seek to stop you have taken notice. Notoriety +"],
+    ["EXP-A3", "Sanity -"],
+    ["EXP-A4", "Cult funds -"],
+    ["EXP-A5", "Cultists lost:"],
+    
+    ["EXP-ABTN0", "Risk your own sanity"],
+    ["EXP-ABTN1", "Send out your cultists"],
+    ["EXP-ABTN2", "Use your network"],
+    ["EXP-ABTN3", "Use the cult's funds"],
+
+    ["EXP-AR0", "ENDEAVOUR REPORT"],
+    ["EXP-AR-SUCCESS", "Successfully obtained"],
+    ["EXP-AR-FAIL", "The endeavour failed to uncover any artefacts."],
+
     ["EXP-T0", "You do not yet have any notoriety, and therefore no enemies."],
     ["EXP-T1", "You reduced your notoriety by"],
     ["EXP-T2", "was lost to the enemy."],
