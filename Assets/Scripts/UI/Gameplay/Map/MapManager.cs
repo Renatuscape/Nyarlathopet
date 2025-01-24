@@ -59,10 +59,7 @@ public class MapManager : MonoBehaviour
         }
         else
         {
-            AlertSystem.Prompt($"Start an endeavour to seek hidden artefacts in {currentLocation.name}?", () =>
-            {
-                ExplorationManager.SeekArtefacts(currentLocation);
-            });
+            ExplorationArtefacts.PromptArtefactOptions(currentLocation);
         }
     }
 
