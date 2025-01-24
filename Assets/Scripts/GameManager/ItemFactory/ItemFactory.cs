@@ -2,7 +2,7 @@ using UnityEngine;
 
 public static class ItemFactory
 {
-    public static Item GenerateItemFromLocation(Location location)
+    public static Item GenerateItemFromLocation(Location location, int bonusPoints)
     {
         Item item = new Item()
         {
@@ -14,7 +14,7 @@ public static class ItemFactory
             item.level = 1;
         }
 
-        int skillPoints = item.level * 2;
+        int skillPoints = (item.level * 2) + bonusPoints;
 
         if (location.isRisky)
         {
