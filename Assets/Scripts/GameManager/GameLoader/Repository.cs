@@ -10,11 +10,11 @@ public static class Repository
 
     public static string GetText(string tag)
     {
-        var entry = displayText.entries.FirstOrDefault(e => e[0] == tag);
+        var entry = displayText?.entries?.FirstOrDefault(e => e[0] == tag);
 
         if (entry == null)
         {
-            Report.Write("Repository", tag + " returned null from " + displayText.language);
+            Report.Write("Repository", tag + " returned null.");
         }
 
         return entry != null ? entry[1] : "▓║▓┤▓░▓";
