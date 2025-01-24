@@ -2,34 +2,6 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 public static class ExplorationManager
 {
-    public static void SeekArtefacts(Location location)
-    {
-        // Add costs here
-
-        Item item = ItemFactory.GenerateItemFromLocation(location);
-        GameplayManager.dummyData.inventory.Add(item);
-
-        string alertMessage = $"{Repository.GetText("EXP-A0")} {item.name}.";
-        int networkGain = Random.Range(0, item.level + 1);
-        int notorietyGain = Random.Range(0, item.level + 1);
-
-        if (networkGain > 0)
-        {
-            alertMessage += $"\n{Repository.GetText("EXP-A1")} " + networkGain;
-            GameplayManager.dummyData.network += networkGain;
-        }
-
-        if (notorietyGain > 0)
-        {
-            alertMessage += $"\n{Repository.GetText("EXP-A2")} " + notorietyGain;
-            GameplayManager.dummyData.notoriety += notorietyGain;
-        }
-
-        AlertSystem.Force(alertMessage, () =>
-        {
-            HandleEndeavourPoints();
-        });
-    }
 
     public static void ThwartEnemies()
     {
@@ -74,7 +46,7 @@ public static class ExplorationManager
 
             AlertSystem.Force(alertMessage, () =>
             {
-                HandleEndeavourPoints();
+                HandleEndeavourPoints(1);
             });
         }
     }
@@ -96,13 +68,13 @@ public static class ExplorationManager
 
         AlertSystem.Force($"{cultist.name} {Repository.GetText("EXP-R0")}", () =>
         {
-            HandleEndeavourPoints();
+            HandleEndeavourPoints(1);
         });
     }
 
-    static void HandleEndeavourPoints()
+    public static void HandleEndeavourPoints(int points)
     {
         // In the future, it should be possible to spend multiple endeavour points
-        GameplayManager.SubtractEndeavourPoints(1);
+        GameplayManager.SubtractEndeavourPoints(points);
     }
 }
