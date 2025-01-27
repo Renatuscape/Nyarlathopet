@@ -7,11 +7,10 @@
     ["OPTION-YES", "Yes"],
     ["OPTION-NO", "No"],
     ["OPTION-NEWGAME", "New Game"],
-    ["OPTION-QUIT", "Quit"],
+    ["OPTION-RETRY", "Retry Month"],
+    ["OPTION-QUIT", "Quit Game"],
 
     ["ROUND-CLEAR0", "YOU SURVIVED THE MONTH."],
-    ["ROUND-CLEAR1A", "YOU SURVIVED THE MONTH.\nBut you have neglected to feed your"],
-    ["ROUND-CLEAR1B", ". Its rage grows."],
 
     ["END-DEAD", "YOU ARE DEAD."],
     ["END-INSANE", "YOU ARE PERMANENTLY INSANE."],
