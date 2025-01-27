@@ -69,7 +69,7 @@ public class GameplayManager : MonoBehaviour
     void RunGameOverRoutine()
     {
         Report.Write(name, "Executing game over routine.");
-        SceneLoader.LoadSceneAndExecute("EventScene", () => EventController.InitiateNormalSequence());
+        SceneLoader.LoadSceneAndExecute("EventScene", () => EventController.InitiateEndGameSequence());
     }
     void CheckNewRoundConditions()
     {
