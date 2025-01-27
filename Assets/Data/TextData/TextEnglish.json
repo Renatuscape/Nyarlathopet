@@ -53,6 +53,8 @@
     ["EXP-T1", "You reduced your notoriety by"],
     ["EXP-T2", "was lost to the enemy."],
     ["EXP-T3", "Your network decreased by"],
-    ["EXP-R0", "joined your cult."]
+    ["EXP-R0", "joined your cult."],
+
+    ["EVENT-LEADER0", "Among the most sane members of the cult, one steps up to become the new leader."]
   ]
 }
