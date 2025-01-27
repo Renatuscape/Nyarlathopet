@@ -37,16 +37,7 @@ public static class EventLibrary
                 },
                 action = () =>
                 {
-                    AlertSystem.Force("Placeholder for Choose New Leader event.", () =>
-                    {
-                        // Placeholder before a selection menu can be made
-                        var newLeader = GameplayManager.dummyData.cultMembers.First();
-                        GameplayManager.dummyData.cultLeader = newLeader;
-                        GameplayManager.dummyData.cultMembers.Remove(newLeader);
-                        AlertSystem.Print(newLeader.name + " became the new cult leader.");
-
-                        HandleEndEvent("NoLeader");
-                    });
+                    EventHelper.ChooseNewLeader(() => HandleEndEvent("NoLeader"));
                 }
             }
         },
