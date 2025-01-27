@@ -223,6 +223,19 @@ public static class EventLibrary
 
         return qualifyingEvents;
     }
+
+    public static EventData GetEndGameEvent()
+    {
+        Report.Write("EventLibrary", "Returning game over event.");
+        if (events[Event.GameOverInsane].CheckCondition())
+        {
+            return events[Event.GameOverInsane];
+        }
+        else
+        {
+            return events[Event.GameOverDead];
+        }
+    }
 }
 
 public enum Event
