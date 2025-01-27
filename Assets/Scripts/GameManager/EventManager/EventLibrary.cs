@@ -200,7 +200,7 @@ public static class EventLibrary
                 priority = int.MinValue,
                 condition = () =>
                 {
-                    return GameplayManager.dummyData.cultLeader == null && GameplayManager.dummyData.cultMembers.Count < 1;
+                    return GameplayManager.dummyData.cultLeader.sanity < 1 && GameplayManager.dummyData.cultMembers.Count < 1;
                 },
                 action = () =>
                 {
