@@ -82,11 +82,15 @@ All assets included in this repository are either 100% free/open source or made 
 
 **Map**
 * ✅ Display locations
-    * ✅  Make nodes selectable
-    * ✅  Display location availability and risk-factor
+    * ✅ Make nodes selectable
+    * ✅ Display location availability and risk-factor
 * Create exploration controller
     * 🔄 Seek Artefacts
-        * Give options for spending members, network, or funds
+        * Give options for spending:
+            * ✅ Sanity
+            * ✅ Members
+            * Network
+            * Funds
     * 📌 Recruit Members
         * Implement cost
     * 📌 Thwart Enemies
