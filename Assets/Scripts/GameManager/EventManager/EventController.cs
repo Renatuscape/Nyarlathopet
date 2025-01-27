@@ -77,4 +77,13 @@ public static class EventController
 
         return eventData;
     }
+
+    public static void InitiateEndGameSequence()
+    {
+        Report.Write("EventManager", "Initiating end game event sequence.");
+        LoadEventSceneAndExecute(() =>
+        {
+            EventLibrary.GetEndGameEvent().Execute();
+        });
+    }
 }
