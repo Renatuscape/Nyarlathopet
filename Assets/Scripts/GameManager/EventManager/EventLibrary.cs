@@ -33,7 +33,7 @@ public static class EventLibrary
                 priority = 0,
                 condition = () =>
                 {
-                    return GameplayManager.dummyData.cultLeader == null && GameplayManager.dummyData.cultMembers.Count > 0;
+                    return (GameplayManager.dummyData.cultLeader == null || GameplayManager.dummyData.cultLeader.sanity < 1) && GameplayManager.dummyData.cultMembers.Count > 0;
                 },
                 action = () =>
                 {
