@@ -24,6 +24,7 @@ public static class EventController
 
     public static void InitiateNormalSequence()
     {
+        Report.Write("EventManager", "Initiating normal event sequence.");
         eventQueue = EventLibrary.GetEventQueue(GameplayManager.dummyData);
         eventQueue.ForEach(e => { Report.Write("EventQueue", "Queued event: " + e.type.ToString()); });
 
