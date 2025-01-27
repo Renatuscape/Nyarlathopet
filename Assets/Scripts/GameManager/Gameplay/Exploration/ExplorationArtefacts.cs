@@ -12,7 +12,26 @@ public static class ExplorationArtefacts
 
     static void GetArtefactForSanity(Location location)
     {
+        Item foundItem = null;
+        int danger = location.isRisky ? 50 : 20;
+        int maxLoss = Math.Max(2, ((danger * location.level / 10) + (danger * GameplayManager.dummyData.level / 10)) / 2);
+        int loss = Random.Range(1, maxLoss);
+        int network;
 
+        GameplayManager.dummyData.cultLeader.sanity -= loss;
+
+        if (GameplayManager.dummyData.cultLeader.sanity > 0)
+        {
+            int itemBonus = Math.Min(location.level * (danger / 20), loss);
+            foundItem = AddNewArtefact(location, itemBonus);
+
+            network = Random.Range(0, 100) > 85 ? Math.Max(1, GameplayManager.UpdateNetwork((location.level + GameplayManager.dummyData.level) / 2)) : 0;
+        }
+
+        AlertSystem.Force(GetReport(foundItem, 0, 0, loss, 0, null), () =>
+        {
+            HandleEndeavourPoints(1);
+        });
     }
 
     static void GetArtefactForCultist(Location location)
