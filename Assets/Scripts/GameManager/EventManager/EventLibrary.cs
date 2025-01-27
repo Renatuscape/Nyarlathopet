@@ -187,6 +187,7 @@ public static class EventLibrary
                 },
                 action = () =>
                 {
+                    Report.Write("GameOverDead", "Opening game over prompt.");
                     EventHelper.PromptGameOverOptions(Repository.GetText("END-DEAD"));
                 }
             }
