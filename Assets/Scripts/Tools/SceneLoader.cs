@@ -35,6 +35,7 @@ public static class SceneLoader
 
             if (doAfterLoad != null)
             {
+                Report.Write(name, "Attempting to execute action after load: " + doAfterLoad.Method?.Name);
                 doAfterLoad.Invoke();
             }
             else
