@@ -70,7 +70,7 @@ public static class EventLibrary
                 priority = 10,
                 condition = () =>
                 {
-                    return GameplayManager.CheckActivePet() && !GameplayManager.isPetFed;
+                    return GameplayManager.CheckIsPetActive() && !GameplayManager.isPetFed;
                 },
                 action = () =>
                 {
@@ -89,15 +89,15 @@ public static class EventLibrary
                 priority = 80,
                 condition = () =>
                 {
-                    if (GameplayManager.CheckActivePet())
+                    if (GameplayManager.CheckIsPetActive())
                     {
-                        return false;
+                        int rage = GameplayManager.dummyData.currentPet.rage;
+                        int rageThreshold = 150 - rage - GameplayManager.dummyData.level; // Danger of rampage increases with player level
+
+                        return UnityEngine.Random.Range(0, 100) > rageThreshold;
                     }
 
-                    int rage = GameplayManager.dummyData.currentPet.rage;
-                    int rageThreshold = 150 - rage - GameplayManager.dummyData.level; // Danger of rampage increases with player level
-
-                    return UnityEngine.Random.Range(0, 100) > rageThreshold;
+                    return false;
                 },
                 action = () =>
                 {
