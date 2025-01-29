@@ -149,6 +149,29 @@ public static class EventLibrary
             }
         },
         {
+            Event.NewCultistJoined,
+            new()
+            {
+                type = Event.NewCultistJoined,
+                priority = 51,
+                condition = () =>
+                {
+                    if (GameplayManager.CheckIsPetActive()) // New members won't join if there is no pet summoned
+                    {
+                        int threshold = 50 + (GameplayManager.dummyData.cultMembers.Count * 5 ) - GameplayManager.dummyData.notoriety;
+
+                        return Random.Range(0, 100) > threshold;
+                    }
+
+                    return false;
+                },
+                action = () =>
+                {
+                    EventHelper.NewCultistJoined(() => HandleEndEvent("NewCultistJoined"));
+                }
+            }
+        },
+        {
             Event.NewMonth,
             new()
             {
