@@ -1340,9 +1340,9 @@ RectTransform:
   - {fileID: 501631790}
   m_Father: {fileID: 384919401}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 88.33334, y: -82.240005}
   m_SizeDelta: {x: 176.66669, y: 33.38}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &136909277
@@ -5574,7 +5574,6 @@ GameObject:
   - component: {fileID: 625587217}
   - component: {fileID: 625587216}
   - component: {fileID: 625587215}
-  - component: {fileID: 625587218}
   m_Layer: 5
   m_Name: BtnFeed
   m_TagString: Untagged
@@ -5645,19 +5644,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 625587216}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 625587218}
-        m_TargetAssemblyTypeName: BtnFeed, Assembly-CSharp
-        m_MethodName: BtnFeedPet
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &625587216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5696,18 +5683,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625587213}
   m_CullTransparentMesh: 1
---- !u!114 &625587218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625587213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d3ff5d498b8010479f2999b410d307c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &626304898
 GameObject:
   m_ObjectHideFlags: 0
@@ -6090,7 +6065,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &668107444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7526,9 +7501,9 @@ RectTransform:
   - {fileID: 1620596441}
   m_Father: {fileID: 384919401}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 88.33334, y: -159.00002}
   m_SizeDelta: {x: 176.66669, y: 33.38}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &923032539
@@ -8492,9 +8467,9 @@ RectTransform:
   - {fileID: 1846417688}
   m_Father: {fileID: 384919401}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 88.33334, y: -120.62001}
   m_SizeDelta: {x: 176.66669, y: 33.38}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1063974032
