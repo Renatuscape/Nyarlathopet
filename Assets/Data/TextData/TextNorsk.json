@@ -28,14 +28,14 @@
     ["PET-F0", "Du har ingen kultmedlemer å ofre."],
     ["PET-F1A", "Du har allerede fôret din"],
     ["PET-F1B", "denne måneden. Fôr igjen?"],
-    ["PET-F2A", "har meldt seg frivillig."],
+    ["PET-F2A", "Disse ivrige disiplene melder seg frivillig."],
     ["PET-F2B", "Fortsett?"],
     ["PET-F3", "konsumerte"],
 
     ["EXP-A0", "Du fant"],
     ["EXP-A1", "Dine beskjeftigelser forbedret ditt nettverk med"],
     ["EXP-A2", "De som ønsker å stoppe deg har merket dine aktiviteter. Berømmelse økte med"],
-    
+
     ["EXP-T0", "Du har ikke nevneverdig berømmelse. Du har ingen fiender å motarbeide."],
     ["EXP-T1", "Din berømmelse reduseres med"],
     ["EXP-T2", "taptes til fienden."],
