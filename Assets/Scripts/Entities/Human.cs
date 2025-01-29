@@ -19,4 +19,9 @@ public class Human : Creature
 
         string GetBreak() { return isList ? "\n" : (abbreviate ? " " : ", "); }
     }
+
+    public string Print(bool lineBreak = true, bool includeSanity = false, bool includeFunds = false, bool noName = false)
+    {
+        return $"{(noName? "": name)}{(lineBreak ? "\n" : (noName ? "" : " "))}{(includeSanity ? $"SAN:{sanity:D2} " : "")}{(includeFunds ? $"FND:{funds:D2} " : "")}OCC:{occultism:D2} LOR:{lore:D2} STR:{strength:D2}";
+    }
 }
