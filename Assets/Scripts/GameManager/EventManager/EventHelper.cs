@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using Random = UnityEngine.Random;
 public static class EventHelper
 {
     public static void PromptGameOverOptions(string textAlert)
@@ -24,7 +24,7 @@ public static class EventHelper
         var members = GameplayManager.dummyData.cultMembers.OrderByDescending(m => m.sanity).ToList();
         List<(string, Action)> options = new();
 
-        for (int i = 0; i < 6 && i < members.Count - 1; i++) {
+        for (int i = 0; i < AlertSystem.MaxOptions && i < members.Count - 1; i++) {
             int capturedIndex = i;
             options.Add((members[capturedIndex].name, () => ElectLeader(members[capturedIndex])));
         }
