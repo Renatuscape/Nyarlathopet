@@ -46,7 +46,7 @@ public static class ItemFactory
         {
             item.type = ItemType.Tome;
         }
-        else if (item.magick > item.strength && item.lore > item.strength) // Magick and lore must be more than strength
+        else if (item.magick >= item.strength && item.lore >= item.strength) // Magick and lore must be more than strength
         {
             item.type = ItemType.Prayer;
         }
