@@ -214,4 +214,21 @@ public static class Repository
             }
         };
     }
+
+    public static string GetLocationNameByLevel(int level)
+    {
+        int searchLevel = level;
+
+        while (searchLevel > 0)
+        {
+            var locationsByLevel = locations.Where(l => l.level == searchLevel).ToList();
+            if (locationsByLevel.Count > 0)
+            {
+                return locationsByLevel[UnityEngine.Random.Range(0, locationsByLevel.Count)].name;
+            }
+            searchLevel--;
+        }
+
+        return "???";
+    }
 }
