@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Linq;
 using UnityEngine;
-using static UnityEngine.CullingGroup;
 using Random = UnityEngine.Random;
 
 public static class StatConverter
@@ -43,18 +41,18 @@ public static class StatConverter
         }
     }
 
-    public static CreatureStats ConvertItemToCreatureStats(Item item, int reductionChance = 25, float skillPointMultiplier = 0.5f)
+    public static CreatureStats ConvertItemToCreatureStats(Item item, float skillPointMultiplier = 0.5f)
     {
         MundaneStats stats = new MundaneStats() { lore = item.lore, occultism = item.magick, strength = item.strength };
-        return ConvertMundaneToCreatureStats(stats, reductionChance, skillPointMultiplier);
+        return ConvertMundaneToCreatureStats(stats, skillPointMultiplier);
     }
-    public static CreatureStats ConvertHumanToCreatureStats(Human human, int reductionChance = 25, float skillPointMultiplier = 0.5f)
+    public static CreatureStats ConvertHumanToCreatureStats(Human human, float skillPointMultiplier = 0.5f)
     {
         MundaneStats stats = new MundaneStats() { lore = human.lore, occultism = human.occultism, strength = human.strength};
-        return ConvertMundaneToCreatureStats(stats, reductionChance, skillPointMultiplier);
+        return ConvertMundaneToCreatureStats(stats, skillPointMultiplier);
     }
 
-    static CreatureStats ConvertMundaneToCreatureStats(MundaneStats mundane, int reductionChance = 25, float skillPointMultiplier = 0.5f)
+    static CreatureStats ConvertMundaneToCreatureStats(MundaneStats mundane, float skillPointMultiplier = 0.5f)
     {
         CreatureStats statChanges = new();
 
@@ -65,24 +63,19 @@ public static class StatConverter
 
         while (!isSuccessful) {
             MundaneStats mundaneCopy = new() { lore = mundane.lore, strength = mundane.strength, occultism = mundane.occultism };
-            isSuccessful = AttemptStatConversion(cultistLevel, reductionChance, mundaneCopy, statChanges);
+            isSuccessful = AttemptStatConversion(cultistLevel, mundaneCopy, statChanges);
         }
 
         return statChanges;
     }
 
-    static bool AttemptStatConversion(int cultistLevel, int reductionChance, MundaneStats mundane, CreatureStats statChanges)
+    static bool AttemptStatConversion(int cultistLevel, MundaneStats mundane, CreatureStats statChanges)
     {
         // STAT INCREASES
         for (int i = 0; i < cultistLevel; i++)
         {
             int stat = Random.Range(0, 3);
             int statIncrease = 1;
-
-            if (Random.Range(0, 100) < reductionChance)
-            {
-                statIncrease = -statIncrease;
-            }
 
             if (stat == 0 && mundane.lore > 0)
             {
@@ -102,7 +95,7 @@ public static class StatConverter
             {
                 mundane.strength--;
 
-                if (Random.Range(0, 2) == 0) { statChanges.strength += statIncrease; }
+                if (Random.Range(0, 3) != 0) { statChanges.strength += statIncrease; }
                 else { statChanges.rage += statIncrease; }
             }
         }
