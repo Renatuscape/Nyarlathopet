@@ -38,4 +38,17 @@ public static class EventHelper
             doAfterChoice.Invoke();
         }
     }
+
+    public static void NewCultistJoined(Action doAfterChoice)
+    {
+        int level = Random.Range(1, GameplayManager.dummyData.level);
+        var newCultist = CultistFactory.GetCultist(level);
+        newCultist.origin = Repository.GetLocationNameByLevel(level);
+        GameplayManager.dummyData.cultMembers.Add(newCultist);
+
+        AlertSystem.Force(newCultist.name + " " + Repository.GetText("EVENT-NEWCULTIST"), () =>
+        {
+            doAfterChoice.Invoke();
+        });
+    }
 }
