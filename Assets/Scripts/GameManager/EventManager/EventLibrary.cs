@@ -262,5 +262,6 @@ public enum Event
     CultRaided,
     CultMutiny,
     GameOverInsane,
-    GameOverDead
+    GameOverDead,
+    NewCultistJoined
 }
