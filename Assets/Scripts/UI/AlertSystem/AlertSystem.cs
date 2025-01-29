@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 // Used by other classes to display text alerts and confirmation prompts. Ensure that an AlertSystem object exists in the scene so static methods can be called
 public class AlertSystem : MonoBehaviour
 {
@@ -19,6 +18,9 @@ public class AlertSystem : MonoBehaviour
     public List<ChoiceButton> choiceButtons;
     public TextMeshProUGUI choiceMesh;
     public Button btnCloseChoice;
+    public GridLayoutGroup choiceGrid;
+    const int maxChoicesInColumn = 6;
+    public static int MaxOptions {  get; private set; }
 
     private void Awake()
     {
@@ -26,6 +28,7 @@ public class AlertSystem : MonoBehaviour
         instance = this;
         btnCloseAlert.onClick.AddListener(CloseDisplay);
         btnCloseChoice.onClick.AddListener(CloseDisplay);
+        MaxOptions = choiceButtons.Count;
     }
 
     void SetWindow(bool isChoice = false)
@@ -86,7 +89,7 @@ public class AlertSystem : MonoBehaviour
     }
     void PrintChoiceWithCustomOptions(string alertText, List<(string text, Action action)> choices, bool isForced = true)
     {
-        if (choices.Count > 5 || (!isForced && choices.Count > 4))
+        if (choices.Count > choiceButtons.Count)
         {
             Report.Write(name, "Custom choices had too many options to print: " + alertText);
         }
@@ -107,6 +110,16 @@ public class AlertSystem : MonoBehaviour
                 button.button.onClick.AddListener(choices[i].action.Invoke);
             }
         }
+
+        if (choices.Count < maxChoicesInColumn)
+        {
+            choiceGrid.constraintCount = choices.Count;
+        }
+        else
+        {
+            choiceGrid.constraintCount = maxChoicesInColumn;
+        }
+
         SetWindow(true);
     }
 
