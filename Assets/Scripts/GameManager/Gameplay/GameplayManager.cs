@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -155,19 +154,5 @@ public class GameplayManager : MonoBehaviour
             return false;
         }
         return true;
-    }
-
-    public static int UpdateNotoriety(int points)
-    {
-        int originalNotoriety = dummyData.notoriety;
-        dummyData.notoriety = Math.Clamp(originalNotoriety + points, 0, 99);
-        return dummyData.notoriety - originalNotoriety;
-    }
-
-    public static int UpdateNetwork(int points)
-    {
-        int originalNetwork = dummyData.network;
-        dummyData.network = Math.Clamp(originalNetwork + points, 0, 99);
-        return dummyData.network - originalNetwork;
     }
 }
