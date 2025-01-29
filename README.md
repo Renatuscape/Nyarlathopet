@@ -40,12 +40,15 @@ All assets included in this repository are either 100% free/open source or made 
     * Implement final summoning of the mask
         * Where should this button go?
         * When should it become available?
-* Implement worship
+* ✅ Implement worship
 * ✅ Implement feeding
     * Track whether pet was fed this round, and increase rage if it was not. Clearly alert the player
 * Implement communing
     * Chance of leveling up when stats are high enough and enough masks have been found
 * Decide whether pet activities should consume EP, and consider whether more than 3 EP per round is necessary
+
+* 🪲 Fix bugs
+    * ✅ No cult members are displayed in the feeding options
 
 **Sanctuary visuals**
 * Add custom graphic for the Book of Masks
@@ -61,6 +64,8 @@ All assets included in this repository are either 100% free/open source or made 
 * ✅ Implement cultist selection
 * ✅ Implement item selection
 * ✅ Implement item sacrifice
+* Summoned pet should be checked as fed
+* ✅ Filter out non-artefacts from ritual menu
 * 🪲 Fix bugs
     * Ritual stats must not drop below 0
     * Player should lose minimum 1 sanity when sacrificing cultists
@@ -84,6 +89,8 @@ All assets included in this repository are either 100% free/open source or made 
 * ✅ Display locations
     * ✅ Make nodes selectable
     * ✅ Display location availability and risk-factor
+    * Lock locations above player level
+
 * Create exploration controller
     * 🔄 Seek Artefacts
         * Give options for spending:
@@ -131,6 +138,9 @@ For events which occur between rounds, or forced early under certain conditions
     * Pet tantrums (high rage)
 
 ### Misc
+**Content**
+* Add non-risky level 1 area with magic/pet that can easily be summoned from Boston artefacts
+
 **Magick and Occultism**
 * Rename human stat magick to occultism in code and displays
 * Horrors should use magick stat, humans should use occultism
