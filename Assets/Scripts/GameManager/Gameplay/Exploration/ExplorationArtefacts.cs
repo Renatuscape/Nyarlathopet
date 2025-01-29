@@ -25,7 +25,7 @@ public static class ExplorationArtefacts
             int itemBonus = Math.Min(location.level * (danger / 20), loss);
             foundItem = AddNewArtefact(location, itemBonus);
 
-            network = Random.Range(0, 100) > 85 ? Math.Max(1, GameplayManager.UpdateNetwork((location.level + GameplayManager.dummyData.level) / 2)) : 0;
+            network = Random.Range(0, 100) > 85 ? Math.Max(1, DummyDataUpdater.UpdateNetwork((location.level + GameplayManager.dummyData.level) / 2)) : 0;
         }
 
         AlertSystem.Force(GetReport(foundItem, 0, 0, loss, 0, null), () =>
@@ -71,10 +71,10 @@ public static class ExplorationArtefacts
             int itemBonus = deadCultists.Count > 0 ? (deadCultists.Count * 2 + GameplayManager.dummyData.level) / 2 : 0;
             foundItem = AddNewArtefact(location, itemBonus);
 
-            network = Random.Range(0, 100) > 65 ? Math.Max(1, GameplayManager.UpdateNetwork((location.level + GameplayManager.dummyData.level) / 2)) : 0;
+            network = Random.Range(0, 100) > 65 ? Math.Max(1, DummyDataUpdater.UpdateNetwork((location.level + GameplayManager.dummyData.level) / 2)) : 0;
         }
 
-        notoriety = deadCultists.Count > 0 && Random.Range(0, 100) > 50 ? GameplayManager.UpdateNotoriety((deadCultists.Count * 2 + GameplayManager.dummyData.level) / 2) : 0;
+        notoriety = deadCultists.Count > 0 && Random.Range(0, 100) > 50 ? DummyDataUpdater.UpdateNotoriety((deadCultists.Count * 2 + GameplayManager.dummyData.level) / 2) : 0;
 
 
         AlertSystem.Force(GetReport(foundItem, network, notoriety, 0, 0, deadCultists), () =>
