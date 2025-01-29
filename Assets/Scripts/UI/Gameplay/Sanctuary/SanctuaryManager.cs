@@ -18,6 +18,9 @@ public class SanctuaryManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        btnFeed.onClick.AddListener(() => PetController.FeedPet());
+        btnWorship.onClick.AddListener(() => PetController.WorshipPet());
+        btnCommune.onClick.AddListener(() => PetController.CommuneWithPet());
     }
 
     private void OnEnable()
