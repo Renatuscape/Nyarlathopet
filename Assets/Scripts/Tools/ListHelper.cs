@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 public static class ListHelper
 {
@@ -22,6 +23,28 @@ public static class ListHelper
             if (currentItemIndex < humans.Count)
             {
                 prefabSlots[slotIndex].SetDisplay(humans[currentItemIndex]);
+                prefabSlots[slotIndex].gameObject.SetActive(true);
+                isListEmpty = false;
+            }
+            else
+            {
+                prefabSlots[slotIndex].gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public static void DisplayArtefactsFromIndex(int index, List<Item> items, List<ItemUiPrefab> prefabSlots, out bool isListEmpty)
+    {
+        var artefacts = items.Where(i => i.type == ItemType.Artefact).ToList();
+        isListEmpty = true;
+
+        for (int slotIndex = 0; slotIndex < prefabSlots.Count; slotIndex++)
+        {
+            int currentItemIndex = index + slotIndex;
+
+            if (currentItemIndex < items.Count)
+            {
+                prefabSlots[slotIndex].SetDisplay(items[currentItemIndex]);
                 prefabSlots[slotIndex].gameObject.SetActive(true);
                 isListEmpty = false;
             }
