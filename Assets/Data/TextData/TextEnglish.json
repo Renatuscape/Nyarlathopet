@@ -28,9 +28,19 @@
     ["PET-F0", "You have no cult members to sacrifice."],
     ["PET-F1A", "You already fed your"],
     ["PET-F1B", "this month. Feed again?"],
-    ["PET-F2A", "has volunteered."],
+    ["PET-F2A", "These fervent worshippers have volunteered."],
     ["PET-F2B", "Proceed?"],
     ["PET-F3", "consumed"],
+
+    ["PET-W0", "You have no prayers to recite. Seek them out in the world where magick and lore is abundant."],
+    ["PET-W1", "Which prayer should be recited during worship?"],
+    ["PET-W2", "How would you like to worship?"],
+    ["PET-W3", "Public sermon"],
+    ["PET-W3B", "Your public sermon draws attention from allies and enemies alike."],
+    ["PET-W4", "Members-only sermon"],
+    ["PET-W4B", "Behind the closed doors of your sanctuary, whispered prayers soothe your"],
+    ["PET-W5", "Worship in private"],
+    ["PET-W5B", "Alone, you enter the sanctuary and kneel before your master. Your praises earn you brief respite."],
 
     ["EXP-A", "How will you search for artefacts?"],
     ["EXP-A0", "You obtained"],
@@ -55,6 +65,7 @@
     ["EXP-T3", "Your network decreased by"],
     ["EXP-R0", "joined your cult."],
 
-    ["EVENT-LEADER0", "Among the most sane members of the cult, one steps up to become the new leader."]
+    ["EVENT-LEADER0", "Among the most sane members of the cult, one steps up to become the new leader."],
+    ["EVENT-NEWCULTIST", "has joined your cult."]
   ]
 }
