@@ -232,7 +232,7 @@ public class RitualManager : MonoBehaviour
 
     void UpdateItems()
     {
-        ListHelper.DisplayItemsFromIndex(itemIndex, GameplayManager.dummyData.inventory, itemSlots, out var isListEmpty);
+        ListHelper.DisplayArtefactsFromIndex(itemIndex, GameplayManager.dummyData.inventory, itemSlots, out var isListEmpty);
         activeItem = null;
         itemSlots.ForEach(slot => slot.Highlight(false));
 
