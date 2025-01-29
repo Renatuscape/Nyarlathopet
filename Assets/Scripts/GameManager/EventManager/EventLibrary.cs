@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Random = UnityEngine.Random;
 
 public class EventData
 {
@@ -94,7 +95,7 @@ public static class EventLibrary
                         int rage = GameplayManager.dummyData.currentPet.rage;
                         int rageThreshold = 150 - rage - GameplayManager.dummyData.level; // Danger of rampage increases with player level
 
-                        return UnityEngine.Random.Range(0, 100) > rageThreshold;
+                        return Random.Range(0, 100) > rageThreshold;
                     }
 
                     return false;
@@ -117,7 +118,7 @@ public static class EventLibrary
                 condition = () =>
                 {
                     int raidThreshold = 125 - GameplayManager.dummyData.notoriety;
-                    return UnityEngine.Random.Range(0, 100) > raidThreshold;
+                    return Random.Range(0, 100) > raidThreshold;
                 },
                 action = () =>
                 {
@@ -136,7 +137,7 @@ public static class EventLibrary
                 priority = 50,
                 condition = () =>
                 {
-                    return GameplayManager.dummyData.currentPet == null
+                    return !GameplayManager.CheckIsPetActive()
                     && GameplayManager.dummyData.cultMembers.Count > 0; // No point if there are no members to be mad
                 },
                 action = () =>
