@@ -28,14 +28,15 @@ public class Horror : Creature
         };
     }
 
-    public string GetStatPrintOut(bool abbreviate, bool isList)
+    public string Print(bool abbreviate, bool isList)
     {
-        return $"{(abbreviate ? "MTH:" : "Myhtos ")}{mythos:D2}{GetBreak()}" +
-            $"{(abbreviate ? "ITR:" : "Intrigue ")}{intrigue:D2}{GetBreak()}" +
-            $"{(abbreviate ? "MGC:" : "Magick ")}{magick:D2}{GetBreak()}" +
-            $"{(abbreviate ? "ABS:" : "Abstraction ")}{abstraction:D2} {GetBreak()}" +
-            $"{(abbreviate ? "STR:" : "Strength ")}{strength:D2} {GetBreak()}" +
-            $"{(abbreviate ? "RGE:" : "Rage ")}{rage:D2}";
+        return 
+            $"{(abbreviate ? $"{Tags.Get("MTH")}:" : $"{Tags.Get("Mth")} ")}{mythos:D2}{GetBreak()}" +
+            $"{(abbreviate ? $"{Tags.Get("ITR")}:" : $"{Tags.Get("Itr")} ")}{intrigue:D2}{GetBreak()}" +
+            $"{(abbreviate ? $"{Tags.Get("MGK")}:" : $"{Tags.Get("Mgk")} ")}{magick:D2}{GetBreak()}" +
+            $"{(abbreviate ? $"{Tags.Get("ABS")}:" : $"{Tags.Get("Abs")} ")}{abstraction:D2} {GetBreak()}" +
+            $"{(abbreviate ? $"{Tags.Get("STR")}:" : $"{Tags.Get("Str")} ")}{strength:D2} {GetBreak()}" +
+            $"{(abbreviate ? $"{Tags.Get("RGE")}:" : $"{Tags.Get("Rge")} ")}{rage:D2}";
 
         string GetBreak() { return isList ? "\n" : (abbreviate ? " " : ", "); }
     }
