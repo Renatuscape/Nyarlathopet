@@ -11,7 +11,7 @@ public class BtnEnableRitualMenu : MonoBehaviour
         }
         else
         {
-            AlertSystem.Print($"{Repository.GetText("RIT-ERR")} {GameplayManager.MaxEndeavourPoints} EP.");
+            AlertSystem.Print($"{Text.Get("RIT-ERR")} {GameplayManager.MaxEndeavourPoints} EP.");
         }
     }
 }

@@ -15,7 +15,7 @@ public static class RitualController
         if (manager.sacrificesMade > 0)
         {
             Report.Write("RitualController", manager.sacrificesMade + " sacrifices were already made. Prompt before exiting.");
-            AlertSystem.Prompt(Repository.GetText("RIT-ABORT"), () =>
+            AlertSystem.Prompt(Text.Get("RIT-ABORT"), () =>
             {
                 manager.ritualCanvas.gameObject.SetActive(false);
                 manager.ResetRitual();

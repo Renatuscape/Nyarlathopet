@@ -6,7 +6,7 @@ public static class RitualSacrificeHelper
 {
     public static void OfferArtefact(Horror horrorState, Item item, out string report)
     {
-        report = $"{Repository.GetText("SACR0")} " + item.name + ".\n";
+        report = $"{Text.Get("SACR0")} " + item.name + ".\n";
         GameplayManager.dummyData.inventory.Remove(item);
         int magickIncrease = 0;
         int abstractionIncrease = 0;
@@ -14,15 +14,15 @@ public static class RitualSacrificeHelper
         int intrigueIncrease = 0;
         int rageIncrease = 0; 
 
-        int itemLevel = Math.Max(1, Mathf.FloorToInt((item.lore + item.strength + item.magick) * 0.5f));
+        int itemLevel = Math.Max(1, Mathf.FloorToInt((item.lore + item.strength + item.occultism) * 0.5f));
 
         // Find the highest stat value
-        int maxStat = Math.Max(item.lore, Math.Max(item.strength, item.magick));
+        int maxStat = Math.Max(item.lore, Math.Max(item.strength, item.occultism));
 
         // Helper method to count how many stats equal the max
         int CountMaxStats() => (item.lore == maxStat ? 1 : 0)
                             + (item.strength == maxStat ? 1 : 0)
-                            + (item.magick == maxStat ? 1 : 0);
+                            + (item.occultism == maxStat ? 1 : 0);
 
         for (int i = 0; i < itemLevel; i++)
         {
@@ -43,12 +43,12 @@ public static class RitualSacrificeHelper
                     intrigueIncrease++;
                     strengthIncrease++;
                 }
-                else if (item.lore == item.magick && maxStat == item.lore)
+                else if (item.lore == item.occultism && maxStat == item.lore)
                 {
                     intrigueIncrease++;
                     magickIncrease++;
                 }
-                else if (item.magick == item.strength && maxStat == item.magick)
+                else if (item.occultism == item.strength && maxStat == item.occultism)
                 {
                     magickIncrease++;
                     strengthIncrease++;
@@ -62,7 +62,7 @@ public static class RitualSacrificeHelper
                 intrigueIncrease++;
                 rageIncrease--;
             }
-            else if (item.magick == maxStat)
+            else if (item.occultism == maxStat)
             {
                 magickIncrease++;
                 abstractionIncrease++;
@@ -166,6 +166,6 @@ public static class RitualSacrificeHelper
         }
 
         // Display results
-        report = $"{cultist.name} {Repository.GetText("SACR1")} {sanityLossLeader}.{(totalMemberSanityLoss > 0 ? $"\n{Repository.GetText("SACR2")}" : "")}\n{statReport}";
+        report = $"{cultist.name} {Text.Get("SACR1")} {sanityLossLeader}.{(totalMemberSanityLoss > 0 ? $"\n{Text.Get("SACR2")}" : "")}\n{statReport}";
     }
 }

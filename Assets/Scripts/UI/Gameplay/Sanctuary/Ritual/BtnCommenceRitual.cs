@@ -4,7 +4,7 @@ public class BtnCommenceRitual : MonoBehaviour
 {
     public void BtnCommence()
     {
-        AlertSystem.Prompt(Repository.GetText("RIT-COMM"), () =>
+        AlertSystem.Prompt(Text.Get("RIT-COMM"), () =>
         {
             RitualController.CommenceRitual();
         });
