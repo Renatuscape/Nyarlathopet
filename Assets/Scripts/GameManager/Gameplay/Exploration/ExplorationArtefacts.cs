@@ -7,7 +7,7 @@ public static class ExplorationArtefacts
 {
     public static void PromptArtefactOptions(Location location)
     {
-        AlertSystem.Choice(Repository.GetText("EXP-A"), GetOptions(location), false); // Choice is not forced
+        AlertSystem.Choice(Text.Get("EXP-A"), GetOptions(location), false); // Choice is not forced
     }
 
     static void GetArtefactForSanity(Location location)
@@ -104,22 +104,22 @@ public static class ExplorationArtefacts
     {
         List<(string text, Action action)> options = new()
         {
-            (Repository.GetText("EXP-ABTN0"), () => GetArtefactForSanity(location))
+            (Text.Get("EXP-ABTN0"), () => GetArtefactForSanity(location))
         };
 
         if (GameplayManager.dummyData.cultMembers.Count > 0)
         {
-            options.Add((Repository.GetText("EXP-ABTN1"), () => GetArtefactForCultist(location)));
+            options.Add((Text.Get("EXP-ABTN1"), () => GetArtefactForCultist(location)));
         }
 
         if (GameplayManager.dummyData.network > 3)
         {
-            options.Add((Repository.GetText("EXP-ABTN2"), () => GetArtefactForNetwork(location)));
+            options.Add((Text.Get("EXP-ABTN2"), () => GetArtefactForNetwork(location)));
         }
 
         if (GameplayManager.dummyData.funds > 50)
         {
-            options.Add((Repository.GetText("EXP-ABTN3"), () => GetArtefactForFunds(location)));
+            options.Add((Text.Get("EXP-ABTN3"), () => GetArtefactForFunds(location)));
         }
 
         return options;
@@ -127,34 +127,34 @@ public static class ExplorationArtefacts
 
     static string GetReport(Item item, int network, int notoriety, int sanity, int funds, List<string> deadCultists)
     {
-        string report = Repository.GetText("EXP-AR0") + "\n\n";
+        string report = Text.Get("EXP-AR0") + "\n\n";
 
-        report += (item == null ? Repository.GetText("EXP-AR-FAIL") : Repository.GetText($"EXP-AR-SUCCESS") + " " + item.name + ".") + "\n";
+        report += (item == null ? Text.Get("EXP-AR-FAIL") : Text.Get($"EXP-AR-SUCCESS") + " " + item.name + ".") + "\n";
 
         if (network != 0)
         {
-            report += Repository.GetText("EXP-A1") + network + "\n";
+            report += Text.Get("EXP-A1") + network + "\n";
         }
 
         if (notoriety != 0)
         {
-            report += Repository.GetText("EXP-A2") + notoriety + "\n";
+            report += Text.Get("EXP-A2") + notoriety + "\n";
         }
 
         if (sanity != 0)
         {
-            report += Repository.GetText("EXP-A3") + sanity + "\n";
+            report += Text.Get("EXP-A3") + sanity + "\n";
         }
 
         if (funds != 0)
         {
-            report += Repository.GetText("EXP-A4") + funds + "\n";
+            report += Text.Get("EXP-A4") + funds + "\n";
         }
 
         if (deadCultists != null && deadCultists.Count > 0)
         {
 
-            report += Repository.GetText("EXP-A5") + " " + FormatNameList(deadCultists) + ".";
+            report += Text.Get("EXP-A5") + " " + FormatNameList(deadCultists) + ".";
         }
 
         return report;
