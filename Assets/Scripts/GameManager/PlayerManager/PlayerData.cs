@@ -62,20 +62,20 @@ public class PlayerData
         };
         inventory = new()
         {
-            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 2, strength = 0, lore = 0 },
-            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 0, strength = 2, lore = 0 },
-            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 1, strength = 1, lore = 0 },
-            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 0, strength = 2, lore = 0 },
-            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 1, strength = 1, lore = 0 },
-            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 2, strength = 0, lore = 0 },
-            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 0, strength = 2, lore = 0 },
-            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 1, strength = 1, lore = 0 },
-            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 0, strength = 2, lore = 0 },
-            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 1, strength = 1, lore = 0 },
-            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 0, strength = 2, lore = 0 },
-            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 1, strength = 1, lore = 0 },
-            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 0, strength = 2, lore = 0 },
-            new() { name = "Random Item of Testing", type = ItemType.Artefact, magick = 1, strength = 1, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, occultism = 2, strength = 0, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, occultism = 0, strength = 2, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, occultism = 1, strength = 1, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, occultism = 0, strength = 2, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, occultism = 1, strength = 1, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, occultism = 2, strength = 0, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, occultism = 0, strength = 2, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, occultism = 1, strength = 1, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, occultism = 0, strength = 2, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, occultism = 1, strength = 1, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, occultism = 0, strength = 2, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, occultism = 1, strength = 1, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, occultism = 0, strength = 2, lore = 0 },
+            new() { name = "Random Item of Testing", type = ItemType.Artefact, occultism = 1, strength = 1, lore = 0 },
         };
     }
 }
