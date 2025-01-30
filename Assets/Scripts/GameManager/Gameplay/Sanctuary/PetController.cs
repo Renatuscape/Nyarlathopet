@@ -30,10 +30,7 @@ public static class PetController
 
     public static void CommuneWithPet()
     {
-        // Options - how would you like to commune with your pet?
-        // Commune in private - Increase stats or level, reducing specified pet stat (increases rage), requires tome
-        // Volunteer a cultist - Reduce a specified pet stat, increasing cultist stat (increases rage), requires tome
-        // Everyone will commune - spend a tome to increase everyone's sanity a little, increasing rage, requires tome
+        PetCommuneHelper.Initialise();
     }
 
     public static void FinaliseSummoning()
