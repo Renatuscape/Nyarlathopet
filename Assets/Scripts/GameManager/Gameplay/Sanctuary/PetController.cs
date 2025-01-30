@@ -8,11 +8,11 @@ public static class PetController
     {
         if (GameplayManager.dummyData.cultMembers.Count < 1)
         {
-            AlertSystem.Print(Repository.GetText("PET-F0"));
+            AlertSystem.Print(Text.Get("PET-F0"));
         }
         if (GameplayManager.isPetFed)
         {
-            AlertSystem.Prompt($"{Repository.GetText("PET-F1A")} {GameplayManager.dummyData.currentPet.name} {Repository.GetText("PET-F1B")}", () =>
+            AlertSystem.Prompt($"{Text.Get("PET-F1A")} {GameplayManager.dummyData.currentPet.name} {Text.Get("PET-F1B")}", () =>
             {
                 PromptChooseVolunteerToFeedPet();
             });
@@ -58,7 +58,7 @@ public static class PetController
         }
 
         Report.Write("PetController - ConfirmVolunteer", "Choices created: " + choices.Count);
-        AlertSystem.Choice(Repository.GetText("PET-F2A"), choices, false);
+        AlertSystem.Choice(Text.Get("PET-F2A"), choices, false);
     }
 
     static void ExecuteFeeding(Human volunteer)
@@ -70,7 +70,7 @@ public static class PetController
         var changes = StatConverter.ConvertHumanToCreatureStats(volunteer, 0);
         var report = StatConverter.CreateCreatureStatChangeReport(changes, true);
 
-        AlertSystem.Print($"{GameplayManager.dummyData.currentPet.name} {Repository.GetText("PET-F3")} {volunteer.name}.\n" + report);
+        AlertSystem.Print($"{GameplayManager.dummyData.currentPet.name} {Text.Get("PET-F3")} {volunteer.name}.\n" + report);
 
         GameplayManager.dummyData.currentPet.ApplyStatChanges(changes);
         SanctuaryManager.instance.UpdateDisplay();
