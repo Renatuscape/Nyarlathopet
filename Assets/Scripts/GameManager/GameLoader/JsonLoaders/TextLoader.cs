@@ -8,6 +8,7 @@ public class TextData
 {
     public Language language;
     public List<string[]> entries;
+    public List<string[]> tags;
 }
 
 public class TextLoader : MonoBehaviour
