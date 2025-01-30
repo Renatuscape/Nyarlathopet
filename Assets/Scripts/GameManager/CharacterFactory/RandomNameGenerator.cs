@@ -135,11 +135,11 @@ public static class RandomNameGenerator
         string suffix = "";
 
         // Choose prefix
-        if (item.lore > item.strength && item.lore > item.magick)
+        if (item.lore > item.strength && item.lore > item.occultism)
         {
             prefix = ItemPrefixLore[Random.Range(0, ItemPrefixLore.Length)];
         }
-        else if (item.strength >= item.magick && item.strength > item.lore)
+        else if (item.strength >= item.occultism && item.strength > item.lore)
         {
             prefix = ItemPrefixStrength[Random.Range(0, ItemPrefixStrength.Length)];
         }
@@ -163,7 +163,7 @@ public static class RandomNameGenerator
         }
 
         // Choose suffix, if book strength is high enough
-        if ((item.lore + item.magick + item.strength / 2) > Player.Data.level)
+        if ((item.lore + item.occultism + item.strength / 2) > Player.Data.level)
         {
             suffix = " of " + ItemSuffixes[Random.Range(0, ItemSuffixes.Length)];
         }
