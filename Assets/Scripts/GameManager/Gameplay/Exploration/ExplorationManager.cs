@@ -9,13 +9,13 @@ public static class ExplorationManager
 
         if (GameplayManager.dummyData.notoriety < 1)
         {
-            AlertSystem.Print(Repository.GetText("EXP-T0"));
+            AlertSystem.Print(Text.Get("EXP-T0"));
         }
         else
         {
             int maxReduction = Mathf.FloorToInt(GameplayManager.dummyData.notoriety * 0.75f);
             int reduction = Random.Range(1, maxReduction) + GameplayManager.dummyData.level;
-            string alertMessage = $"{Repository.GetText("EXP-T1")} {reduction}.";
+            string alertMessage = $"{Text.Get("EXP-T1")} {reduction}.";
 
             GameplayManager.dummyData.notoriety -= reduction;
             int startingNetwork = GameplayManager.dummyData.network;
@@ -28,7 +28,7 @@ public static class ExplorationManager
                 if (GameplayManager.dummyData.cultMembers.Count > 1)
                 {
                     Human cultist = GameplayManager.dummyData.cultMembers[Random.Range(0, GameplayManager.dummyData.cultMembers.Count)];
-                    alertMessage += $"\n{cultist.name} {Repository.GetText("EXP-T2")}";
+                    alertMessage += $"\n{cultist.name} {Text.Get("EXP-T2")}";
                     GameplayManager.dummyData.cultMembers.Remove(cultist);
                 }
                 else
@@ -42,7 +42,7 @@ public static class ExplorationManager
                 currentNetwork = startingNetwork - 1;
             }
 
-            alertMessage += $"\n{Repository.GetText("EXP-T3")} {startingNetwork - currentNetwork}";
+            alertMessage += $"\n{Text.Get("EXP-T3")} {startingNetwork - currentNetwork}";
 
             AlertSystem.Force(alertMessage, () =>
             {
@@ -66,7 +66,7 @@ public static class ExplorationManager
 
         GameplayManager.dummyData.cultMembers.Add(cultist);
 
-        AlertSystem.Force($"{cultist.name} {Repository.GetText("EXP-R0")}", () =>
+        AlertSystem.Force($"{cultist.name} {Text.Get("EXP-R0")}", () =>
         {
             HandleEndeavourPoints(1);
         });
