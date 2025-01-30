@@ -43,7 +43,7 @@ public static class StatConverter
 
     public static CreatureStats ConvertItemToCreatureStats(Item item, float skillPointMultiplier = 0.5f)
     {
-        MundaneStats stats = new MundaneStats() { lore = item.lore, occultism = item.magick, strength = item.strength };
+        MundaneStats stats = new MundaneStats() { lore = item.lore, occultism = item.occultism, strength = item.strength };
         return ConvertMundaneToCreatureStats(stats, skillPointMultiplier);
     }
     public static CreatureStats ConvertHumanToCreatureStats(Human human, float skillPointMultiplier = 0.5f)
