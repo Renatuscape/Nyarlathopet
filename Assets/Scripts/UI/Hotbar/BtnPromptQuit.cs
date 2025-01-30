@@ -6,7 +6,7 @@ public class BtnQuitApplicaiton : MonoBehaviour
 {
     public void BtnPromptQuit()
     {
-        AlertSystem.Prompt(Repository.GetText("ALERT-QUIT"),
+        AlertSystem.Prompt(Text.Get("ALERT-QUIT"),
             () =>
             {
                 DebugManager.WriteDebugSessionLog(true);
