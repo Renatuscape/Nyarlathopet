@@ -184,7 +184,7 @@ public static class EventLibrary
                 },
                 action = () =>
                 {
-                    AlertSystem.Force(Repository.GetText("ROUND-CLEAR0"),() => {
+                    AlertSystem.Force(Text.Get("ROUND-CLEAR0"),() => {
                         HandleEndEvent(Event.NewMonth.ToString());
                     });
                 }
@@ -203,7 +203,7 @@ public static class EventLibrary
                 action = () =>
                 {
                     Report.Write("GameOverDead", "Opening game over prompt.");
-                    EventHelper.PromptGameOverOptions(Repository.GetText("END-DEAD"));
+                    EventHelper.PromptGameOverOptions(Text.Get("END-DEAD"));
                 }
             }
         },
@@ -220,7 +220,7 @@ public static class EventLibrary
                 action = () =>
                 {
                     Report.Write("GameOverInsane", "Opening game over prompt.");
-                    EventHelper.PromptGameOverOptions(Repository.GetText("END-INSANE"));
+                    EventHelper.PromptGameOverOptions(Text.Get("END-INSANE"));
                 }
             }
         }
