@@ -48,7 +48,7 @@ public class GameLoader : MonoBehaviour
         Report.Write(name, "Loaded text from JSON in " + GlobalSettings.language);
         loadBar.value++;
 
-        loaderDescription.text = Repository.GetText("LOAD0");
+        loaderDescription.text = Text.Get("LOAD0");
         //loaderDescription.text = "Finding locations ...";
         yield return StartCoroutine(locationLoader.LoadData());
         Report.Write(name, "Loaded locations from JSON.");
