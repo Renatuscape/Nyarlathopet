@@ -41,5 +41,45 @@
     ["EXP-T2", "taptes til fienden."],
     ["EXP-T3", "Ditt nettverk økte med"],
     ["EXP-R0", "sluttet seg til din kult."]
+  ],
+  "tags": [
+    ["SAN", "FNF"],
+    ["OCL", "OKL"],
+    ["LOR", "KNS"],
+    ["STR", "STR"],
+    ["FNS", "VRD"],
+
+    ["San", "Fornuft"],
+    ["Ocl", "Okkultisme"],
+    ["Lor", "Kunnskap"],
+    ["Str", "Styrke"],
+    ["Fns", "Verdier"],
+
+    ["MTH", "MTH"],
+    ["ITR", "ITR"],
+    ["MGK", "MAG"],
+    ["ABS", "ABS"],
+    ["RGE", "RSR"],
+
+    ["Mth", "Mythos"],
+    ["Itr", "Intrige"],
+    ["Mgk", "Magi"],
+    ["Abs", "Abstraksjon"],
+    ["Rge", "Raseri"],
+
+    ["NWK", "NTV"],
+    ["NTR", "BRM"],
+    ["MBS", "MDL"],
+
+    ["Nwk", "Nettverk"],
+    ["Ntr", "Berømmelse"],
+    ["Mbs", "Medlemmer"],
+    ["Ldr", "Leder"],
+
+    ["Artefact", "Artefakt"],
+    ["Tome", "Lærebok"],
+    ["Prayer", "Bønn"],
+
+    ["RiskyE", "Høy risiko!"]
   ]
 }
