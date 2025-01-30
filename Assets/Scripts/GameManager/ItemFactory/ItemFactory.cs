@@ -25,9 +25,9 @@ public static class ItemFactory
         {
             int type = Random.Range(0, 3);
 
-            if (type == 0 && location.hasMagick)
+            if (type == 0 && location.hasOccultism)
             {
-                item.magick++;
+                item.occultism++;
                 skillPoints--;
             }
             else if (type == 1 && location.hasStrength)
@@ -42,11 +42,11 @@ public static class ItemFactory
             }
         }
 
-        if (item.lore > item.strength && item.lore > item.magick) // Lore must be more than strength and magic
+        if (item.lore > item.strength && item.lore > item.occultism) // Lore must be more than strength and magic
         {
             item.type = ItemType.Tome;
         }
-        else if (item.magick >= item.strength && item.lore >= item.strength) // Magick and lore must be more than strength
+        else if (item.occultism >= item.strength && item.lore >= item.strength) // Magick and lore must be more than strength
         {
             item.type = ItemType.Prayer;
         }
