@@ -127,8 +127,8 @@ public class AlertSystem : MonoBehaviour
     {
         PrintChoiceWithCustomOptions(alertText, new()
         {
-            (Repository.GetText("OPTION-YES"), actionYes),
-            (Repository.GetText("OPTION-NO"), actionNo)
+            (Text.Get("OPTION-YES"), actionYes),
+            (Text.Get("OPTION-NO"), actionNo)
         });
     }
 
