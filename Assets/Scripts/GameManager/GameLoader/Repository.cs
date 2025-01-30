@@ -8,18 +8,6 @@ public static class Repository
     public static Horror[] masks;
     public static Horror[] pets;
 
-    public static string GetText(string tag)
-    {
-        var entry = displayText?.entries?.FirstOrDefault(e => e[0] == tag);
-
-        if (entry == null)
-        {
-            Report.Write("Repository", tag + " returned null.");
-        }
-
-        return entry != null ? entry[1] : "▓║▓┤▓░▓";
-    }
-
     public static Location GetLocationByID(int id)
     {
         return locations[id];
@@ -88,7 +76,7 @@ public static class Repository
                 level = 1,
                 x = 0,
                 y = 0,
-                hasMagick = true,
+                hasOccultism = true,
                 hasStrength = false,
                 hasLore = true,
                 hasMoney = false,
@@ -100,7 +88,7 @@ public static class Repository
                 level = 1,
                 x = 0,
                 y = 1,
-                hasMagick = false,
+                hasOccultism = false,
                 hasStrength = true,
                 hasLore = false,
                 hasMoney = true,
@@ -112,7 +100,7 @@ public static class Repository
                 level = 1,
                 x = 1,
                 y = 0,
-                hasMagick = true,
+                hasOccultism = true,
                 hasStrength = true,
                 hasLore = false,
                 hasMoney = true,
