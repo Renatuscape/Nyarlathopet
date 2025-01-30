@@ -10,7 +10,7 @@ public class Location: Entity
     public int x;
     public int y;
 
-    public bool hasMagick;      // Items from here can increase magick
+    public bool hasOccultism;      // Items from here can increase magick
     public bool hasStrength;    // Items from here can increase stength
     public bool hasLore;        // Items from here can increase lore
     public bool hasMoney;       // Money can be gained here
