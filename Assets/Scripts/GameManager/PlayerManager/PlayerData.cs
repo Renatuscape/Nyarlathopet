@@ -19,7 +19,7 @@ public class PlayerData
 
     public override string ToString()
     {
-        return $"{cultName ?? "Unnamed Cult"} ({level})\nLeader\t\t{cultLeader.name}\nFunds:\t\t{funds}\nMembers:\t{cultMembers.Count}";
+        return $"{cultName ?? "Unnamed Cult"} (lv.{level})\n{Tags.Get("Ldr")}\t\t{cultLeader.name}\n{Tags.Get("Fns")}:\t\t{funds}\n{Tags.Get("Mbs")}:\t{cultMembers.Count}";
     }
 
     public PlayerData DeepCopy()
