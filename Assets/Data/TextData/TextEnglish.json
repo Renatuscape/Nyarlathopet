@@ -3,7 +3,7 @@
   "entries": [
     ["LOAD0", "Transcribing the ancient texts ..."],
     ["ALERT-QUIT", "QUIT GAME?\nProgress is saved at the start of a new month. Any unsaved progress will be lost."],
-    
+
     ["OPTION-YES", "Yes"],
     ["OPTION-NO", "No"],
     ["OPTION-NEWGAME", "New Game"],
@@ -16,15 +16,15 @@
     ["END-INSANE", "YOU ARE PERMANENTLY INSANE."],
 
     ["RIT-ERR", "The summoning ritual must commence at the beginning of a new month, when the moon and stars are correct.\nReturn when you have"],
-    ["RIT-ABORT", "ABANDON PROGRESS AND ABORT RITUAL?\nAll amassed power will be lost. Any sacrifices made will be for naught."],
+    ["RIT-ABORT", "ABANDON PROGRESS AND ABORT RITUAL?\nAll amassed power will be lost. Any sacrifices made will be for naught." ],
     ["RIT-COMM", "Commence the summoning with these sacrificial offerings?"],
 
     ["SAN-READY", "The sanctuary is ready for a summoning."],
-    
+
     ["SACR0", "Sacrificed"],
     ["SACR1", "is sacrificed. Your sanity is reduced by"],
     ["SACR2", "Your cultists have also suffered."],
-    
+
     ["PET-F0", "You have no cult members to sacrifice."],
     ["PET-F1A", "You already fed your"],
     ["PET-F1B", "this month. Feed again?"],
@@ -32,7 +32,11 @@
     ["PET-F2B", "Proceed?"],
     ["PET-F3", "consumed"],
 
-    ["PET-W0", "You have no prayers to recite. Seek them out in the world where magick and lore is abundant."],
+    ["PET-C0", "You have no tomes to guide you in communing with your master. Seek them out where lore is abundant."],
+    ["PET-C1", "Which tome will guide the communing?"],
+    ["PET-C2", "Who should commune with the "],
+
+    ["PET-W0", "You have no prayers to recite. Seek them out in the world where occultism and lore is abundant."],
     ["PET-W1", "Which prayer should be recited during worship?"],
     ["PET-W2", "How would you like to worship?"],
     ["PET-W3", "Public sermon"],
@@ -44,12 +48,12 @@
 
     ["EXP-A", "How will you search for artefacts?"],
     ["EXP-A0", "You obtained"],
-    ["EXP-A1", "Network +"],
-    ["EXP-A2", "Those who would seek to stop you have taken notice. Notoriety +"],
+    ["EXP-A1", "Your work has established new connections. Network +"],
+    ["EXP-A2","Those who would seek to stop you have taken notice. Notoriety +"],
     ["EXP-A3", "Sanity -"],
     ["EXP-A4", "Cult funds -"],
     ["EXP-A5", "Cultists lost:"],
-    
+
     ["EXP-ABTN0", "Risk your own sanity"],
     ["EXP-ABTN1", "Send out your cultists"],
     ["EXP-ABTN2", "Use your network"],
@@ -67,5 +71,45 @@
 
     ["EVENT-LEADER0", "Among the most sane members of the cult, one steps up to become the new leader."],
     ["EVENT-NEWCULTIST", "has joined your cult."]
+  ],
+  "tags": [
+    ["SAN", "SAN"],
+    ["OCL", "OCL"],
+    ["LOR", "LOR"],
+    ["STR", "STR"],
+    ["FNS", "FNS"],
+
+    ["San", "Sanity"],
+    ["Ocl", "Occultism"],
+    ["Lor", "Lore"],
+    ["Str", "Strength"],
+    ["Fns", "Funds"],
+
+    ["MTH", "MTH"],
+    ["ITR", "ITR"],
+    ["MGK", "MGC"],
+    ["ABS", "ABS"],
+    ["RGE", "RGE"],
+
+    ["Mth", "Mythos"],
+    ["Itr", "Intrigue"],
+    ["Mgk", "Magick"],
+    ["Abs", "Abstraction"],
+    ["Rge", "Rage"],
+
+    ["NWK", "NWK"],
+    ["NTR", "NTR"],
+    ["MBS", "MBS"],
+
+    ["Nwk", "Network"],
+    ["Ntr", "Notoriety"],
+    ["Mbs", "Members"],
+    ["Ldr", "Leader"],
+
+    ["Artefact", "Artefact"],
+    ["Tome", "Tome"],
+    ["Prayer", "Prayer"],
+
+    ["RiskyE", "Risky endeavour!"]
   ]
 }
