@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -48,7 +46,7 @@ public class SanctuaryManager : MonoBehaviour
         btnBeginRitual.gameObject.SetActive(false);
 
         petName.text = pet.name;
-        petStats.text = pet.GetStatPrintOut(false, true);
+        petStats.text = pet.Print(false, true);
         petName.gameObject.SetActive(true);
     }
 
@@ -56,7 +54,7 @@ public class SanctuaryManager : MonoBehaviour
     {
         petName.gameObject.SetActive(false);
         
-        petStats.text = Repository.GetText("SAN-READY");
+        petStats.text = Text.Get("SAN-READY");
 
         btnFeed.gameObject.SetActive(false);
         btnWorship.gameObject.SetActive(false);
