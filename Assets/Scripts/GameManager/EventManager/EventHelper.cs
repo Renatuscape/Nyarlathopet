@@ -10,9 +10,9 @@ public static class EventHelper
     {
         Player.SetPlayerData(null);
         AlertSystem.Choice(textAlert, new(){
-            (Repository.GetText("OPTION-NEWGAME"), () => {SceneManager.LoadScene("NewGame");}),
-            (Repository.GetText("OPTION-RETRY"), () => {SceneManager.LoadScene("MainMenu");}),
-            (Repository.GetText("OPTION-QUIT"), () => {
+            (Text.Get("OPTION-NEWGAME"), () => {SceneManager.LoadScene("NewGame");}),
+            (Text.Get("OPTION-RETRY"), () => {SceneManager.LoadScene("MainMenu");}),
+            (Text.Get("OPTION-QUIT"), () => {
                 DebugManager.WriteDebugSessionLog(true);
                 Application.Quit();
                 })
@@ -29,7 +29,7 @@ public static class EventHelper
             options.Add((members[capturedIndex].name, () => ElectLeader(members[capturedIndex])));
         }
 
-        AlertSystem.Choice(Repository.GetText("EVENT-LEADER0"), options);
+        AlertSystem.Choice(Text.Get("EVENT-LEADER0"), options);
 
         void ElectLeader(Human cultist)
         {
@@ -46,7 +46,7 @@ public static class EventHelper
         newCultist.origin = Repository.GetLocationNameByLevel(level);
         GameplayManager.dummyData.cultMembers.Add(newCultist);
 
-        AlertSystem.Force(newCultist.name + " " + Repository.GetText("EVENT-NEWCULTIST"), () =>
+        AlertSystem.Force(newCultist.name + " " + Text.Get("EVENT-NEWCULTIST"), () =>
         {
             doAfterChoice.Invoke();
         });
