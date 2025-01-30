@@ -5,7 +5,7 @@ public class Item
     public string name;
     public ItemType type;
 
-    public int magick;
+    public int occultism;
     public int strength;
     public int lore;
 }
