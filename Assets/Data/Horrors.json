@@ -18,7 +18,7 @@
       "rage": 1,
       "intrigue": 1,
       "abstraction": 0,
-      "magick": 0,
+      "magick": 1,
       "strength": 0,
       "sanityLoss": 3
     },
@@ -28,9 +28,9 @@
       "description": "The tiniest fragment of eldritch power that has taken on a primal shape.",
       "rage": 5,
       "intrigue": 0,
-      "abstraction": 0,
-      "magick": 1,
-      "strength": 0,
+      "abstraction": 1,
+      "magick": 0,
+      "strength": 1,
       "sanityLoss": 3
     }
   ],
