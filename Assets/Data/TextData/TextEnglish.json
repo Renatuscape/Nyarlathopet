@@ -39,7 +39,12 @@
 
     ["PET-C0", "You have no tomes to guide you in communing with your master. Seek them out where lore is abundant."],
     ["PET-C1", "Which tome will guide the communing?"],
-    ["PET-C2", "Who should commune with the "],
+    ["PET-C2", "Who should commune with the"],
+    ["PET-C3", "Choose a power to draw upon."],
+    ["PET-C4", "This aspect of your master is too weak for you to draw on its power."],
+    ["PET-C5", "Commune in private"],
+    ["PET-C6", "Elect a cultist"],
+    ["PET-C7", "All will commune"],
 
     ["PET-W0", "You have no prayers to recite. Seek them out in the world where occultism and lore is abundant."],
     ["PET-W1", "Which prayer should be recited during worship?"],
