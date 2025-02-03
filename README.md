@@ -49,6 +49,7 @@ All assets included in this repository are either 100% free/open source or made 
 
 * 🪲 Fix bugs
     * ✅ No cult members are displayed in the feeding options
+    * Pet name font size must be autoscaled
 
 **Sanctuary visuals**
 * Add custom graphic for the Book of Masks
@@ -76,6 +77,7 @@ All assets included in this repository are either 100% free/open source or made 
     * Do not display cultist reactions when there are no cult members
     * Ensure that a summoning gives at least one skill point and at least one sanity loss
     * Summoned pet had 0 rage
+    * Summoned pet has no stats
 
 **Ledger**
 * ✅ Display leader data
