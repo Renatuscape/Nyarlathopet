@@ -10,35 +10,64 @@ public static class StatConverter
 
         if (includeUnchanged || stats.mythos != 0)
         {
-            report += $"MTH{GetValueWithOperator(stats.mythos)} ";
+            report += $"{Tags.Get("MTH")}{GetValueWithOperator(stats.mythos)} ";
         }
         if (includeUnchanged || stats.intrigue != 0)
         {
-            report += $"ITR{GetValueWithOperator(stats.intrigue)} ";
+            report += $"{Tags.Get("ITR")}{GetValueWithOperator(stats.intrigue)} ";
         }
         if (includeUnchanged || stats.magick != 0)
         {
-            report += $"MGC{GetValueWithOperator(stats.magick)} ";
+            report += $"{Tags.Get("MGK")}{GetValueWithOperator(stats.magick)} ";
         }
         if (includeUnchanged || stats.abstraction != 0)
         {
-            report += $"ABS{GetValueWithOperator(stats.abstraction)} ";
+            report += $"{Tags.Get("ABS")}{GetValueWithOperator(stats.abstraction)} ";
         }
         if (includeUnchanged || stats.strength != 0)
         {
-            report += $"STR{GetValueWithOperator(stats.strength)} ";
+            report += $"{Tags.Get("STR")}{GetValueWithOperator(stats.strength)} ";
         }
         if (includeUnchanged || stats.rage != 0)
         {
-            report += $"RGE{GetValueWithOperator(stats.rage)} ";
+            report += $"{Tags.Get("RGE")}{GetValueWithOperator(stats.rage)} ";
         }
 
         return report.Trim(' ');
+    }
 
-        string GetValueWithOperator(int value)
+    public static string CreateMundaneStatChangeReport(MundaneStats stats, bool includeUnchanged)
+    {
+        string report = "";
+
+        if (includeUnchanged || stats.occultism != 0)
         {
-            return (value < 0 ? "-" : "+") + value;
+            report += $"{Tags.Get("OCC")}{GetValueWithOperator(stats.occultism)} ";
         }
+        if (includeUnchanged || stats.lore != 0)
+        {
+            report += $"{Tags.Get("LOR")}{GetValueWithOperator(stats.lore)} ";
+        }
+        if (includeUnchanged || stats.strength != 0)
+        {
+            report += $"{Tags.Get("STR")}{GetValueWithOperator(stats.strength)} ";
+        }
+        if (includeUnchanged || stats.sanity != 0)
+        {
+            report += $"{Tags.Get("SAN")}{GetValueWithOperator(stats.sanity)} ";
+        }
+
+        return report.Trim(' ');
+    }
+
+    public static string GetValueWithOperator(int value)
+    {
+        if (value < 0)
+        {
+            return value.ToString(); // negative values will already display operator
+        }
+
+        return "+" + value;
     }
 
     public static CreatureStats ConvertItemToCreatureStats(Item item, float skillPointMultiplier = 0.5f)
