@@ -34,6 +34,7 @@ public static class RitualSummonHelper
 
         // Store copy of pet in dummy data
         GameplayManager.dummyData.currentPet = foundPet;
+        GameplayManager.isPetFed = true;
 
         return true;
     }
