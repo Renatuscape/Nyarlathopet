@@ -4,25 +4,25 @@ using Random = UnityEngine.Random;
 
 public static class RitualSummonHelper
 {
-    public static void CommenceRitual(Horror ritualState)
+    public static void CommenceRitual(CreatureStats ritualState)
     {
         if (FindAndStoreEligiblePet(ritualState))
         {
-            AlertSystem.Force($"You summon a fraction of Nyarlathotep!\nOne {GameplayManager.dummyData.currentPet.name} appears before you.", () =>
+            AlertSystem.Force($"{Text.Get("RIT-SUCCA")} {GameplayManager.dummyData.currentPet.name} {Text.Get("RIT-SUCCB")}", () =>
             {
                 PerformEndRoutine(true);
             });
         }
         else
         {
-            AlertSystem.Force("The ritual failed to summon even the smallest fraction of Nyarlathotep. Amass greater power before your next attempt.", () =>
+            AlertSystem.Force(Text.Get("RIT-FAIL"), () =>
             {
                 PerformEndRoutine(false);
             });
         }
     }
 
-    static bool FindAndStoreEligiblePet(Horror ritualState)
+    static bool FindAndStoreEligiblePet(CreatureStats ritualState)
     {
         // Search repository for the pet that best matches the ritual state
         var foundPet = Repository.GetPetByStats(ritualState);
@@ -96,12 +96,15 @@ public static class RitualSummonHelper
             }
         }
 
-        report += $"SAN-{sanLoss} MGC+{magick} STR+{strength} LOR+{lore}";
+        report += $"{Tags.Get("SAN")}-{sanLoss} {Tags.Get("MGK")}+{magick} {Tags.Get("STR")}+{strength} {Tags.Get("LOR")}+{lore}";
 
-        GameplayManager.dummyData.cultLeader.sanity -= sanLoss;
-        GameplayManager.dummyData.cultLeader.occultism += magick;
-        GameplayManager.dummyData.cultLeader.strength += strength;
-        GameplayManager.dummyData.cultLeader.lore += lore;
+        GameplayManager.dummyData.cultLeader.ApplyStatChanges(new()
+        {
+            sanity = -sanLoss,
+            occultism = magick,
+            strength = strength,
+            lore = lore
+        });
     }
 
     static void ExecuteCultMemberConsequences(out string report)
@@ -111,14 +114,14 @@ public static class RitualSummonHelper
         foreach (var member in GameplayManager.dummyData.cultMembers)
         {
             int sanLoss = Mathf.CeilToInt(Random.Range(pet.sanityLoss * 0.33f, pet.sanityLoss));
-            member.sanity -= sanLoss;
+            member.ApplyStatChanges(new() { sanity = -sanLoss});
         }
 
         RitualController.RemoveInstaneCultists(out report);
 
         if (GameplayManager.dummyData.cultMembers.Count > 0 && string.IsNullOrEmpty(report))
         {
-            report = "Your cult members withstand the mental anguish and fall to their knees in frantic worship.";
+            report = Text.Get("RIT-CULTCONS");
         }
     }
 
