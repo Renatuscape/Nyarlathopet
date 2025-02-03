@@ -3,6 +3,7 @@
   "entries": [
     ["LOAD0", "Transcribing the ancient texts ..."],
     ["ALERT-QUIT", "QUIT GAME?\nProgress is saved at the start of a new month. Any unsaved progress will be lost."],
+    ["ERR-NI", "Feature not implemented."],
 
     ["OPTION-YES", "Yes"],
     ["OPTION-NO", "No"],
@@ -18,6 +19,10 @@
     ["RIT-ERR", "The summoning ritual must commence at the beginning of a new month, when the moon and stars are correct.\nReturn when you have"],
     ["RIT-ABORT", "ABANDON PROGRESS AND ABORT RITUAL?\nAll amassed power will be lost. Any sacrifices made will be for naught." ],
     ["RIT-COMM", "Commence the summoning with these sacrificial offerings?"],
+    ["RIT-SUCCA", "You summon a fraction of Nyarlathotep!\nOne"],
+    ["RIT-SUCCB", "appears before you."],
+    ["RIT-FAIL", "The ritual failed to summon even the smallest fraction of Nyarlathotep. Amass greater power before your next attempt."],
+    ["RIT-CULTCONS", "Your cult members withstand the mental anguish and fall to their knees in frantic worship."],
 
     ["SAN-READY", "The sanctuary is ready for a summoning."],
 
@@ -110,6 +115,7 @@
     ["Tome", "Tome"],
     ["Prayer", "Prayer"],
 
-    ["RiskyE", "Risky endeavour!"]
+    ["RiskyE", "Risky endeavour!"],
+    ["ALL-C", "All cultists"]
   ]
 }
