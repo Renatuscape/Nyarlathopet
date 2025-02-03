@@ -1,7 +1,9 @@
 // Horrors are versions of Nyarlathotep, loaded in from JSON
 // For pets, the stats indicate needed materials in order to summon them
 // For Nyarlathotep, the stats indicates minimum stat growth needed
-[System.Serializable]
+using System;
+
+[Serializable]
 public class Horror : Creature
 {
     public string id = "-1";
