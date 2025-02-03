@@ -5,13 +5,13 @@
 public class Horror : Creature
 {
     public string id = "-1";
-    public int mythos;
-    public int intrigue;
-    public int magick;
-    public int abstraction;
-    public int strength;
-    public int rage; // Pets use this as starting value. Masks add this to the total upon being summoned
-    public int sanityLoss; // Max potential sanity loss upon witnessing the horror
+    public int mythos { get; private set; }
+    public int intrigue { get; private set; }
+    public int magick { get; private set; }
+    public int abstraction { get; private set; }
+    public int strength { get; private set; }
+    public int rage { get; private set; } // Pets use this as starting value. Masks add this to the total upon being summoned
+    public int sanityLoss { get; private set; } // Max potential sanity loss upon witnessing the horror
 
     public Horror Clone()
     {
