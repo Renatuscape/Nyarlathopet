@@ -14,7 +14,7 @@ public static class Player
             inventory = new(),
         };
 
-        Data.cultLeader.sanity += 10;
+        Data.cultLeader.ApplyStatChanges(new() { sanity = 10});
         Data.cultLeader.origin = "Unknown";
     }
 
