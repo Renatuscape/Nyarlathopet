@@ -43,8 +43,8 @@ public class Horror : Creature
 
     public void ApplyStatChanges(CreatureStats changes)
     {
-        mythos += changes.mythos;
-        intrigue += changes.intrigue;
+        mythos = Math.Clamp(mythos + changes.mythos, 0, 99);
+        intrigue = Math.Clamp(intrigue + changes.intrigue, 0, 99);
 
         magick += changes.magick;
         abstraction += changes.abstraction;
