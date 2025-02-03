@@ -3,7 +3,7 @@
     public static string GetRandomString(int length)
     {
         // Characters that are generally safe with Unity's fallback font
-        const string validChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?";
+        const string validChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?▓░▒█▄▀○●◘◙◦│─┌┐└┘├┤┬┴┼←→↑↓↔≈≠±Ѫ₪‡¤¥†‡¶§µ÷£¢¤₪";
         var random = new System.Random();
 
         var result = new System.Text.StringBuilder(length);
