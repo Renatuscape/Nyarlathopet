@@ -2,15 +2,6 @@
 
 public static class DummyDataUpdater
 {
-    public static int UpdateNotoriety(int points)
-    {
-        return UpdateStat(ref GameplayManager.dummyData.notoriety, points);
-    }
-
-    public static int UpdateNetwork(int points)
-    {
-        return UpdateStat(ref GameplayManager.dummyData.network, points);
-    }
 
     public static int UpdateRage(int points, bool decrease)
     {
@@ -21,13 +12,29 @@ public static class DummyDataUpdater
             points = -points;
         }
 
-        return UpdateStat(ref GameplayManager.dummyData.currentPet.rage, points);
+        int original = GameplayManager.dummyData.currentPet.rage;
+
+        GameplayManager.dummyData.currentPet.ApplyStatChanges(new() { rage = points });
+        return GameplayManager.dummyData.currentPet.rage - original;
     }
 
-    public static int UpdateSanity(int points)
+    public static int UpdateLeaderSanity(int points)
     {
         if (GameplayManager.dummyData.cultLeader == null) { return 0; }
-        return UpdateStat(ref GameplayManager.dummyData.cultLeader.sanity, points);
+
+        int original = GameplayManager.dummyData.cultLeader.sanity;
+        GameplayManager.dummyData.cultLeader.ApplyStatChanges(new() { sanity = points });
+        return GameplayManager.dummyData.cultLeader.sanity;
+    }
+
+    public static int UpdateNotoriety(int points)
+    {
+        return UpdateStat(ref GameplayManager.dummyData.notoriety, points);
+    }
+
+    public static int UpdateNetwork(int points)
+    {
+        return UpdateStat(ref GameplayManager.dummyData.network, points);
     }
 
     static int UpdateStat(ref int stat, int points)
