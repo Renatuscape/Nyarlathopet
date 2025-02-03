@@ -19,7 +19,7 @@ public class RitualManager : MonoBehaviour
     public TextMeshProUGUI itemPlaceholderText;
 
     [SerializeField]
-    private Horror ritualState;
+    private CreatureStats ritualState;
     public int cultistIndex;
     public int itemIndex;
     public int sacrificesMade;
