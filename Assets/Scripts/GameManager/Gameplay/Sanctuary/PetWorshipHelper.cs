@@ -88,7 +88,7 @@ public static class PetWorshipHelper
         int sanIncrease = Random.Range(Math.Max(2, prayer.lore / 2), Math.Max(2, prayer.lore + prayer.occultism) * 2);
         
         int rageChange = DummyDataUpdater.UpdateRage(rageReduction, true);
-        int sanChange = DummyDataUpdater.UpdateSanity(sanIncrease);
+        int sanChange = DummyDataUpdater.UpdateLeaderSanity(sanIncrease);
 
         GameplayManager.dummyData.inventory.Remove(prayer);
 
