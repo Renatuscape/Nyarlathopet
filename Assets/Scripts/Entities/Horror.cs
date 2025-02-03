@@ -46,10 +46,10 @@ public class Horror : Creature
         mythos = Math.Clamp(mythos + changes.mythos, 0, 99);
         intrigue = Math.Clamp(intrigue + changes.intrigue, 0, 99);
 
-        magick += changes.magick;
-        abstraction += changes.abstraction;
+        magick = Math.Clamp(mythos + changes.magick, 0, 99);
+        abstraction = Math.Clamp(abstraction + changes.abstraction, 0, 99);
 
-        strength += changes.strength;
-        rage += changes.rage;
+        strength = Math.Clamp(strength + changes.strength, 0, 99);
+        rage = Math.Clamp(rage + changes.rage, 0, 99);
     }
 }
