@@ -61,7 +61,7 @@ public static class ExplorationManager
 
         if (currentLocation.hasMoney)
         {
-            cultist.funds = cultist.funds * 3;
+            cultist.ApplyStatChanges(new() { funds = cultist.funds * 2});
         }
 
         GameplayManager.dummyData.cultMembers.Add(cultist);
