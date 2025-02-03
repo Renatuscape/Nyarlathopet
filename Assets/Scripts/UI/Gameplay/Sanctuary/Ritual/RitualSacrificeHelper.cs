@@ -4,7 +4,7 @@ using Random = UnityEngine.Random;
 
 public static class RitualSacrificeHelper
 {
-    public static void OfferArtefact(Horror horrorState, Item item, out string report)
+    public static void OfferArtefact(CreatureStats horrorState, Item item, out string report)
     {
         report = $"{Text.Get("SACR0")} " + item.name + ".\n";
         GameplayManager.dummyData.inventory.Remove(item);
@@ -83,7 +83,7 @@ public static class RitualSacrificeHelper
         report += $"MGC+{magickIncrease} ABS+{abstractionIncrease} ITR+{intrigueIncrease} STR+{strengthIncrease} RGE{(rageIncrease >= 0 ? "+" : "-")}{rageIncrease}";
     }
 
-    public static void SacrificeCultist(Horror ritualState, Human cultist, out string report)
+    public static void SacrificeCultist(CreatureStats ritualState, Human cultist, out string report)
     {
         int reductionChance = 25;
         GameplayManager.dummyData.cultMembers.Remove(cultist);
@@ -154,14 +154,14 @@ public static class RitualSacrificeHelper
 
         // SANITY LOSS
         int sanityLossLeader = Random.Range(0, cultistLevel);
-        GameplayManager.dummyData.cultLeader.sanity -= sanityLossLeader;
+        DummyDataUpdater.UpdateLeaderSanity(-sanityLossLeader);
 
         int totalMemberSanityLoss = 0;
 
         foreach (var member in GameplayManager.dummyData.cultMembers)
         {
             int sanLoss = Random.Range(0, cultistLevel);
-            member.sanity -= sanLoss;
+            member.ApplyStatChanges(new() { sanity = -sanLoss});
             totalMemberSanityLoss += sanLoss;
         }
 
