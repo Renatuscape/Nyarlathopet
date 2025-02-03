@@ -11,6 +11,6 @@ public static class Text
             Report.Write("Tags", tag + " returned null.");
         }
 
-        return entry != null ? entry[1] : "▓░▓";
+        return entry != null ? entry[1] : RandomFactory.GetRandomString(UnityEngine.Random.Range(6, 12));
     }
 }
