@@ -16,10 +16,12 @@ public static class CultistFactory
         {
             name = RandomNameGenerator.GetRandomHumanName(),
             type = CreatureType.Cultist,
-            funds = random.Next(0, (level * 5) + 1),
-            sanity = random.Next(5, (level * 10) + 1),
             origin = "???"
         };
+
+        MundaneStats stats = new();
+        stats.funds = random.Next(0, (level * 5) + 1);
+        stats.sanity = random.Next(5, (level * 10) + 1);
 
         int skillPoints = level * 2;
 
@@ -28,20 +30,21 @@ public static class CultistFactory
             int randomStat = random.Next(0, 3);
             if (randomStat == 0)
             {
-                cultist.occultism++;
+                stats.occultism++;
             }
             else if (randomStat == 1)
             {
-                cultist.strength++;
+                stats.strength++;
             }
             else
             {
-                cultist.lore++;
+                stats.lore++;
             }
 
             skillPoints--;
         }
 
+        cultist.ApplyStatChanges(stats);
         return cultist;
     }
 }
