@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-
+using Random = UnityEngine.Random;
 public static class Repository
 {
     public static TextData displayText;
@@ -29,7 +30,7 @@ public static class Repository
         return horrors[id].Clone();
     }
 
-    public static Horror GetPetByStats(Horror refStats)
+    public static Horror GetPetByStats(CreatureStats refStats)
     {
         if (refStats == null)
         {
@@ -68,139 +69,13 @@ public static class Repository
     public static void CreateDummyData()
     {
         // Initialize locations array
-        locations = new Location[]
-        {
-            new Location
-            {
-                name = "Duckberg",
-                level = 1,
-                x = 0,
-                y = 0,
-                hasOccultism = true,
-                hasStrength = false,
-                hasLore = true,
-                hasMoney = false,
-                isRisky = false
-            },
-            new Location
-            {
-                name = "Walachia",
-                level = 1,
-                x = 0,
-                y = 1,
-                hasOccultism = false,
-                hasStrength = true,
-                hasLore = false,
-                hasMoney = true,
-                isRisky = true
-            },
-            new Location
-            {
-                name = "Constantinople",
-                level = 1,
-                x = 1,
-                y = 0,
-                hasOccultism = true,
-                hasStrength = true,
-                hasLore = false,
-                hasMoney = true,
-                isRisky = true
-            }
-        };
+        locations = GenerateDummyLocations(15);
 
         // Initialize masks array
-        masks = new Horror[]
-        {
-            new Horror
-            {
-                id = "MASK2",
-                name = "Void Visage",
-                description = "A mask that seems to absorb light and hope alike.",
-                rage = 12,
-                intrigue = 7,
-                abstraction = 8,
-                magick = 4,
-                strength = 2,
-                sanityLoss = 5
-            },
-            new Horror
-            {
-                id = "MASK3",
-                name = "Crown of Thorns",
-                description = "Ancient symbols writhe across its surface, forming patterns that hurt to observe.",
-                rage = 18,
-                intrigue = 3,
-                abstraction = 6,
-                magick = 6,
-                strength = 3,
-                sanityLoss = 7
-            },
-            new Horror
-            {
-                id = "MASK4",
-                name = "Whispers of the Deep",
-                description = "This mask speaks in tongues that no mortal should comprehend.",
-                rage = 14,
-                intrigue = 8,
-                abstraction = 9,
-                magick = 5,
-                strength = 1,
-                sanityLoss = 8
-            }
-                };
+        masks = GenerateDummyHorrors(10);
 
         // Initialize pets array
-        pets = new Horror[]
-        {
-            new Horror
-            {
-                id = "PET0",
-                name = "Dummy",
-                description = "If you can't summon this one, I don't know what you're doing.",
-                rage = 8,
-                intrigue = 0,
-                abstraction = 0,
-                magick = 1,
-                strength = 1,
-                sanityLoss = 4
-            },
-            new Horror
-            {
-                id = "PET2",
-                name = "Shifting Shade",
-                description = "A living shadow that dances at the edge of reality.",
-                rage = 8,
-                intrigue = 2,
-                abstraction = 3,
-                magick = 2,
-                strength = 0,
-                sanityLoss = 4
-            },
-            new Horror
-            {
-                id = "PET3",
-                name = "Ethereal Familiar",
-                description = "A wispy creature that phases between dimensions.",
-                rage = 6,
-                intrigue = 3,
-                abstraction = 0,
-                magick = 3,
-                strength = 0,
-                sanityLoss = 3
-            },
-            new Horror
-            {
-                id = "PET4",
-                name = "Crawling Chaos",
-                description = "A mass of tentacles and eyes that shouldn't exist.",
-                rage = 12,
-                intrigue = 1,
-                abstraction = 4,
-                magick = 1,
-                strength = 1,
-                sanityLoss = 5
-            }
-        };
+        pets = GenerateDummyHorrors(10, true);
     }
 
     public static string GetLocationNameByLevel(int level)
@@ -212,11 +87,75 @@ public static class Repository
             var locationsByLevel = locations.Where(l => l.level == searchLevel).ToList();
             if (locationsByLevel.Count > 0)
             {
-                return locationsByLevel[UnityEngine.Random.Range(0, locationsByLevel.Count)].name;
+                return locationsByLevel[Random.Range(0, locationsByLevel.Count)].name;
             }
             searchLevel--;
         }
 
         return "???";
+    }
+
+    static Horror[] GenerateDummyHorrors(int amount, bool isPet = false)
+    {
+        List<Horror> horrors = new();
+
+        for (int i = 0; i < amount; i++)
+        {
+            var newHorror = GetDummyHorror(isPet);
+            newHorror.id = i.ToString();
+
+            int skillPoints = isPet ? i * 2 : i * 15;
+            CreatureStats stats = new CreatureStats();
+            stats.AddRandomStats(skillPoints);
+            newHorror.ApplyStatChanges(stats);
+        }
+
+        return horrors.ToArray();
+    }
+
+    static Horror GetDummyHorror(bool isPet = false)
+    {
+        Horror newHorror = new()
+        {
+            name = RandomFactory.GetRandomString(Random.Range(6, 10)),
+            description = RandomFactory.GetRandomString(Random.Range(12, 22)),
+        };
+
+        return newHorror;
+    }
+
+    static Location[] GenerateDummyLocations(int amount)
+    {
+        List<Location> locations = new();
+
+        var newLocation = AttemptToGenerate();
+
+        while (locations.Count < amount)
+        {
+            newLocation = AttemptToGenerate();
+
+            if (locations.FirstOrDefault(l => l.x == newLocation.x && l.y == newLocation.y) == null)
+            {
+                locations.Add(newLocation);
+            }
+        }
+
+        return locations.ToArray();
+
+        Location AttemptToGenerate()
+        {
+            return new Location
+            {
+                name = RandomFactory.GetRandomString(Random.Range(4, 10)),
+                level = Random.Range(1, 10),
+                x = Random.Range(0, 60),
+                y = Random.Range(0, 45),
+                hasOccultism = Random.Range(0, 2) != 0,
+                hasStrength = Random.Range(0, 2) != 0,
+                hasLore = Random.Range(0, 2) != 0,
+                hasMoney = Random.Range(0, 1) == 0,
+                isRisky = Random.Range(0, 3) == 0
+            };
+        }
     }
 }
