@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Random = UnityEngine.Random;
 
 public static class ExplorationArtefacts
@@ -18,7 +17,7 @@ public static class ExplorationArtefacts
         int loss = Random.Range(1, maxLoss);
         int network;
 
-        GameplayManager.dummyData.cultLeader.sanity -= loss;
+        DummyDataUpdater.UpdateLeaderSanity(-loss);
 
         if (GameplayManager.dummyData.cultLeader.sanity > 0)
         {
