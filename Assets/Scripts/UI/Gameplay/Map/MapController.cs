@@ -22,9 +22,9 @@ public class MapController : MonoBehaviour
 
         cells = new GameObject[columns, 45];
 
-        for (int x = 0; x < 60; x++)
+        for (int x = 0; x < columns; x++)
         {
-            for (int y = 0; y < 45; y++)
+            for (int y = 0; y < rows; y++)
             {
                 var location = Repository.GetLocationByCoordinates((x, y));
 
