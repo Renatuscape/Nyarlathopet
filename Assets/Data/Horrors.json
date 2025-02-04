@@ -32,6 +32,17 @@
       "magick": 0,
       "strength": 1,
       "sanityLoss": 3
+    },
+    {
+      "id": "PET3",
+      "name": "Otherworldly Shard",
+      "description": "Splintered off from something unearthly, it hums and pulses slowly but intensely.",
+      "rage": 15,
+      "intrigue": 0,
+      "abstraction": 2,
+      "magick": 3,
+      "strength": 0,
+      "sanityLoss": 5
     }
   ],
   "masks": [
