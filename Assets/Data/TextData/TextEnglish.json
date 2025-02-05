@@ -56,6 +56,11 @@
     ["PET-W5", "Worship in private"],
     ["PET-W5B", "Alone, you enter the sanctuary and kneel before your master. Your praises earn you brief respite."],
 
+    ["MAP-INFT", "Endeavour"],
+    ["MAP-INFD", "Select a destination to proceed with your endeavour. Risky locations yield higher rewards."],
+    ["MAP-NSEL", "Select your destination on the map."],
+    ["MAP-RECR", "Start an endeavour to recruit members in"],
+
     ["EXP-A", "How will you search for artefacts?"],
     ["EXP-A0", "You obtained"],
     ["EXP-A1", "Your work has established new connections. Network +"],
