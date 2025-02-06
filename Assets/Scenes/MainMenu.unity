@@ -1039,7 +1039,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7421336315809768499, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421336315809768499, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2080682444}
+    - target: {fileID: 7421336315809768499, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BtnPromptSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421336315809768499, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BtnPromptMainMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421336315809768499, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7764346223421831982, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
       propertyPath: m_Enabled
@@ -1734,38 +1750,30 @@ MonoBehaviour:
       name: 
       description: 
       type: 0
-      magick: 0
-      strength: 0
-      lore: 0
-      sanity: 0
-      funds: 0
+      <occultism>k__BackingField: 0
+      <lore>k__BackingField: 0
+      <strength>k__BackingField: 0
+      <sanity>k__BackingField: 0
+      <funds>k__BackingField: 0
       origin: 
     cultMembers: []
     inventory: []
-    discoveredCreatures: 
+    bookOfMasks: []
     currentPet:
       name: 
       description: 
       type: 0
       id: -1
-      rage: 0
-      intrigue: 0
-      abstraction: 0
-      magick: 0
-      strength: 0
-      sanityLoss: 0
+      <mythos>k__BackingField: 0
+      <intrigue>k__BackingField: 0
+      <magick>k__BackingField: 0
+      <abstraction>k__BackingField: 0
+      <strength>k__BackingField: 0
+      <rage>k__BackingField: 0
+      <sanityLoss>k__BackingField: 0
+    language: 
   titleCultName: {fileID: 1784581304}
-  tagLevel: {fileID: 0}
-  tagMasks: {fileID: 0}
-  tagMembers: {fileID: 0}
-  tagAge: {fileID: 0}
-  tagCultFunds: {fileID: 0}
   titleLeaderName: {fileID: 1303868762}
-  tagMagick: {fileID: 0}
-  tagStrength: {fileID: 0}
-  tagLore: {fileID: 0}
-  tagFunds: {fileID: 0}
-  tagSanity: {fileID: 0}
 --- !u!4 &1327874609
 Transform:
   m_ObjectHideFlags: 0
@@ -2374,6 +2382,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784581302}
   m_CullTransparentMesh: 1
+--- !u!114 &2080682444 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 754784541204061392, guid: 034738fbcd6a726439e1fa2580ee59b9, type: 3}
+  m_PrefabInstance: {fileID: 782623884}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d0261fae8e0c3428043403e63bbde5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
