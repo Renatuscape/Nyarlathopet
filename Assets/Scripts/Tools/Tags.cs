@@ -11,6 +11,6 @@ public static class Tags
             Report.Write("Tags", tag + " returned null.");
         }
 
-        return entry != null ? entry[1] : "▓║▓┤▓░▓";
+        return entry != null ? entry[1] : $"[{tag}]";
     }
 }
