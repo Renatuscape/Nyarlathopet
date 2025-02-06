@@ -1,10 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class GlobalSettings : MonoBehaviour
+public static class GlobalSettings
 {
-    public static Language language = Language.English;
+    public static Language language
+    {
+        get => (Language)PlayerPrefs.GetInt("Language", (int)Language.English);
+        set
+        {
+            PlayerPrefs.SetInt("Language", (int)value);
+            PlayerPrefs.Save();
+        }
+    }
 }
 
 public enum Language
