@@ -1,0 +1,141 @@
+{
+    "language": "Latinus",
+    "entries": [
+      ["LOAD0", "Transcribens antiquos codices ..."],
+      ["ALERT-QUIT", "LUDUS DESERENDUS?\nProgressus initio novi mensis servatur. Progressus non servatus amittetur."],
+      ["ERR-NI", "Functio nondum implementata."],
+  
+      ["MENU-MAINP", "Redire ad primum menu?\nProgressus in currentis mensis amittetur."],
+      ["MENU-OPTIT", "OPTIONES"],
+  
+      ["SETT-LANGP", "Elige linguam et restarte ludum ut mutationes applicentur."],
+      ["SETT-LANGCA", "Lingua mutata ad"],
+      ["SETT-LANGCB", "Restarte ludum ut mutationes applicentur."],
+      ["SETT-LANGERR", "est lingua praesens."],
+  
+      ["OPTION-YES", "Etiam"],
+      ["OPTION-NO", "Non"],
+      ["OPTION-NEWGAME", "Novus Ludus"],
+      ["OPTION-RETRY", "Mensem Iterare"],
+      ["OPTION-QUIT", "Ludum Deserere"],
+      ["OPTION-MMENU", "Primum Menu"],
+      ["OPTION-LANG", "Linguam Mutare"],
+  
+      ["ROUND-CLEAR0", "MENSEM SUPERAVISTI."],
+  
+      ["END-DEAD", "MORTUUS ES."],
+      ["END-INSANE", "IN PERPETUUM INSANUS EFFECTUS ES."],
+  
+      ["RIT-ERR", "Ritualis convocatio incipi debet initio novi mensis, cum luna et sidera recte disposita sunt.\nRedire quando habebis"],
+      ["RIT-ABORT", "PROGRESSUM DESERERE ET RITUM INTERRUMPERE?\nOmnis potestas amissa erit. Sacrificia in irritum ceciderunt."],
+      ["RIT-COMM", "Incipere convocationem his sacrificiis oblatis?"],
+      ["RIT-SUCCA", "Evocas fragmentum Nyarlathotep!\nUnus"],
+      ["RIT-SUCCB", "apparet coram te."],
+      ["RIT-FAIL", "Rituale ne minimum quidem fragmentum Nyarlathotep evocare potuit. Maiorem potestatem congere antequam iterum conaris."],
+      ["RIT-CULTCONS", "Membris cultus mentales cruciatus tolerantibus, in genua procidunt furenti adoratione."],
+  
+      ["SAN-READY", "Sanctuarium paratum est pro convocatione."],
+  
+      ["SACR0", "Sacrificatus"],
+      ["SACR1", "sacrificatus est. Sanitas tua diminuta est per"],
+      ["SACR2", "Cultistae tui etiam passi sunt."],
+  
+      ["PET-F0", "Nullos cultus membros habes ut sacrifices."],
+      ["PET-F1A", "Iam pavisti tuos"],
+      ["PET-F1B", "hoc mense. Iterum pavere?"],
+      ["PET-F2A", "Hi ferventes adoratores voluntarie processerunt."],
+      ["PET-F2B", "Procedere?"],
+      ["PET-F3", "consumpsit"],
+  
+      ["PET-C0", "Nullos codices habes qui te ducant in communicando cum domino tuo. Quaere ubi lore abundat."],
+      ["PET-C1", "Quis codex ducet communicationem?"],
+      ["PET-C2", "Quis communicabit cum"],
+      ["PET-C3", "Elige potestatem deducendam."],
+      ["PET-C4", "Hoc aspectus domini tui nimis debilis est ut eius potestatem deducas."],
+      ["PET-C5", "Communicare privatim"],
+      ["PET-C6", "Elige cultistam"],
+      ["PET-C7", "Omnes communicabunt"],
+  
+      ["PET-W0", "Nullas preces habes recitandas. Quaere ubi occultismus et lore abundant."],
+      ["PET-W1", "Quae precatio recitanda est durante cultu?"],
+      ["PET-W2", "Quomodo vis adorare?"],
+      ["PET-W3", "Concio publica"],
+      ["PET-W3B", "Concio publica attentionem attrahit ab sociis et inimicis."],
+      ["PET-W4", "Concio membris tantum"],
+      ["PET-W4B", "Intra clausas sanctuarii fores, preces submissae lenient tuam"],
+      ["PET-W5", "Adorare privatim"],
+      ["PET-W5B", "Solus, intras sanctuarium et genua flectis coram domino tuo. Laudes tuae brevem requiem tibi concedunt."],
+  
+      ["MAP-INFT", "Conatus"],
+      ["MAP-INFD", "Elige destinationem ut procedas cum conatu tuo. Loca periculosa maiora praemia ferunt."],
+      ["MAP-NSEL", "Elige destinationem in mappa."],
+      ["MAP-RECR", "Incipere conatum ad recludendos membros in"],
+  
+      ["EXP-A", "Quomodo quaeres artefacta?"],
+      ["EXP-A0", "Obtinuisti"],
+      ["EXP-A1", "Opus tuum novos nexus constituit. Retis incrementum +"],
+      ["EXP-A2","Qui te prohibere volunt, animadverterunt. Notorietas +"],
+      ["EXP-A3", "Sanitas -"],
+      ["EXP-A4", "Pecuniae cultus -"],
+      ["EXP-A5", "Cultistae perditi:"],
+  
+      ["EXP-ABTN0", "Riscare tuam sanitatem"],
+      ["EXP-ABTN1", "Mittere cultistas tuos"],
+      ["EXP-ABTN2", "Uti rete tuo"],
+      ["EXP-ABTN3", "Uti pecuniis cultus"],
+  
+      ["EXP-AR0", "RELATIO CONATUS"],
+      ["EXP-AR-SUCCESS", "Artefacta feliciter obtenta"],
+      ["EXP-AR-FAIL", "Conatus nullos artefactos detegere potuit."],
+  
+      ["EXP-T0", "Nondum habes notorietatem, et ideo nullos inimicos."],
+      ["EXP-T1", "Diminuisti notorietatem tuam per"],
+      ["EXP-T2", "amissus est inimicis."],
+      ["EXP-T3", "Retis tui diminutio per"],
+      ["EXP-R0", "adiunxit cultui tuo."],
+  
+      ["EVENT-LEADER0", "Inter membra cultus maxime sana, unus prosilit ut novus dux."],
+      ["EVENT-NEWCULTIST", "adiunxit cultui tuo."]
+    ],
+    "tags": [
+      ["SAN", "SAN"],
+      ["OCL", "OCL"],
+      ["LOR", "LOR"],
+      ["STR", "FOR"],
+      ["FNS", "OPS"],
+  
+      ["San", "Sanitas"],
+      ["Ocl", "Occultismus"],
+      ["Lor", "Lore"],
+      ["Str", "Fortitudo"],
+      ["Fns", "Opes"],
+  
+      ["MTH", "MTH"],
+      ["ITR", "ITR"],
+      ["MGK", "MGC"],
+      ["ABS", "ABS"],
+      ["RGE", "IRA"],
+  
+      ["Mth", "Mythos"],
+      ["Itr", "Intriga"],
+      ["Mgk", "Magica"],
+      ["Abs", "Abstractio"],
+      ["Rge", "Ira"],
+  
+      ["NWK", "RET"],
+      ["NTR", "NTR"],
+      ["MBS", "MBR"],
+  
+      ["Nwk", "Retis"],
+      ["Ntr", "Notorietas"],
+      ["Mbs", "Membra"],
+      ["Ldr", "Dux"],
+  
+      ["Artefact", "Artefactum"],
+      ["Tome", "Codex"],
+      ["Prayer", "Precatio"],
+  
+      ["RiskyE", "Conatus periculosus!"],
+      ["ALL-C", "Omnes cultistae"]
+    ]
+  }
