@@ -587,6 +587,7 @@ MonoBehaviour:
   textJsonList:
   - {fileID: 4900000, guid: 01d77f119cd2c1b449905c8b6eafb561, type: 3}
   - {fileID: 4900000, guid: a659858744e474a48bf4594e811edb39, type: 3}
+  - {fileID: 4900000, guid: 2de185f40006dd64aa3800b2c8ba45b0, type: 3}
 --- !u!1 &972965592
 GameObject:
   m_ObjectHideFlags: 0
