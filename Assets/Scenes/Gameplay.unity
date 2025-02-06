@@ -6056,7 +6056,6 @@ GameObject:
   m_Component:
   - component: {fileID: 668107444}
   - component: {fileID: 668107447}
-  - component: {fileID: 668107446}
   - component: {fileID: 668107445}
   - component: {fileID: 668107448}
   m_Layer: 5
@@ -6105,29 +6104,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &668107446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 668107443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 32
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
 --- !u!223 &668107447
 Canvas:
   m_ObjectHideFlags: 0
@@ -6146,7 +6122,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 31
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -6166,12 +6142,12 @@ MonoBehaviour:
   infoTitle: {fileID: 1363655802}
   infoMesh: {fileID: 2119647166}
   currentLocation:
-    name: Amsterdam
+    name: 
     description: 
     level: 0
     x: 0
     y: 0
-    hasMagick: 1
+    hasOccultism: 0
     hasStrength: 0
     hasLore: 0
     hasMoney: 0
@@ -6721,17 +6697,12 @@ MonoBehaviour:
   cultistPlaceholderText: {fileID: 1891326557}
   itemPlaceholderText: {fileID: 931194246}
   ritualState:
-    name: 
-    description: 
-    type: 0
-    id: 
     mythos: 0
     intrigue: 0
     magick: 0
     abstraction: 0
     strength: 0
     rage: 0
-    sanityLoss: 0
   cultistIndex: 0
   itemIndex: 0
   sacrificesMade: 0
@@ -7450,11 +7421,11 @@ MonoBehaviour:
     name: 
     description: 
     type: 0
-    occultism: 0
-    lore: 0
-    strength: 0
-    sanity: 0
-    funds: 0
+    <occultism>k__BackingField: 0
+    <lore>k__BackingField: 0
+    <strength>k__BackingField: 0
+    <sanity>k__BackingField: 0
+    <funds>k__BackingField: 0
     origin: 
   cultistSlot1: {fileID: 2101048967}
   cultistSlot2: {fileID: 1670719980}
