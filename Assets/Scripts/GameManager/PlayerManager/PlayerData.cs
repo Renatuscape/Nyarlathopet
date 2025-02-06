@@ -15,7 +15,6 @@ public class PlayerData
     public List<Item> inventory = new(); // Holds inventory items, which are randomly generated
     public List<string> bookOfMasks = new(); // Holds ID of discovered creatures
     public Horror currentPet;
-    public string language;
 
     public override string ToString()
     {
