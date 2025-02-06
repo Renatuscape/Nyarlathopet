@@ -69,7 +69,7 @@ public static class Repository
     public static void CreateDummyData()
     {
         // Initialize locations array
-        locations = GenerateDummyLocations(15);
+        locations = GenerateDummyLocations(145);
 
         // Initialize masks array
         masks = GenerateDummyHorrors(10);
