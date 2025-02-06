@@ -33,17 +33,6 @@ public class GameLoader : MonoBehaviour
         Report.Write(name, "Loaded save data from JSON.");
         loadBar.value++;
 
-        // Set language from save file
-        if (Enum.TryParse(Player.Data.language, out Language languageSetting))
-        {
-            GlobalSettings.language = languageSetting;
-        }
-        else
-        {
-            Report.Write(name, "Unable to parse language setting from file. Defaulting to English.");
-            GlobalSettings.language = Language.English;
-        }
-
         yield return StartCoroutine(textLoader.LoadData());
         Report.Write(name, "Loaded text from JSON in " + GlobalSettings.language);
         loadBar.value++;
