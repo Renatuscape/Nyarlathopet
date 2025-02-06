@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +13,7 @@ public class MapManager : MonoBehaviour
     public Button btnRecruit;
     public Button btnThwart;
 
-    private void Start()
+    private void Awake()
     {
         instance = this;
         btnSeek.onClick.AddListener(() => BtnSeek());
@@ -42,8 +40,8 @@ public class MapManager : MonoBehaviour
         }
         else
         {
-            infoTitle.text = "Endeavour";
-            infoMesh.text = "Select a destination to proceed with your endeavour. Risky locations yield higher rewards.";
+            infoTitle.text = Text.Get("MAP-INFT");
+            infoMesh.text = Text.Get("MAP-INFD");
 
             btnSeek.gameObject.SetActive(false);
             btnRecruit.gameObject.SetActive(false);
@@ -55,7 +53,7 @@ public class MapManager : MonoBehaviour
     {
         if (currentLocation == null)
         {
-            AlertSystem.Print("Select your destination on the map.");
+            AlertSystem.Print(Text.Get("MAP-NSEL"));
         }
         else
         {
@@ -75,11 +73,11 @@ public class MapManager : MonoBehaviour
     {
         if (currentLocation == null)
         {
-            AlertSystem.Print("Select your destination on the map.");
+            AlertSystem.Print(Text.Get("MAP-NSEL"));
         }
         else
         {
-            AlertSystem.Prompt($"Start an endeavour to recruit members in {currentLocation.name}?", () =>
+            AlertSystem.Prompt($"{Text.Get("MAP-RECR")} {currentLocation.name}?", () =>
             {
                 ExplorationManager.RecruitMembers(currentLocation);
             });
