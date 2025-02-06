@@ -5,11 +5,22 @@
     ["ALERT-QUIT", "QUIT GAME?\nProgress is saved at the start of a new month. Any unsaved progress will be lost."],
     ["ERR-NI", "Feature not implemented."],
 
+    ["MENU-MAINP", "Return to main menu?\nProgress on the current month will be lost."],
+    ["MENU-OPTIT", "OPTIONS"],
+
+    ["SETT-LANGP", "Choose language and restart game to apply changes."],
+    ["SETT-LANGCA", "Language set to"],
+    ["SETT-LANGCB", "Restart the game to apply changes."],
+    ["SETT-LANGERR", "is the current language."],
+
+
     ["OPTION-YES", "Yes"],
     ["OPTION-NO", "No"],
     ["OPTION-NEWGAME", "New Game"],
     ["OPTION-RETRY", "Retry Month"],
     ["OPTION-QUIT", "Quit Game"],
+    ["OPTION-MMENU", "Main Menu"],
+    ["OPTION-LANG", "Change Language"],
 
     ["ROUND-CLEAR0", "YOU SURVIVED THE MONTH."],
 
@@ -57,8 +68,8 @@
     ["PET-W5B", "Alone, you enter the sanctuary and kneel before your master. Your praises earn you brief respite."],
 
     ["MAP-INFT", "Endeavour"],
-    ["MAP-INFD", "Select a destination to proceed with your endeavour. Risky locations yield higher rewards."],
-    ["MAP-NSEL", "Select your destination on the map."],
+    ["MAP-INFD", "Choose a destination to proceed with your endeavour. Risky locations yield higher rewards."],
+    ["MAP-NSEL", "Choose your destination on the map."],
     ["MAP-RECR", "Start an endeavour to recruit members in"],
 
     ["EXP-A", "How will you search for artefacts?"],
