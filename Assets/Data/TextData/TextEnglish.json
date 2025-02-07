@@ -13,7 +13,6 @@
     ["SETT-LANGCB", "Restart the game to apply changes."],
     ["SETT-LANGERR", "is the current language."],
 
-
     ["OPTION-YES", "Yes"],
     ["OPTION-NO", "No"],
     ["OPTION-NEWGAME", "New Game"],
@@ -21,6 +20,28 @@
     ["OPTION-QUIT", "Quit Game"],
     ["OPTION-MMENU", "Main Menu"],
     ["OPTION-LANG", "Change Language"],
+
+    ["BtnMM-CONT", "Continue"],
+    ["BtnMM-NEWG", "New Game"],
+    ["BtnMM-SETT", "Settings"],
+
+    ["BtnHB-SANC", "Sanctuary"],
+    ["BtnHB-LEDG", "Ledger"],
+    ["BtnHB-MAPM", "Map"],
+
+    ["BtnSNC-BRIT", "Begin Ritual"],
+    ["BtnSNC-FEED", "Feed"],
+    ["BtnSNC-COMM", "Commune"],
+    ["BtnSNC-WRSH", "Worship"],
+
+    ["BtnMAP-SARF", "Seek Artefact"],
+    ["BtnMAP-RECM", "Recruit Members"],
+    ["BtnMAP-TWRT", "Thwart Enemies"],
+
+    ["BtnRIT-OART", "Offer Artefact"],
+    ["BtnRIT-SACC", "Sacrifice Cultist"],
+    ["BtnRIT-CSUM", "Commence Summoning"],
+    ["BtnRIT-ABRT", "Abort Ritual"],
 
     ["ROUND-CLEAR0", "YOU SURVIVED THE MONTH."],
 
@@ -131,6 +152,7 @@
     ["Ntr", "Notoriety"],
     ["Mbs", "Members"],
     ["Ldr", "Leader"],
+    ["Cult", "Cult"],
 
     ["Artefact", "Artefact"],
     ["Tome", "Tome"],
