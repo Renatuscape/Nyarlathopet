@@ -25,6 +25,6 @@ public class ItemUiPrefab: MonoBehaviour
     void UpdateDisplayInfo()
     {
         itemName.text = item.name;
-        itemStats.text = $"LOR:{item.lore:D2} STR:{item.strength:D2} MGC:{item.occultism:D2}";
+        itemStats.text = $"{Tags.Get("LOR")}:{item.lore:D2} {Tags.Get("STR")}:{item.strength:D2} {Tags.Get("OCL")}:{item.occultism:D2}";
     }
 }
