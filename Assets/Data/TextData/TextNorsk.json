@@ -5,7 +5,7 @@
     ["ALERT-QUIT", "AVSLUTT SPILL?\nSpillet blir lagret på starten av en ny måned. Alt som ikke er lagret vil gå tapt."],
     ["ERR-NI", "Funksjonen er ikke implementert."],
     
-    ["MENU-MAINP", "Gå tilbake til hovedmenyen?\nFremgang i denne måneden vil gå tapt."],
+    ["MENU-MAINP", "Gå tilbake til hovedmenyen?\nAlt arbeide du har foretatt deg denne måneden vil gå tapt."],
     ["MENU-OPTIT", "INNSTILLINGER"],
     
     ["SETT-LANGP", "Velg språk og start spillet på nytt for å aktivere endringene."],
@@ -20,6 +20,28 @@
     ["OPTION-QUIT", "Avslutt spill"],
     ["OPTION-MMENU", "Hovedmeny"],
     ["OPTION-LANG", "Endre språk"],
+
+    ["BtnMM-CONT", "Fortsett"],
+    ["BtnMM-NEWG", "Nytt Spill"],
+    ["BtnMM-SETT", "Innstillinger"],
+
+    ["BtnHB-SANC", "Kapell"],
+    ["BtnHB-LEDG", "Register"],
+    ["BtnHB-MAPM", "Kart"],
+
+    ["BtnSNC-BRIT", "Begynn Ritual"],
+    ["BtnSNC-FEED", "Fôr"],
+    ["BtnSNC-COMM", "Kanaliser"],
+    ["BtnSNC-WRSH", "Tilbe"],
+
+    ["BtnMAP-SARF", "Søk Artefakt"],
+    ["BtnMAP-RECM", "Rekrutter"],
+    ["BtnMAP-TWRT", "Motarbeid Fiender"],
+
+    ["BtnRIT-OART", "Ofre Artefakt"],
+    ["BtnRIT-SACC", "Ofre Kultist"],
+    ["BtnRIT-CSUM", "Begynn Påkalling"],
+    ["BtnRIT-ABRT", "Avbryt Ritual"],
     
     ["ROUND-CLEAR0", "DU OVERLEVDE MÅNEDEN."],
     ["END-DEAD", "DU ER DØD."],
@@ -81,7 +103,7 @@
     ["EXP-ABTN0", "Risiker din egen fornuft"],
     ["EXP-ABTN1", "Send ut dine kultister"],
     ["EXP-ABTN2", "Bruk ditt nettverk"],
-    ["EXP-ABTN3", "Bruk kultens verdier"],
+    ["EXP-ABTN3", "Bruk av hvelvets verdier"],
     
     ["EXP-AR0", "RESULTAT AV FORETAGENDE"],
     ["EXP-AR-SUCCESS", "Du anskaffet en"],
@@ -129,6 +151,7 @@
     ["Ntr", "Berømmelse"],
     ["Mbs", "Medlemmer"],
     ["Ldr", "Leder"],
+    ["Cult", "Kult"],
     
     ["Artefact", "Artefakt"],
     ["Tome", "Lærebok"],
