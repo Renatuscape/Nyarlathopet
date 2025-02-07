@@ -9,6 +9,7 @@ public class PopOutController : MonoBehaviour
     public Button btnOpenStats;
     public Button btnStatPanel;
     public TextMeshProUGUI statValues;
+    public TextMeshProUGUI statLabels;
 
     private void Awake()
     {
@@ -22,6 +23,19 @@ public class PopOutController : MonoBehaviour
     {
         var d = GameplayManager.dummyData;
         var l = d.cultLeader;
+        statLabels.text =
+            $"{Tags.Get("Ldr").ToUpper()}" +
+            $"\n{Tags.Get("SAN")}:" +
+            $"\n{Tags.Get("OCL")}:" +
+            $"\n{Tags.Get("LOR")}:" +
+            $"\n{Tags.Get("STR")}:" +
+            $"\n" +
+            $"\n{Tags.Get("Cult").ToUpper()}" +
+            $"\n{Tags.Get("NWK")}:" +
+            $"\n{Tags.Get("NTR")}:" +
+            $"\n{Tags.Get("MBS")}:" +
+            $"\n{Tags.Get("FNS")}:";
+
         statValues.text = 
             $"\n{l.sanity:D2}" +
             $"\n{l.occultism:D2}" +
