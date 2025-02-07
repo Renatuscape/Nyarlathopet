@@ -281,6 +281,7 @@ MonoBehaviour:
   btnOpenStats: {fileID: 3439334391199826925}
   btnStatPanel: {fileID: 117091933836765994}
   statValues: {fileID: 2880789126988640024}
+  statLabels: {fileID: 3632613399075585836}
 --- !u!1 &5631230789994244124
 GameObject:
   m_ObjectHideFlags: 0
