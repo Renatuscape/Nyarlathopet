@@ -3,22 +3,36 @@
   "entries": [
     ["LOAD0", "Oversetter de antikke tekster ..."],
     ["ALERT-QUIT", "AVSLUTT SPILL?\nSpillet blir lagret på starten av en ny måned. Alt som ikke er lagret vil gå tapt."],
+    ["ERR-NI", "Funksjonen er ikke implementert."],
+    
+    ["MENU-MAINP", "Gå tilbake til hovedmenyen?\nFremgang i denne måneden vil gå tapt."],
+    ["MENU-OPTIT", "INNSTILLINGER"],
+    
+    ["SETT-LANGP", "Velg språk og start spillet på nytt for å aktivere endringene."],
+    ["SETT-LANGCA", "Språk satt til"],
+    ["SETT-LANGCB", "Start spillet på nytt for å aktivere endringene."],
+    ["SETT-LANGERR", "er det nåværende språket."],
     
     ["OPTION-YES", "Ja"],
     ["OPTION-NO", "Nei"],
     ["OPTION-NEWGAME", "Nytt spill"],
     ["OPTION-RETRY", "Prøv igjen"],
     ["OPTION-QUIT", "Avslutt spill"],
-
+    ["OPTION-MMENU", "Hovedmeny"],
+    ["OPTION-LANG", "Endre språk"],
+    
     ["ROUND-CLEAR0", "DU OVERLEVDE MÅNEDEN."],
-
     ["END-DEAD", "DU ER DØD."],
     ["END-INSANE", "DU ER PERMANENT SINSSYK."],
-
+    
     ["RIT-ERR", "Påkallingen kan bare igangsettes på starten av en ny måned, når himmellegmene er i riktig stilling.\nPrøv igjen når du har"],
     ["RIT-ABORT", "FORKAST ALL FREMGANG OG AVBRYT RITUALET?\nAlle ansamlede krefter vil gå tapt. Dine ofre vil være bortkastet."],
     ["RIT-COMM", "Begynn påkallingen med disse offergavene?"],
-
+    ["RIT-SUCCA", "Du påkaller en brøkdel av Nyarlathotep!\nEn"],
+    ["RIT-SUCCB", "manifesterer seg foran deg."],
+    ["RIT-FAIL", "Ritualet mislyktes i å påkalle selv den minste del av Nyarlathotep. Samle mer kraft før ditt neste forsøk."],
+    ["RIT-CULTCONS", "Dine kultmedlemmer motstår den mentale påkjenningen og faller på kne i frenetisk tilbedelse."],
+    
     ["SAN-READY", "Kapellet er klart for en ny påkallelse."],
     
     ["SACR0", "Ofret"],
@@ -31,16 +45,56 @@
     ["PET-F2A", "Disse ivrige disiplene melder seg frivillig."],
     ["PET-F2B", "Fortsett?"],
     ["PET-F3", "konsumerte"],
-
+    
+    ["PET-C0", "Du har ingen lærebøker til å veilede deg i å kanalisere din mester. Søk der kunnskap er i overflod."],
+    ["PET-C1", "Hvilken lærebok skal veilede kanaliseringen?"],
+    ["PET-C2", "Hvem skal kanalisere"],
+    ["PET-C3", "Velg en kraft å trekke på."],
+    ["PET-C4", "Dette aspektet av din mester er for svakt til at du kan trekke på dets kraft."],
+    ["PET-C5", "Kanaliser alene"],
+    ["PET-C6", "Velg en kultist"],
+    ["PET-C7", "Alle skal kanalisere"],
+    
+    ["PET-W0", "Du har ingen bønner å resitere. Søk der okkultisme og kunnskap er i overflod."],
+    ["PET-W1", "Hvilken bønn skal resiteres under tilbedelsen?"],
+    ["PET-W2", "Hvordan ønsker du å tilbe?"],
+    ["PET-W3", "Offentlig seremoni"],
+    ["PET-W3B", "Din offentlige seremoni tiltrekker oppmerksomhet fra både allierte og fiender."],
+    ["PET-W4", "Medlemsseremoni"],
+    ["PET-W4B", "Bak kapellets lukkede dører beroliger hviskende bønner din"],
+    ["PET-W5", "Tilbe alene"],
+    ["PET-W5B", "Alene går du inn i kapellet og kneler foran din mester. Din lovprisning gir deg et kort pusterom."],
+    
+    ["MAP-INFT", "Foretagende"],
+    ["MAP-INFD", "Velg et mål for ditt foretagende. Risikable steder gir større belønninger."],
+    ["MAP-NSEL", "Velg ditt mål på kartet."],
+    ["MAP-RECR", "Start et foretagende for å rekruttere medlemmer i"],
+    
+    ["EXP-A", "Hvordan vil du søke etter artefakter?"],
     ["EXP-A0", "Du fant"],
     ["EXP-A1", "Dine beskjeftigelser forbedret ditt nettverk med"],
     ["EXP-A2", "De som ønsker å stoppe deg har merket dine aktiviteter. Berømmelse økte med"],
-
+    ["EXP-A3", "Fornuft -"],
+    ["EXP-A4", "Kultverdier -"],
+    ["EXP-A5", "Tapte kultister:"],
+    
+    ["EXP-ABTN0", "Risiker din egen fornuft"],
+    ["EXP-ABTN1", "Send ut dine kultister"],
+    ["EXP-ABTN2", "Bruk ditt nettverk"],
+    ["EXP-ABTN3", "Bruk kultens verdier"],
+    
+    ["EXP-AR0", "FORETAGENDERAPPORT"],
+    ["EXP-AR-SUCCESS", "Vellykket anskaffelse av"],
+    ["EXP-AR-FAIL", "Foretagendet mislyktes i å avdekke noen artefakter."],
+    
     ["EXP-T0", "Du har ikke nevneverdig berømmelse. Du har ingen fiender å motarbeide."],
     ["EXP-T1", "Din berømmelse reduseres med"],
     ["EXP-T2", "taptes til fienden."],
     ["EXP-T3", "Ditt nettverk økte med"],
-    ["EXP-R0", "sluttet seg til din kult."]
+    ["EXP-R0", "sluttet seg til din kult."],
+    
+    ["EVENT-LEADER0", "Blant de mest fornuftige medlemmene av kulten, trer én frem for å bli den nye lederen."],
+    ["EVENT-NEWCULTIST", "har sluttet seg til din kult."]
   ],
   "tags": [
     ["SAN", "FNF"],
@@ -48,38 +102,39 @@
     ["LOR", "KNS"],
     ["STR", "STR"],
     ["FNS", "VRD"],
-
+    
     ["San", "Fornuft"],
     ["Ocl", "Okkultisme"],
     ["Lor", "Kunnskap"],
     ["Str", "Styrke"],
     ["Fns", "Verdier"],
-
+    
     ["MTH", "MTH"],
     ["ITR", "ITR"],
     ["MGK", "MAG"],
     ["ABS", "ABS"],
     ["RGE", "RSR"],
-
+    
     ["Mth", "Mythos"],
     ["Itr", "Intrige"],
     ["Mgk", "Magi"],
     ["Abs", "Abstraksjon"],
     ["Rge", "Raseri"],
-
+    
     ["NWK", "NTV"],
     ["NTR", "BRM"],
     ["MBS", "MDL"],
-
+    
     ["Nwk", "Nettverk"],
     ["Ntr", "Berømmelse"],
     ["Mbs", "Medlemmer"],
     ["Ldr", "Leder"],
-
+    
     ["Artefact", "Artefakt"],
     ["Tome", "Lærebok"],
     ["Prayer", "Bønn"],
-
-    ["RiskyE", "Høy risiko!"]
+    
+    ["RiskyE", "Høy risiko!"],
+    ["ALL-C", "Alle kultister"]
   ]
 }
