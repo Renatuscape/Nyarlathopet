@@ -20,6 +20,28 @@
       ["OPTION-QUIT", "Ludum Deserere"],
       ["OPTION-MMENU", "Primum Menu"],
       ["OPTION-LANG", "Linguam Mutare"],
+
+      ["BtnMM-CONT", "Perge"],
+      ["BtnMM-NEWG", "Ludus Novus"],
+      ["BtnMM-SETT", "Optiones"],
+
+      ["BtnHB-SANC", "Fanum"],
+      ["BtnHB-LEDG", "Codex"],
+      ["BtnHB-MAPM", "Tabula"],
+
+      ["BtnSNC-BRIT", "Incipe Ritum"],
+      ["BtnSNC-FEED", "Pasce"],
+      ["BtnSNC-COMM", "Evoca"],
+      ["BtnSNC-WRSH", "Adora"],
+
+      ["BtnMAP-SARF", "Quaere Artefactum"],
+      ["BtnMAP-RECM", "Conscribe"],
+      ["BtnMAP-TWRT", "Impedi Hostes"],
+
+      ["BtnRIT-OART", "Offer Artefactum"],
+      ["BtnRIT-SACC", "Sacrifica Cultistam"],
+      ["BtnRIT-CSUM", "Incipe Evocationem"],
+      ["BtnRIT-ABRT", "Abrumpe Ritum"],
   
       ["ROUND-CLEAR0", "MENSEM SUPERAVISTI."],
   
@@ -34,7 +56,7 @@
       ["RIT-FAIL", "Rituale ne minimum quidem fragmentum Nyarlathotep evocare potuit. Maiorem potestatem congere antequam iterum conaris."],
       ["RIT-CULTCONS", "Membris cultus mentales cruciatus tolerantibus, in genua procidunt furenti adoratione."],
   
-      ["SAN-READY", "Sanctuarium paratum est pro convocatione."],
+      ["SAN-READY", "Fanum paratum est pro convocatione."],
   
       ["SACR0", "Sacrificatus"],
       ["SACR1", "sacrificatus est. Sanitas tua diminuta est per"],
@@ -62,9 +84,9 @@
       ["PET-W3", "Concio publica"],
       ["PET-W3B", "Concio publica attentionem attrahit ab sociis et inimicis."],
       ["PET-W4", "Concio membris tantum"],
-      ["PET-W4B", "Intra clausas sanctuarii fores, preces submissae lenient tuam"],
+      ["PET-W4B", "Intra clausas fani fores, preces submissae lenient tuam"],
       ["PET-W5", "Adorare privatim"],
-      ["PET-W5B", "Solus, intras sanctuarium et genua flectis coram domino tuo. Laudes tuae brevem requiem tibi concedunt."],
+      ["PET-W5B", "Solus, intras fanum et genua flectis coram domino tuo. Laudes tuae brevem requiem tibi concedunt."],
   
       ["MAP-INFT", "Conatus"],
       ["MAP-INFD", "Elige destinationem ut procedas cum conatu tuo. Loca periculosa maiora praemia ferunt."],
@@ -130,6 +152,7 @@
       ["Ntr", "Notorietas"],
       ["Mbs", "Membra"],
       ["Ldr", "Dux"],
+      ["Cult", "Cultus"],
   
       ["Artefact", "Artefactum"],
       ["Tome", "Codex"],
