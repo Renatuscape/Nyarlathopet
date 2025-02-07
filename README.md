@@ -13,6 +13,16 @@ All assets included in this repository are either 100% free/open source or made 
 * ✅ Create loader class for Text[Language].json
 * ✅ Create repository for text snippets and their ID
 * 🔄 Implement use of the text repository across all classes that display text
+    * Button labels for SystemAlerts (may as well make the button display text dynamic)
+    * Replace hardcoded new game prompt
+    * Replace ledger UI text
+    * Add translations for place descriptions and names
+    * Pop-up menu must use dynamic labels
+    * EP and months must use dynamic labels
+    * Item names should have translations
+    * Creature names should have translations
+    * The compass rose should have translations of N/S/E/W
+    * Ritual page buttons and skills must be translated
 
 **Load Horror objects**
 * ✅ Create loader class for Horrors.json
