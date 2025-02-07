@@ -63,10 +63,10 @@
     ["PET-W4", "Medlemsseremoni"],
     ["PET-W4B", "Bak kapellets lukkede dører beroliger hviskende bønner din"],
     ["PET-W5", "Tilbe alene"],
-    ["PET-W5B", "Alene går du inn i kapellet og kneler foran din mester. Din lovprisning gir deg et kort pusterom."],
+    ["PET-W5B", "Du går inn i kapellet alene og kneler foran din mester. Dine lovsanger gir deg et kort pusterom."],
     
     ["MAP-INFT", "Foretagende"],
-    ["MAP-INFD", "Velg et mål for ditt foretagende. Risikable steder gir større belønninger."],
+    ["MAP-INFD", "Velg et mål for ditt foretagende. Steder med høy risiko gir større belønninger."],
     ["MAP-NSEL", "Velg ditt mål på kartet."],
     ["MAP-RECR", "Start et foretagende for å rekruttere medlemmer i"],
     
@@ -83,11 +83,11 @@
     ["EXP-ABTN2", "Bruk ditt nettverk"],
     ["EXP-ABTN3", "Bruk kultens verdier"],
     
-    ["EXP-AR0", "FORETAGENDERAPPORT"],
-    ["EXP-AR-SUCCESS", "Vellykket anskaffelse av"],
-    ["EXP-AR-FAIL", "Foretagendet mislyktes i å avdekke noen artefakter."],
+    ["EXP-AR0", "RESULTAT AV FORETAGENDE"],
+    ["EXP-AR-SUCCESS", "Du anskaffet en"],
+    ["EXP-AR-FAIL", "Foretagendet mislyktes. Du oppdrev ingen artefakter."],
     
-    ["EXP-T0", "Du har ikke nevneverdig berømmelse. Du har ingen fiender å motarbeide."],
+    ["EXP-T0", "Du har ingen nevneverdig berømmelse, og ingen fiender å motarbeide."],
     ["EXP-T1", "Din berømmelse reduseres med"],
     ["EXP-T2", "taptes til fienden."],
     ["EXP-T3", "Ditt nettverk økte med"],
