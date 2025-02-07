@@ -910,11 +910,11 @@ MonoBehaviour:
     name: 
     description: 
     type: 0
-    magick: 0
-    strength: 0
-    lore: 0
-    sanity: 0
-    funds: 0
+    <occultism>k__BackingField: 0
+    <lore>k__BackingField: 0
+    <strength>k__BackingField: 0
+    <sanity>k__BackingField: 0
+    <funds>k__BackingField: 0
     origin: 
   image: {fileID: 4495626286105408190}
   button: {fileID: 9213382414858436928}
