@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -40,8 +39,8 @@ public class BtnPromptMainMenu : MonoBehaviour
 
         foreach (var language in languages)
         {
-            string label = language != GlobalSettings.language ? language.ToString() : $"[{language.ToString()}]";
-            options.Add((language.ToString(), () => ChooseLanguage(language)));
+            string label = language == GlobalSettings.language ? $"[{language.ToString()}]" : language.ToString();
+            options.Add((label, () => ChooseLanguage(language)));
         }
 
         AlertSystem.Choice(Text.Get("SETT-LANGP"), options, false);
