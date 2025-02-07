@@ -28,8 +28,8 @@ public class HumanUiPrefab : MonoBehaviour
     {
         nameText.text = human.name;
         originText.text = human.origin;
-        fundsText.text = $"Funds:{human.funds:D2}";
-        statText.text = $"SAN:{human.sanity:D2} LOR:{human.lore:D2}\n" +
-                        $"STR:{human.strength:D2} MGC:{human.occultism:D2}";
+        fundsText.text = $"{Tags.Get("FNS")}:{human.funds:D2}";
+        statText.text = $"{Tags.Get("SAN")}:{human.sanity:D2} {Tags.Get("LOR")}:{human.lore:D2}\n" +
+                        $"{Tags.Get("STR")}:{human.strength:D2} {Tags.Get("OCL")}:{human.occultism:D2}";
     }
 }
