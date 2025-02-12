@@ -48,6 +48,26 @@ public class Horror : Creature
         return Math.Max(1, GetStatSum() / 15);
     }
 
+    public bool CheckIfReady()
+    {
+        var template = Repository.GetHorrorByID(id);
+
+        if (template == null)
+        {
+            Report.Write(name, "No horror template was found for ID " + id);
+            return false;
+        }
+
+        // Stats must be 12 times higher than pet starting stats before summoning can be completed
+        // This means pet total stats must range between 1 and 33 (four stats that can max out at 99, excluding rage and sanity loss)
+        if (GetStatSum() >= template.GetStatSum() * 12)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
     public string Print(bool abbreviate, bool isList)
     {
         return 
