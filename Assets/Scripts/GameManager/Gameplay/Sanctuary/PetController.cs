@@ -33,7 +33,7 @@ public static class PetController
         PetCommuneHelper.Initialise();
     }
 
-    public static void FinaliseSummoning()
+    public static void CompleteRitual()
     {
         // Confirmation
             // Execute final summoning (event?)
