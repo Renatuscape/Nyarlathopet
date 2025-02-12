@@ -11,6 +11,7 @@ public class SanctuaryManager : MonoBehaviour
     public Button btnFeed;
     public Button btnWorship;
     public Button btnCommune;
+    public Button btnCompleteRitual;
     public Button btnBeginRitual;
 
     private void Awake()
@@ -19,6 +20,7 @@ public class SanctuaryManager : MonoBehaviour
         btnFeed.onClick.AddListener(() => PetController.FeedPet());
         btnWorship.onClick.AddListener(() => PetController.WorshipPet());
         btnCommune.onClick.AddListener(() => PetController.CommuneWithPet());
+        btnCompleteRitual.onClick.AddListener(() => PetController.CompleteRitual());
     }
 
     private void OnEnable()
@@ -43,6 +45,7 @@ public class SanctuaryManager : MonoBehaviour
         btnFeed.gameObject.SetActive(true);
         btnWorship.gameObject.SetActive(true);
         btnCommune.gameObject.SetActive(true);
+        btnCompleteRitual.gameObject.SetActive(pet.CheckIfReady());
         btnBeginRitual.gameObject.SetActive(false);
 
         petName.text = pet.name;
@@ -59,6 +62,7 @@ public class SanctuaryManager : MonoBehaviour
         btnFeed.gameObject.SetActive(false);
         btnWorship.gameObject.SetActive(false);
         btnCommune.gameObject.SetActive(false);
+        btnCompleteRitual.gameObject.SetActive(false);
         btnBeginRitual.gameObject.SetActive(true);
     }
 }
