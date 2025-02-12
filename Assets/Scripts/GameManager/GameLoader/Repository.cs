@@ -24,10 +24,15 @@ public static class Repository
         return locations.FirstOrDefault(l => l.x == coords.x && l.y == coords.y);
     }
 
-    public static Horror GetHorrorByID(int id)
+    public static Horror GetHorrorByID(string id)
     {
         var horrors = masks.Concat(pets).ToArray();
-        return horrors[id].Clone();
+        var horror = horrors.FirstOrDefault(h => h.id == id);
+        if (horror == null)
+        {
+            return horror.Clone();
+        }
+        return null;
     }
 
     public static Horror GetPetByStats(CreatureStats refStats)
