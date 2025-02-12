@@ -38,6 +38,11 @@ public class Horror : Creature
         };
     }
 
+    public int GetStatSum()
+    {
+        return mythos + intrigue + magick + abstraction + strength;
+    }
+
     public int GetLevel()
     {
         return Math.Max(1, (mythos + intrigue + magick + abstraction + strength + rage) / 15);
