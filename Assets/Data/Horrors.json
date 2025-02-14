@@ -67,6 +67,17 @@
       "magick": 5,
       "strength": 1,
       "sanityLoss": 6
+    },
+    {
+      "id": "MASK2",
+      "name": "Non-Euclidian Shard",
+      "description": "It bends and twists in ways that hurt the eyes and mind.",
+      "rage": 20,
+      "intrigue": 5,
+      "abstraction": 32,
+      "magick": 42,
+      "strength": 5,
+      "sanityLoss": 15
     }
   ]
 }
